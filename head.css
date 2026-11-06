@@ -11,7 +11,7 @@
         --lkk-accent: #d22232;
         --lkk-shadow: 0 10px 24px rgba(12, 20, 37, 0.05);
         --lkk-radius: 12px;
-        --lkk-container: 1180px;
+        --lkk-container: 1280px;
       }
 
       *,
@@ -47,6 +47,10 @@
         width: calc(100% - 32px);
         max-width: var(--lkk-container);
         margin: 0 auto;
+      }
+      .lkk-nav-bar .lkk-main-nav,
+      .lkk-post-page .lkk-page {
+        max-width: var(--lkk-container);
       }
 /* Css Responsive */
            @media (max-width: 980px) {
