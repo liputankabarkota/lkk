@@ -321,7 +321,6 @@ img { display: block; max-width: 100%; height: auto; }
 ]]></b:skin>
             <link rel='preload' as='style' href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/dist/lkk.min.css' onload='this.onload=null;this.rel=&quot;stylesheet&quot;' />
         <noscript><link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/dist/lkk.min.css' /></noscript>
-        <b:if cond='data:view.isPost and data:blog.postImageUrl'>
     </head>
     <body>
         <div class='lkk-top'><div class='lkk-wrap'>
