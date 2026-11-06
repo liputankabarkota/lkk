@@ -1,89 +1,120 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:js='false' b:layoutsVersion='3' lang='id' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-  <b:attr name='xmlns' value=''/>
-  <b:attr name='xmlns:b' value=''/>
-  <b:attr name='xmlns:expr' value=''/>
-  <b:attr name='xmlns:data' value=''/>
-  <head>
-    <meta content='width=device-width, initial-scale=1' name='viewport'/>
-    <link crossorigin='anonymous' href='https://blogger.googleusercontent.com' rel='preconnect'/>
-    <link crossorigin='anonymous' href='https://cdn.jsdelivr.net' rel='preconnect'/>
-    <link href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/head.min.css' id='lkk-theme-css' media='all' rel='stylesheet'/>
-    <meta content='id_ID' property='og:locale'/>
-    <meta content='Liputan Kabar Kota' property='og:site_name'/>
-    <meta content='summary_large_image' name='twitter:card'/>
-    <meta content='Liputan Kabar Kota' name='twitter:site'/>
-    <meta content='#062f68' name='theme-color'/>
-    <b:if cond='data:view.isSearch and not data:view.isLabelSearch'>
-      <meta content='noindex,follow' name='robots'/>
-      <meta content='noindex,follow' name='googlebot'/>
-      <meta content='noindex,follow' name='googlebot-news'/>
-      <b:else/>
-      <meta content='index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' name='robots'/>
-      <meta content='index,follow' name='googlebot'/>
-      <meta content='index,follow' name='googlebot-news'/>
-    </b:if>
-    <b:include data='blog' name='all-head-content'/>
-    <b:if cond='data:view.isHomepage'>
-      <title>Liputan Kabar Kota</title>
-      <meta content='Media digital dari Jepara, Jawa Tengah, menyajikan berita daerah hingga nasional tentang pemerintahan, pembangunan, hukum, pendidikan, ekonomi, sosial budaya, dan masyarakat.' name='description'/>
-      <meta content='Liputan Kabar Kota: Berita Jepara, Nasional &amp; Daerah' property='og:title'/>
-      <meta content='Media digital dari Jepara, Jawa Tengah, menyajikan berita daerah hingga nasional tentang pemerintahan, pembangunan, hukum, pendidikan, ekonomi, sosial budaya, dan masyarakat.' property='og:description'/>
-      <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
-      <meta content='website' property='og:type'/>
-      <meta content='Liputan Kabar Kota: Berita Jepara, Nasional &amp; Daerah' name='twitter:title'/>
-      <meta content='Media digital dari Jepara, Jawa Tengah, menyajikan berita daerah hingga nasional tentang pemerintahan, pembangunan, hukum, pendidikan, ekonomi, sosial budaya, dan masyarakat.' name='twitter:description'/>
-      <b:else/>
-      <b:if cond='data:view.isLabelSearch'>
-        <title><data:blog.searchLabel/> - Liputan Kabar Kota</title>
-        <meta expr:content='&quot;Berita &quot; + data:blog.searchLabel + &quot; terbaru dan informasi pilihan dari Liputan Kabar Kota.&quot;' name='description'/>
-        <meta expr:content='data:blog.searchLabel + &quot; | Berita Terkini - Liputan Kabar Kota&quot;' property='og:title'/>
-        <meta expr:content='&quot;Berita &quot; + data:blog.searchLabel + &quot; terbaru dan informasi pilihan dari Liputan Kabar Kota.&quot;' property='og:description'/>
-        <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
-        <meta content='website' property='og:type'/>
-        <meta expr:content='data:blog.searchLabel + &quot; | Berita Terkini - Liputan Kabar Kota&quot;' name='twitter:title'/>
-        <meta expr:content='&quot;Berita &quot; + data:blog.searchLabel + &quot; terbaru dan informasi pilihan dari Liputan Kabar Kota.&quot;' name='twitter:description'/>
-        <b:else/>
-        <title><data:view.title.escaped/> - Liputan Kabar Kota</title>
-        <b:if cond='data:view.isPost and data:view.description'>
-          <meta expr:content='data:view.description.escaped' name='description'/>
-          <b:elseif cond='data:view.isPost'/>
-          <meta expr:content='data:view.title.escaped' name='description'/>
-          <b:elseif cond='data:view.description'/>
-          <meta expr:content='data:view.description.escaped' name='description'/>
-          <b:else/>
-          <meta expr:content='&quot;Informasi &quot; + data:view.title.escaped + &quot; serta berita terkini dari Liputan Kabar Kota.&quot;' name='description'/>
+<html b:css='false' b:defaultwidgetversion='2' b:js='false' b:layoutsVersion='3' lang='id'
+    xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b'
+    xmlns:data='http://www.google.com/2005/gml/data'
+    xmlns:expr='http://www.google.com/2005/gml/expr'>
+    <b:attr name='xmlns' value='' />
+    <b:attr name='xmlns:b' value='' />
+    <b:attr name='xmlns:expr' value='' />
+    <b:attr name='xmlns:data' value='' />
+    <head>
+        <meta content='width=device-width, initial-scale=1' name='viewport' />
+        <link crossorigin='anonymous' href='https://blogger.googleusercontent.com' rel='preconnect' />
+        <link crossorigin='anonymous' href='https://cdn.jsdelivr.net' rel='preconnect' />
+        <link href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/head.min.css'
+            id='lkk-theme-css' media='all' rel='stylesheet' />
+        <meta content='id_ID' property='og:locale' />
+        <meta content='Liputan Kabar Kota' property='og:site_name' />
+        <meta content='summary_large_image' name='twitter:card' />
+        <meta content='Liputan Kabar Kota' name='twitter:site' />
+        <meta content='#062f68' name='theme-color' />
+        <b:if cond='data:view.isSearch and not data:view.isLabelSearch'>
+            <meta content='noindex,follow' name='robots' />
+            <meta content='noindex,follow' name='googlebot' />
+            <meta content='noindex,follow' name='googlebot-news' />
+            <b:else />
+            <meta content='index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'
+                name='robots' />
+            <meta content='index,follow' name='googlebot' />
+            <meta content='index,follow' name='googlebot-news' />
         </b:if>
-        <meta expr:content='data:view.title.escaped + &quot; | Liputan Kabar Kota&quot;' property='og:title'/>
-        <b:if cond='data:view.isPost and data:view.description'>
-          <meta expr:content='data:view.description.escaped' property='og:description'/>
-          <b:elseif cond='data:view.isPost'/>
-          <meta expr:content='data:view.title.escaped' property='og:description'/>
-          <b:elseif cond='data:view.description'/>
-          <meta expr:content='data:view.description.escaped' property='og:description'/>
-          <b:else/>
-          <meta expr:content='&quot;Informasi &quot; + data:view.title.escaped + &quot; serta berita terkini dari Liputan Kabar Kota.&quot;' property='og:description'/>
+        <b:include data='blog' name='all-head-content' />
+        <b:if cond='data:view.isHomepage'>
+            <title>Liputan Kabar Kota</title>
+            <meta
+                content='Media digital dari Jepara, Jawa Tengah, menyajikan berita daerah hingga nasional tentang pemerintahan, pembangunan, hukum, pendidikan, ekonomi, sosial budaya, dan masyarakat.'
+                name='description' />
+            <meta content='Liputan Kabar Kota: Berita Jepara, Nasional &amp; Daerah'
+                property='og:title' />
+            <meta
+                content='Media digital dari Jepara, Jawa Tengah, menyajikan berita daerah hingga nasional tentang pemerintahan, pembangunan, hukum, pendidikan, ekonomi, sosial budaya, dan masyarakat.'
+                property='og:description' />
+            <meta expr:content='data:blog.canonicalUrl' property='og:url' />
+            <meta content='website' property='og:type' />
+            <meta content='Liputan Kabar Kota: Berita Jepara, Nasional &amp; Daerah'
+                name='twitter:title' />
+            <meta
+                content='Media digital dari Jepara, Jawa Tengah, menyajikan berita daerah hingga nasional tentang pemerintahan, pembangunan, hukum, pendidikan, ekonomi, sosial budaya, dan masyarakat.'
+                name='twitter:description' />
+            <b:else />
+            <b:if cond='data:view.isLabelSearch'>
+                <title><data:blog.searchLabel /> - Liputan Kabar Kota</title>
+                <meta
+                    expr:content='&quot;Berita &quot; + data:blog.searchLabel + &quot; terbaru dan informasi pilihan dari Liputan Kabar Kota.&quot;'
+                    name='description' />
+                <meta
+                    expr:content='data:blog.searchLabel + &quot; | Berita Terkini - Liputan Kabar Kota&quot;'
+                    property='og:title' />
+                <meta
+                    expr:content='&quot;Berita &quot; + data:blog.searchLabel + &quot; terbaru dan informasi pilihan dari Liputan Kabar Kota.&quot;'
+                    property='og:description' />
+                <meta expr:content='data:blog.canonicalUrl' property='og:url' />
+                <meta content='website' property='og:type' />
+                <meta
+                    expr:content='data:blog.searchLabel + &quot; | Berita Terkini - Liputan Kabar Kota&quot;'
+                    name='twitter:title' />
+                <meta
+                    expr:content='&quot;Berita &quot; + data:blog.searchLabel + &quot; terbaru dan informasi pilihan dari Liputan Kabar Kota.&quot;'
+                    name='twitter:description' />
+                <b:else />
+                <title><data:view.title.escaped /> - Liputan Kabar Kota</title>
+                <b:if cond='data:view.isPost and data:view.description'>
+                    <meta expr:content='data:view.description.escaped' name='description' />
+                    <b:elseif cond='data:view.isPost' />
+                    <meta expr:content='data:view.title.escaped' name='description' />
+                    <b:elseif cond='data:view.description' />
+                    <meta expr:content='data:view.description.escaped' name='description' />
+                    <b:else />
+                    <meta
+                        expr:content='&quot;Informasi &quot; + data:view.title.escaped + &quot; serta berita terkini dari Liputan Kabar Kota.&quot;'
+                        name='description' />
+                </b:if>
+                <meta expr:content='data:view.title.escaped + &quot; | Liputan Kabar Kota&quot;'
+                    property='og:title' />
+                <b:if cond='data:view.isPost and data:view.description'>
+                    <meta expr:content='data:view.description.escaped' property='og:description' />
+                    <b:elseif cond='data:view.isPost' />
+                    <meta expr:content='data:view.title.escaped' property='og:description' />
+                    <b:elseif cond='data:view.description' />
+                    <meta expr:content='data:view.description.escaped' property='og:description' />
+                    <b:else />
+                    <meta
+                        expr:content='&quot;Informasi &quot; + data:view.title.escaped + &quot; serta berita terkini dari Liputan Kabar Kota.&quot;'
+                        property='og:description' />
+                </b:if>
+                <meta expr:content='data:blog.canonicalUrl' property='og:url' />
+                <meta expr:content='data:view.title.escaped + &quot; | Liputan Kabar Kota&quot;'
+                    name='twitter:title' />
+                <b:if cond='data:view.isPost and data:view.description'>
+                    <meta expr:content='data:view.description.escaped' name='twitter:description' />
+                    <b:elseif cond='data:view.isPost' />
+                    <meta expr:content='data:view.title.escaped' name='twitter:description' />
+                    <b:elseif cond='data:view.description' />
+                    <meta expr:content='data:view.description.escaped' name='twitter:description' />
+                    <b:else />
+                    <meta
+                        expr:content='&quot;Informasi &quot; + data:view.title.escaped + &quot; serta berita terkini dari Liputan Kabar Kota.&quot;'
+                        name='twitter:description' />
+                </b:if>
+                <b:if cond='data:view.isPost'>
+                    <meta content='article' property='og:type' />
+                    <b:else />
+                    <meta content='website' property='og:type' />
+                </b:if>
+            </b:if>
         </b:if>
-        <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
-        <meta expr:content='data:view.title.escaped + &quot; | Liputan Kabar Kota&quot;' name='twitter:title'/>
-        <b:if cond='data:view.isPost and data:view.description'>
-          <meta expr:content='data:view.description.escaped' name='twitter:description'/>
-          <b:elseif cond='data:view.isPost'/>
-          <meta expr:content='data:view.title.escaped' name='twitter:description'/>
-          <b:elseif cond='data:view.description'/>
-          <meta expr:content='data:view.description.escaped' name='twitter:description'/>
-          <b:else/>
-          <meta expr:content='&quot;Informasi &quot; + data:view.title.escaped + &quot; serta berita terkini dari Liputan Kabar Kota.&quot;' name='twitter:description'/>
-        </b:if>
-        <b:if cond='data:view.isPost'>
-          <meta content='article' property='og:type'/>
-          <b:else/>
-          <meta content='website' property='og:type'/>
-        </b:if>
-      </b:if>
-    </b:if>
-    <script type='application/ld+json'>
+        <script type='application/ld+json'>
             {
               &quot;@context&quot;: &quot;https://schema.org&quot;,
               &quot;@graph&quot;: [
@@ -130,8 +161,8 @@
               ]
             }
         </script>
-    <b:if cond='data:view.isHomepage'>
-      <script type='application/ld+json'>
+        <b:if cond='data:view.isHomepage'>
+            <script type='application/ld+json'>
                 {
                   &quot;@context&quot;: &quot;https://schema.org&quot;,
                   &quot;@type&quot;: &quot;WebPage&quot;,
@@ -144,9 +175,9 @@
                   &quot;publisher&quot;: {&quot;@id&quot;: &quot;https://www.liputankabarkota.com/#publisher&quot;}
                 }
             </script>
-    </b:if>
-    <b:if cond='data:view.isPage'>
-      <script type='application/ld+json'>
+        </b:if>
+        <b:if cond='data:view.isPage'>
+            <script type='application/ld+json'>
                 {
                   &quot;@context&quot;: &quot;https://schema.org&quot;,
                   &quot;@type&quot;: &quot;WebPage&quot;,
@@ -159,8 +190,8 @@
                   &quot;publisher&quot;: {&quot;@id&quot;: &quot;https://www.liputankabarkota.com/#publisher&quot;}
                 }
             </script>
-      <b:elseif cond='data:view.isLabelSearch'/>
-      <script type='application/ld+json'>
+            <b:elseif cond='data:view.isLabelSearch' />
+            <script type='application/ld+json'>
                 {
                   &quot;@context&quot;: &quot;https://schema.org&quot;,
                   &quot;@graph&quot;: [
@@ -185,8 +216,8 @@
                   ]
                 }
             </script>
-      <b:elseif cond='data:view.isSearch'/>
-      <script type='application/ld+json'>
+            <b:elseif cond='data:view.isSearch' />
+            <script type='application/ld+json'>
                 {
                   &quot;@context&quot;: &quot;https://schema.org&quot;,
                   &quot;@type&quot;: &quot;SearchResultsPage&quot;,
@@ -198,8 +229,8 @@
                   &quot;publisher&quot;: {&quot;@id&quot;: &quot;https://www.liputankabarkota.com/#publisher&quot;}
                 }
             </script>
-    </b:if>
-    <b:skin><![CDATA[
+        </b:if>
+        <b:skin><![CDATA[
       :root {
         --lkk-bg: #f3f5f7;
         --lkk-line: #e5e9ef;
@@ -503,872 +534,1064 @@
         .lkk-home-latest-list { grid-template-columns: 1fr; }
       }
 ]]></b:skin>
-    <noscript>
-      <link href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/head.min.css' rel='stylesheet'/>
-    </noscript>
-  </head>
-  <body>
-    <div class='lkk-topbar'>
-      <div class='lkk-container lkk-topbar-inner'>
-        <div class='lkk-topbar-links'>
-          <a href='https://www.liputankabarkota.com/'>Home</a>
-          <a href='https://www.liputankabarkota.com/p/redaksi.html'>Redaksi</a>
-          <a href='https://www.liputankabarkota.com/p/contact.html'>Kontak</a>
+        <noscript>
+            <link
+                href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/head.min.css'
+                rel='stylesheet' />
+        </noscript>
+    </head>
+    <body>
+        <div class='lkk-topbar'>
+            <div class='lkk-container lkk-topbar-inner'>
+                <div class='lkk-topbar-links'>
+                    <a href='https://www.liputankabarkota.com/'>Home</a>
+                    <a href='https://www.liputankabarkota.com/p/redaksi.html'>Redaksi</a>
+                    <a href='https://www.liputankabarkota.com/p/contact.html'>Kontak</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <header class='lkk-site-header lkk-print-site-header'>
-      <div class='lkk-container lkk-header-inner'>
-        <a class='lkk-brand' expr:href='data:blog.homepageUrl' expr:title='data:blog.title'>
-          <img alt='Liputan Kabar Kota - Berita Lokal, Untuk Kita Semua' class='lkk-brand-logo' decoding='async' height='88' loading='eager' src='https://blogger.googleusercontent.com/img/a/AVvXsEjgRVVM0QqVwPxzGs7TIhfD1zDB1vtKwhgoOE2eKKrkFY4dRB5yEGnkau8vl7KXmoWer3u7eBPafATg01FaFIY9ksfR6Rpr06usrk5mJ2FQ6-98c-mm_fvfjoiFHgpEyJQYSFLVstsEL8W1GRsaWVMu8mypCymwSe9yZjTJ7Q0Fyg2708VTDc_x-Qt2gAc=w175' title='Liputan Kabar Kota - Berita Lokal, Untuk Kita Semua' width='175'/>
-        </a>
-        <form action='https://www.liputankabarkota.com/search' aria-label='Cari berita Liputan Kabar Kota' class='lkk-header-search lkk-search-form' method='get' role='search'>
-          <input aria-label='Kata kunci berita' class='lkk-search-input' name='q' placeholder='Cari berita' type='search'/>
-          <button type='submit'>Cari</button>
-        </form>
-      </div>
-      <div class='lkk-nav-bar'>
-        <nav aria-label='Main navigation' class='lkk-container lkk-main-nav'>
-          <a aria-label='Beranda' href='https://www.liputankabarkota.com/'>Beranda</a>
-          <a href='https://www.liputankabarkota.com/#lkk-breaking'>Terkini</a>
-          <a href='https://www.liputankabarkota.com/#lkk-home-latest-heading'>Berita
-            Terbaru</a>
-          <a href='https://www.liputankabarkota.com/search/label/Nasional'>Nasional</a>
-          <a href='https://www.liputankabarkota.com/search/label/Politik'>Politik</a>
-          <a href='https://www.liputankabarkota.com/search/label/Ekonomi'>Ekonomi</a>
-          <a href='https://www.liputankabarkota.com/search/label/Daerah'>Daerah</a>
-          <a href='https://www.liputankabarkota.com/search/label/Pendidikan'>Pendidikan</a>
-          <a href='https://www.liputankabarkota.com/search/label/Teknologi'>Teknologi</a>
-          <a href='https://www.liputankabarkota.com/search/label/Kesehatan'>Kesehatan</a>
-          <a href='https://www.liputankabarkota.com/search/label/Olahraga'>Olahraga</a>
-        </nav>
-      </div>
-    </header>
-    <b:section id='1'/>
-    <div expr:class='data:view.isPost ? &quot;lkk-main-blog lkk-post-page&quot; : &quot;lkk-main-blog&quot;'>
-      <b:section class='berita-utama' id='berita-utama' preferred='yes' showaddelement='no'>
-        <b:widget id='Blog1' locked='true' title='Postingan Blog' type='Blog' version='2' visible='true'>
-          <b:widget-settings>
-            <b:widget-setting name='showDateHeader'>false</b:widget-setting>
-            <b:widget-setting name='commentLabel'>Comment</b:widget-setting>
-            <b:widget-setting name='showShareButtons'>false</b:widget-setting>
-            <b:widget-setting name='showCommentLink'>false</b:widget-setting>
-            <b:widget-setting name='postLocationLabel'>Location:</b:widget-setting>
-            <b:widget-setting name='showAuthor'>true</b:widget-setting>
-            <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-            <b:widget-setting name='timestampLabel'>MMM d, yyyy</b:widget-setting>
-            <b:widget-setting name='reactionsLabel'/>
-            <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
-            <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-            <b:widget-setting name='showLabels'>true</b:widget-setting>
-            <b:widget-setting name='showLocation'>false</b:widget-setting>
-            <b:widget-setting name='postLabelsLabel'/>
-            <b:widget-setting name='showTimestamp'>true</b:widget-setting>
-            <b:widget-setting name='postsPerAd'>1</b:widget-setting>
-            <b:widget-setting name='showBacklinks'>false</b:widget-setting>
-            <b:widget-setting name='showInlineAds'>false</b:widget-setting>
-            <b:widget-setting name='showReactions'>false</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main' var='this'>
-            <main class='lkk-page lkk-container'>
-              <b:if cond='data:view.isHomepage'>
-                <section aria-label='Kabar terkini' class='lkk-breaking' id='lkk-breaking'>
-                  <span class='lkk-breaking-label'>Kabar Terkini</span>
-                  <b:loop index='i' values='data:posts' var='post'>
-                    <b:if cond='data:i == 0'>
-                      <a expr:href='data:post.url'>
-                        <data:post.title/>
-                      </a>
-                    </b:if>
-                  </b:loop>
-                </section>
-                <section aria-label='Berita utama dan berita terbaru' class='lkk-home-top'>
-                  <b:loop index='i' values='data:posts' var='post'>
-                    <b:if cond='data:i == 0'>
-                      <b:include data='post' name='homeLead'/>
-                    </b:if>
-                  </b:loop>
-                  <aside aria-labelledby='lkk-home-latest-heading' class='lkk-home-latest'>
-                    <header class='lkk-section-head'>
-                      <h2 id='lkk-home-latest-heading'>Berita Terbaru</h2>
-                      <a class='lkk-more-link' href='https://www.liputankabarkota.com/search'>Lihat
-                        semua</a>
-                    </header>
-                    <div class='lkk-home-latest-list'>
-                      <b:loop index='i' values='data:posts' var='post'>
-                        <b:if cond='data:i &gt; 0 and data:i &lt; 6'>
-                          <b:include data='post' name='homeMiniCard'/>
-                        </b:if>
-                      </b:loop>
-                    </div>
-                  </aside>
-                </section>
-                <section aria-labelledby='lkk-latest-heading' class='lkk-category-section lkk-home-latest-cards'>
-                  <header class='lkk-section-head'>
-                    <h2 id='lkk-latest-heading'>Pilihan Berita</h2>
-                    <a class='lkk-more-link' href='https://www.liputankabarkota.com/search'>Lihat
-                      semua</a>
-                  </header>
-                  <div class='lkk-news-grid'>
-                    <b:loop index='i' values='data:posts' var='post'>
-                      <b:if cond='data:i &gt; 3 and data:i &lt; 8'>
-                        <b:include data='post' name='postCard'/>
-                      </b:if>
-                    </b:loop>
-                  </div>
-                </section>
-                <nav aria-label='Kategori berita' class='lkk-category-tiles'>
-                  <a href='https://www.liputankabarkota.com/search/label/Nasional'>
-                    <svg aria-hidden='true' class='lkk-category-icon' focusable='false' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                      <path d='M3 9h18L12 4 3 9Zm2 2v7m4-7v7m6-7v7m4-7v7M3 20h18M2 22h20'/>
-                    </svg>
-                    <span>Nasional</span>
-                  </a>
-                  <a href='https://www.liputankabarkota.com/search/label/Politik'>
-                    <svg aria-hidden='true' class='lkk-category-icon' focusable='false' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                      <path d='M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Z'/>
-                      <path d='m8.5 12 2.2 2.2 4.8-4.8'/>
-                    </svg>
-                    <span>Politik</span>
-                  </a>
-                  <a href='https://www.liputankabarkota.com/search/label/Ekonomi'>
-                    <svg aria-hidden='true' class='lkk-category-icon' focusable='false' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                      <path d='M3 20V4m0 16h19'/>
-                      <path d='m6 15 4-4 3 2 6-7m-1 0h4v4'/>
-                    </svg>
-                    <span>Ekonomi</span>
-                  </a>
-                  <a href='https://www.liputankabarkota.com/search/label/Daerah'>
-                    <svg aria-hidden='true' class='lkk-category-icon' focusable='false' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                      <path d='M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z'/>
-                      <circle cx='12' cy='10' r='2.3'/>
-                    </svg>
-                    <span>Daerah</span>
-                  </a>
-                  <a href='https://www.liputankabarkota.com/search/label/Pendidikan'>
-                    <svg aria-hidden='true' class='lkk-category-icon' focusable='false' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                      <path d='m2 9 10-5 10 5-10 5L2 9Z'/>
-                      <path d='M6 11v5c3.5 3 8.5 3 12 0v-5M22 9v6'/>
-                    </svg>
-                    <span>Pendidikan</span>
-                  </a>
-                  <a href='https://www.liputankabarkota.com/search/label/Teknologi'>
-                    <svg aria-hidden='true' class='lkk-category-icon' focusable='false' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                      <rect height='12' rx='2' width='12' x='6' y='6'/>
-                      <path d='M9 9h6v6H9zM9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4'/>
-                    </svg>
-                    <span>Teknologi</span>
-                  </a>
-                  <a href='https://www.liputankabarkota.com/search/label/Kesehatan'>
-                    <svg aria-hidden='true' class='lkk-category-icon' focusable='false' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                      <path d='M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11Z'/>
-                      <path d='M12 9v7m-3.5-3.5h7'/>
-                    </svg>
-                    <span>Kesehatan</span>
-                  </a>
-                  <a href='https://www.liputankabarkota.com/search/label/Olahraga'>
-                    <svg aria-hidden='true' class='lkk-category-icon' focusable='false' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                      <circle cx='12' cy='12' r='9'/>
-                      <path d='m9 3.5 3 3.2-1 4.1-4 1.4-3.5-2m13-5.3-2 3.3 2 3.6 3.8.4M8 20l-.2-4.1 3.2-2.1 4 1.3 1 4'/>
-                    </svg>
-                    <span>Olahraga</span>
-                  </a>
+        <header class='lkk-site-header lkk-print-site-header'>
+            <div class='lkk-container lkk-header-inner'>
+                <a class='lkk-brand' expr:href='data:blog.homepageUrl' expr:title='data:blog.title'>
+                    <img alt='Liputan Kabar Kota - Berita Lokal, Untuk Kita Semua'
+                        class='lkk-brand-logo' decoding='async' height='88' loading='eager'
+                        src='https://blogger.googleusercontent.com/img/a/AVvXsEjgRVVM0QqVwPxzGs7TIhfD1zDB1vtKwhgoOE2eKKrkFY4dRB5yEGnkau8vl7KXmoWer3u7eBPafATg01FaFIY9ksfR6Rpr06usrk5mJ2FQ6-98c-mm_fvfjoiFHgpEyJQYSFLVstsEL8W1GRsaWVMu8mypCymwSe9yZjTJ7Q0Fyg2708VTDc_x-Qt2gAc=w175'
+                        title='Liputan Kabar Kota - Berita Lokal, Untuk Kita Semua' width='175' />
+                </a>
+                <form action='https://www.liputankabarkota.com/search'
+                    aria-label='Cari berita Liputan Kabar Kota'
+                    class='lkk-header-search lkk-search-form' method='get' role='search'>
+                    <input aria-label='Kata kunci berita' class='lkk-search-input' name='q'
+                        placeholder='Cari berita' type='search' />
+                    <button type='submit'>Cari</button>
+                </form>
+            </div>
+            <div class='lkk-nav-bar'>
+                <nav aria-label='Main navigation' class='lkk-container lkk-main-nav'>
+                    <a aria-label='Beranda' href='https://www.liputankabarkota.com/'>Beranda</a>
+                    <a href='https://www.liputankabarkota.com/#lkk-breaking'>Terkini</a>
+                    <a href='https://www.liputankabarkota.com/#lkk-home-latest-heading'>Berita
+                        Terbaru</a>
+                    <a href='https://www.liputankabarkota.com/search/label/Nasional'>Nasional</a>
+                    <a href='https://www.liputankabarkota.com/search/label/Politik'>Politik</a>
+                    <a href='https://www.liputankabarkota.com/search/label/Ekonomi'>Ekonomi</a>
+                    <a href='https://www.liputankabarkota.com/search/label/Daerah'>Daerah</a>
+                    <a href='https://www.liputankabarkota.com/search/label/Pendidikan'>Pendidikan</a>
+                    <a href='https://www.liputankabarkota.com/search/label/Teknologi'>Teknologi</a>
+                    <a href='https://www.liputankabarkota.com/search/label/Kesehatan'>Kesehatan</a>
+                    <a href='https://www.liputankabarkota.com/search/label/Olahraga'>Olahraga</a>
                 </nav>
-                <b:else/>
-                <div class='lkk-archive-layout'>
-                  <div class='lkk-archive-main'>
-                    <b:if cond='not data:view.isSingleItem'>
-                      <header expr:class='data:view.isLabelSearch ? &quot;lkk-archive-head lkk-label-banner&quot; : &quot;lkk-archive-head&quot;'>
-                        <b:if cond='data:view.isLabelSearch'>
-                          <nav aria-label='Breadcrumb' class='lkk-archive-breadcrumb'>
-                            <a href='https://www.liputankabarkota.com/'>
-                              Beranda</a>
-                            <span aria-hidden='true'>/</span>
-                            <span aria-current='page'>
-                              <data:blog.searchLabel/>
+            </div>
+        </header>
+        <b:section id='1' />
+        <div
+            expr:class='data:view.isPost ? &quot;lkk-main-blog lkk-post-page&quot; : &quot;lkk-main-blog&quot;'>
+            <b:section class='berita-utama' id='berita-utama' preferred='yes' showaddelement='no'>
+                <b:widget id='Blog1' locked='true' title='Postingan Blog' type='Blog' version='2'
+                    visible='true'>
+                    <b:widget-settings>
+                        <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+                        <b:widget-setting name='commentLabel'>Comment</b:widget-setting>
+                        <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+                        <b:widget-setting name='showCommentLink'>false</b:widget-setting>
+                        <b:widget-setting name='postLocationLabel'>Location:</b:widget-setting>
+                        <b:widget-setting name='showAuthor'>true</b:widget-setting>
+                        <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+                        <b:widget-setting name='timestampLabel'>MMM d, yyyy</b:widget-setting>
+                        <b:widget-setting name='reactionsLabel' />
+                        <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+                        <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+                        <b:widget-setting name='showLabels'>true</b:widget-setting>
+                        <b:widget-setting name='showLocation'>false</b:widget-setting>
+                        <b:widget-setting name='postLabelsLabel' />
+                        <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+                        <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+                        <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+                        <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+                        <b:widget-setting name='showReactions'>false</b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main' var='this'>
+                        <main class='lkk-page lkk-container'>
+                            <b:if cond='data:view.isHomepage'>
+                                <section aria-label='Kabar terkini' class='lkk-breaking'
+                                    id='lkk-breaking'>
+                                    <span class='lkk-breaking-label'>Kabar Terkini</span>
+                                    <b:loop index='i' values='data:posts' var='post'>
+                                        <b:if cond='data:i == 0'>
+                                            <a expr:href='data:post.url'>
+                                                <data:post.title />
+                                            </a>
+                                        </b:if>
+                                    </b:loop>
+                                </section>
+                                <section aria-label='Berita utama dan berita terbaru'
+                                    class='lkk-home-top'>
+                                    <b:loop index='i' values='data:posts' var='post'>
+                                        <b:if cond='data:i == 0'>
+                                            <b:include data='post' name='homeLead' />
+                                        </b:if>
+                                    </b:loop>
+                                    <aside aria-labelledby='lkk-home-latest-heading'
+                                        class='lkk-home-latest'>
+                                        <header class='lkk-section-head'>
+                                            <h2 id='lkk-home-latest-heading'>Berita Terbaru</h2>
+                                            <a class='lkk-more-link'
+                                                href='https://www.liputankabarkota.com/search'>Lihat
+                                                semua</a>
+                                        </header>
+                                        <div class='lkk-home-latest-list'>
+                                            <b:loop index='i' values='data:posts' var='post'>
+                                                <b:if cond='data:i &gt; 0 and data:i &lt; 6'>
+                                                    <b:include data='post' name='homeMiniCard' />
+                                                </b:if>
+                                            </b:loop>
+                                        </div>
+                                    </aside>
+                                </section>
+                                <section aria-labelledby='lkk-latest-heading'
+                                    class='lkk-category-section lkk-home-latest-cards'>
+                                    <header class='lkk-section-head'>
+                                        <h2 id='lkk-latest-heading'>Pilihan Berita</h2>
+                                        <a class='lkk-more-link'
+                                            href='https://www.liputankabarkota.com/search'>Lihat
+                                            semua</a>
+                                    </header>
+                                    <div class='lkk-news-grid'>
+                                        <b:loop index='i' values='data:posts' var='post'>
+                                            <b:if cond='data:i &gt; 3 and data:i &lt; 8'>
+                                                <b:include data='post' name='postCard' />
+                                            </b:if>
+                                        </b:loop>
+                                    </div>
+                                </section>
+                                <nav aria-label='Kategori berita' class='lkk-category-tiles'>
+                                    <a href='https://www.liputankabarkota.com/search/label/Nasional'>
+                                        <svg aria-hidden='true' class='lkk-category-icon'
+                                            focusable='false' viewBox='0 0 24 24'
+                                            xmlns='http://www.w3.org/2000/svg'>
+                                            <path
+                                                d='M3 9h18L12 4 3 9Zm2 2v7m4-7v7m6-7v7m4-7v7M3 20h18M2 22h20' />
+                                        </svg>
+                                        <span>Nasional</span>
+                                    </a>
+                                    <a href='https://www.liputankabarkota.com/search/label/Politik'>
+                                        <svg aria-hidden='true' class='lkk-category-icon'
+                                            focusable='false' viewBox='0 0 24 24'
+                                            xmlns='http://www.w3.org/2000/svg'>
+                                            <path
+                                                d='M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Z' />
+                                            <path d='m8.5 12 2.2 2.2 4.8-4.8' />
+                                        </svg>
+                                        <span>Politik</span>
+                                    </a>
+                                    <a href='https://www.liputankabarkota.com/search/label/Ekonomi'>
+                                        <svg aria-hidden='true' class='lkk-category-icon'
+                                            focusable='false' viewBox='0 0 24 24'
+                                            xmlns='http://www.w3.org/2000/svg'>
+                                            <path d='M3 20V4m0 16h19' />
+                                            <path d='m6 15 4-4 3 2 6-7m-1 0h4v4' />
+                                        </svg>
+                                        <span>Ekonomi</span>
+                                    </a>
+                                    <a href='https://www.liputankabarkota.com/search/label/Daerah'>
+                                        <svg aria-hidden='true' class='lkk-category-icon'
+                                            focusable='false' viewBox='0 0 24 24'
+                                            xmlns='http://www.w3.org/2000/svg'>
+                                            <path d='M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z' />
+                                            <circle cx='12' cy='10' r='2.3' />
+                                        </svg>
+                                        <span>Daerah</span>
+                                    </a>
+                                    <a
+                                        href='https://www.liputankabarkota.com/search/label/Pendidikan'>
+                                        <svg aria-hidden='true' class='lkk-category-icon'
+                                            focusable='false' viewBox='0 0 24 24'
+                                            xmlns='http://www.w3.org/2000/svg'>
+                                            <path d='m2 9 10-5 10 5-10 5L2 9Z' />
+                                            <path d='M6 11v5c3.5 3 8.5 3 12 0v-5M22 9v6' />
+                                        </svg>
+                                        <span>Pendidikan</span>
+                                    </a>
+                                    <a
+                                        href='https://www.liputankabarkota.com/search/label/Teknologi'>
+                                        <svg aria-hidden='true' class='lkk-category-icon'
+                                            focusable='false' viewBox='0 0 24 24'
+                                            xmlns='http://www.w3.org/2000/svg'>
+                                            <rect height='12' rx='2' width='12' x='6' y='6' />
+                                            <path
+                                                d='M9 9h6v6H9zM9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4' />
+                                        </svg>
+                                        <span>Teknologi</span>
+                                    </a>
+                                    <a
+                                        href='https://www.liputankabarkota.com/search/label/Kesehatan'>
+                                        <svg aria-hidden='true' class='lkk-category-icon'
+                                            focusable='false' viewBox='0 0 24 24'
+                                            xmlns='http://www.w3.org/2000/svg'>
+                                            <path
+                                                d='M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11Z' />
+                                            <path d='M12 9v7m-3.5-3.5h7' />
+                                        </svg>
+                                        <span>Kesehatan</span>
+                                    </a>
+                                    <a href='https://www.liputankabarkota.com/search/label/Olahraga'>
+                                        <svg aria-hidden='true' class='lkk-category-icon'
+                                            focusable='false' viewBox='0 0 24 24'
+                                            xmlns='http://www.w3.org/2000/svg'>
+                                            <circle cx='12' cy='12' r='9' />
+                                            <path
+                                                d='m9 3.5 3 3.2-1 4.1-4 1.4-3.5-2m13-5.3-2 3.3 2 3.6 3.8.4M8 20l-.2-4.1 3.2-2.1 4 1.3 1 4' />
+                                        </svg>
+                                        <span>Olahraga</span>
+                                    </a>
+                                </nav>
+                                <b:else />
+                                <div class='lkk-archive-layout'>
+                                    <div class='lkk-archive-main'>
+                                        <b:if cond='not data:view.isSingleItem'>
+                                            <header
+                                                expr:class='data:view.isLabelSearch ? &quot;lkk-archive-head lkk-label-banner&quot; : &quot;lkk-archive-head&quot;'>
+                                                <b:if cond='data:view.isLabelSearch'>
+                                                    <nav aria-label='Breadcrumb'
+                                                        class='lkk-archive-breadcrumb'>
+                                                        <a href='https://www.liputankabarkota.com/'>
+                                                            Beranda</a>
+                                                        <span aria-hidden='true'>/</span>
+                                                        <span aria-current='page'>
+                                                            <data:blog.searchLabel />
+                                                        </span>
+                                                    </nav>
+                                                    <p class='lkk-page-eyebrow'>Jelajahi kategori</p>
+                                                    <h1>
+                                                        <data:blog.searchLabel />
+                                                    </h1>
+                                                    <p class='lkk-archive-description'> Kumpulan
+                                                        berita <data:blog.searchLabel /> terbaru
+                                                        dari Liputan Kabar Kota. </p>
+                                                    <b:elseif cond='data:view.isSearch' />
+                                                    <p class='lkk-page-eyebrow'>Hasil pencarian</p>
+                                                    <h1>
+                                                        <data:view.title />
+                                                    </h1>
+                                                    <b:else />
+                                                    <h1>
+                                                        <data:view.title />
+                                                    </h1>
+                                                </b:if>
+                                            </header>
+                                        </b:if>
+                                        <div
+                                            expr:class='data:view.isPost ? &quot;lkk-archive-grid blog-posts hfeed lkk-single-post&quot; : &quot;lkk-archive-grid blog-posts hfeed&quot;'>
+                                            <b:loop index='i' values='data:posts' var='post'>
+                                                <b:include data='post' name='postCommentsAndAd' />
+                                            </b:loop>
+                                        </div>
+                                    </div>
+                                    <aside aria-label='Berita terkini dan informasi'
+                                        class='lkk-archive-sidebar'>
+                                        <div class='lkk-sidebar-panel'>
+                                            <img alt='Legal Advisor Liputan Kabar Kota'
+                                                class='lkk-sidebar-banner' decoding='async'
+                                                height='400' loading='lazy'
+                                                src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB9o_kAvat40yaG7z7nuLoLFI-uT5md7FNC10oq2ZonsH2MyTK6m1bly8qj6k9kscYv906sgm6QkvMPLDk4YU5M0xGX8xPCOYamjLIjrEXesTu-_7ZUtB-IKmKCx2WYQvgVDotkxuxAQ6L6HYHrX76Uy-DGHXN2LTTfHg_9v7SsBDrcmtF37ekwO_v2Os/s400/legal-danes.jpg'
+                                                title='Legal Advisor Liputan Kabar Kota' width='266' />
+                                        </div>
+                                        <div class='lkk-sidebar-panel'>
+                                            <img alt='Informasi Liputan Kabar Kota'
+                                                class='lkk-sidebar-banner' decoding='async'
+                                                height='320' loading='lazy'
+                                                src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxRSauF_0RxmPaK-_7bBT8uxAkm2dDODP_Wwh7eA2_zCUNPa9TNmIOjvP11HBimYUynKZ_HYhYzL5LwPQZPA_2ZIwVe4FAI06GlZwQ5wjrHjLIz06BAbI-XXzUna61Teftl8PyLt9Q8qY6t0SH2ofpEvtdNmIEQxQ3WcTfTLkUHNJAYr0mgoej4FHUmBE/s400/WhatsApp%20Image%202026-11-02%20at%2018.55.07.jpeg'
+                                                title='Informasi Liputan Kabar Kota' width='400' />
+                                        </div>
+                                    </aside>
+                                </div>
+                            </b:if>
+                            <b:include cond='not data:view.isHomepage and data:view.isMultipleItems'
+                                name='postPagination' />
+                            <b:include cond='not data:view.isHomepage' name='feedLinks' />
+                        </main>
+                    </b:includable>
+                    <b:includable id='aboutPostAuthor'>
+                        <div class='author-name'>
+                            <a class='g-profile' expr:href='data:post.author.profileUrl'
+                                rel='author' title='author profile'>
+                                <span>
+                                    <data:post.author.name />
+                                </span>
+                            </a>
+                        </div>
+                        <div>
+                            <span class='author-desc'>
+                                <data:post.author.aboutMe />
                             </span>
-                          </nav>
-                          <p class='lkk-page-eyebrow'>Jelajahi kategori</p>
-                          <h1>
-                            <data:blog.searchLabel/>
-                          </h1>
-                          <p class='lkk-archive-description'> Kumpulan berita <data:blog.searchLabel/>
-                            terbaru dari Liputan Kabar Kota. </p>
-                          <b:elseif cond='data:view.isSearch'/>
-                          <p class='lkk-page-eyebrow'>Hasil pencarian</p>
-                          <h1>
-                            <data:view.title/>
-                          </h1>
-                          <b:else/>
-                          <h1>
-                            <data:view.title/>
-                          </h1>
+                        </div>
+                    </b:includable>
+                    <b:includable id='addComments'>
+                        <a expr:href='data:post.commentsUrl'>
+                            <b:message name='messages.postAComment' />
+                        </a>
+                    </b:includable>
+                    <b:includable id='blogThisShare'>
+                        <b:include name='platformShare' />
+                    </b:includable>
+                    <b:includable id='bylineByName' var='byline'>
+                        <b:switch var='data:byline.name'>
+                            <b:case value='share' />
+                            <b:include cond='data:post.shareUrl' name='postShareButtons' />
+                            <b:case value='comments' />
+                            <b:include cond='data:post.allowComments' name='postCommentsLink' />
+                            <b:case value='location' />
+                            <b:include cond='data:post.location' name='postLocation' />
+                            <b:case value='timestamp' />
+                            <b:include cond='not data:view.isPage' name='postTimestamp' />
+                            <b:case value='author' />
+                            <b:include name='postAuthor' />
+                            <b:case value='labels' />
+                            <b:include cond='data:post.labels' name='postLabels' />
+                            <b:case value='icons' />
+                            <b:include cond='data:post.emailPostUrl' name='emailPostIcon' />
+                        </b:switch>
+                    </b:includable>
+                    <b:includable id='bylineRegion' var='regionItems'>
+                        <b:loop values='data:regionItems' var='byline'>
+                            <b:include data='byline' name='bylineByName' />
+                        </b:loop>
+                    </b:includable>
+                    <b:includable id='commentAuthorAvatar'>
+                        <div class='avatar-image-container'>
+                            <img alt='Foto profil pengomentar' class='author-avatar'
+                                decoding='async' expr:src='data:comment.authorAvatarSrc' height='35'
+                                loading='lazy' title='Foto profil pengomentar' width='35' />
+                        </div>
+                    </b:includable>
+                    <b:includable id='commentDeleteIcon' var='comment'>
+                        <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
+                            <b:if cond='data:showCmtPopup'>
+                                <div class='goog-toggle-button'>
+                                    <div class='goog-inline-block comment-action-icon' />
+                                </div>
+                                <b:else />
+                                <a class='comment-delete' expr:href='data:comment.deleteUrl'
+                                    expr:title='data:messages.deleteComment'>
+                                    <img alt='' decoding='async' loading='lazy'
+                                        src='https://resources.blogblog.com/img/icon_delete13.gif' />
+                                </a>
+                            </b:if>
+                        </span>
+                    </b:includable>
+                    <b:includable id='commentForm' var='post'>
+                        <div class='comment-form'>
+                            <a name='comment-form' />
+                            <h4 id='comment-post-message'>
+                                <data:messages.postAComment />
+                            </h4>
+                            <b:if cond='data:this.messages.blogComment != &quot;&quot;'>
+                                <p>
+                                    <data:this.messages.blogComment />
+                                </p>
+                            </b:if>
+                            <b:include data='post' name='commentFormIframeSrc' />
+                            <iframe allowtransparency='allowtransparency'
+                                class='blogger-iframe-colorize blogger-comment-from-post'
+                                expr:height='data:cmtIframeInitialHeight ?: &quot;90px&quot;'
+                                frameborder='0' id='comment-editor' name='comment-editor' src=''
+                                width='100%' />
+                            <data:post.cmtfpIframe />
+                        </div>
+                    </b:includable>
+                    <b:includable id='commentFormIframeSrc' var='post'>
+                        <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src' />
+                    </b:includable>
+                    <b:includable id='commentItem' var='comment'>
+                        <div class='comment' expr:id='&quot;c&quot; + data:comment.id'>
+                            <b:include cond='data:blog.enabledCommentProfileImages'
+                                name='commentAuthorAvatar' />
+
+                            <div class='comment-block'>
+                                <div class='comment-author'>
+                                    <b:if cond='data:comment.authorUrl'>
+                                        <b:message name='messages.authorSaidWithLink'>
+                                            <b:param expr:value='data:comment.author'
+                                                name='authorName' />
+                                            <b:param expr:value='data:comment.authorUrl'
+                                                name='authorUrl' />
+                                        </b:message>
+                                        <b:else />
+                                        <b:message name='messages.authorSaid'>
+                                            <b:param expr:value='data:comment.author'
+                                                name='authorName' />
+                                        </b:message>
+                                    </b:if>
+                                </div>
+                                <div
+                                    expr:class='&quot;comment-body&quot; + (data:comment.isDeleted ? &quot; deleted&quot; : &quot;&quot;)'>
+                                    <data:comment.body />
+                                </div>
+                                <div class='comment-footer'>
+                                    <span class='comment-timestamp'>
+                                        <a expr:href='data:comment.url' title='comment permalink'>
+                                            <data:comment.timestamp />
+                                        </a>
+                                        <b:include data='comment' name='commentDeleteIcon' />
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </b:includable>
+                    <b:includable id='commentList' var='comments'>
+                        <div id='comments-block'>
+                            <b:loop values='data:comments' var='comment'>
+                                <b:include data='comment' name='commentItem' />
+                            </b:loop>
+                        </div>
+                    </b:includable>
+                    <b:includable id='commentPicker' var='post'>
+                        <b:if cond='data:post.showThreadedComments'>
+                            <b:include data='post' name='threadedComments' />
+                            <b:else />
+                            <b:include data='post' name='comments' />
                         </b:if>
-                      </header>
-                    </b:if>
-                    <div expr:class='data:view.isPost ? &quot;lkk-archive-grid blog-posts hfeed lkk-single-post&quot; : &quot;lkk-archive-grid blog-posts hfeed&quot;'>
-                      <b:loop index='i' values='data:posts' var='post'>
-                        <b:include data='post' name='postCommentsAndAd'/>
-                      </b:loop>
-                    </div>
-                  </div>
-                  <aside aria-label='Berita terkini dan informasi' class='lkk-archive-sidebar'>
-                    <div class='lkk-sidebar-panel'>
-                      <img alt='Legal Advisor Liputan Kabar Kota' class='lkk-sidebar-banner' decoding='async' height='400' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB9o_kAvat40yaG7z7nuLoLFI-uT5md7FNC10oq2ZonsH2MyTK6m1bly8qj6k9kscYv906sgm6QkvMPLDk4YU5M0xGX8xPCOYamjLIjrEXesTu-_7ZUtB-IKmKCx2WYQvgVDotkxuxAQ6L6HYHrX76Uy-DGHXN2LTTfHg_9v7SsBDrcmtF37ekwO_v2Os/s400/legal-danes.jpg' title='Legal Advisor Liputan Kabar Kota' width='266'/>
-                    </div>
-                    <div class='lkk-sidebar-panel'>
-                      <img alt='Informasi Liputan Kabar Kota' class='lkk-sidebar-banner' decoding='async' height='320' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxRSauF_0RxmPaK-_7bBT8uxAkm2dDODP_Wwh7eA2_zCUNPa9TNmIOjvP11HBimYUynKZ_HYhYzL5LwPQZPA_2ZIwVe4FAI06GlZwQ5wjrHjLIz06BAbI-XXzUna61Teftl8PyLt9Q8qY6t0SH2ofpEvtdNmIEQxQ3WcTfTLkUHNJAYr0mgoej4FHUmBE/s400/WhatsApp%20Image%202026-11-02%20at%2018.55.07.jpeg' title='Informasi Liputan Kabar Kota' width='400'/>
-                    </div>
-                  </aside>
-                </div>
-              </b:if>
-              <b:include cond='not data:view.isHomepage and data:view.isMultipleItems' name='postPagination'/>
-              <b:include cond='not data:view.isHomepage' name='feedLinks'/>
-            </main>
-          </b:includable>
-          <b:includable id='aboutPostAuthor'>
-            <div class='author-name'>
-              <a class='g-profile' expr:href='data:post.author.profileUrl' rel='author' title='author profile'>
-                <span>
-                  <data:post.author.name/>
-                </span>
-              </a>
-            </div>
-            <div>
-              <span class='author-desc'>
-                <data:post.author.aboutMe/>
-              </span>
-            </div>
-          </b:includable>
-          <b:includable id='addComments'>
-            <a expr:href='data:post.commentsUrl'>
-              <b:message name='messages.postAComment'/>
-            </a>
-          </b:includable>
-          <b:includable id='blogThisShare'>
-            <b:include name='platformShare'/>
-          </b:includable>
-          <b:includable id='bylineByName' var='byline'>
-            <b:switch var='data:byline.name'>
-              <b:case value='share'/>
-              <b:include cond='data:post.shareUrl' name='postShareButtons'/>
-              <b:case value='comments'/>
-              <b:include cond='data:post.allowComments' name='postCommentsLink'/>
-              <b:case value='location'/>
-              <b:include cond='data:post.location' name='postLocation'/>
-              <b:case value='timestamp'/>
-              <b:include cond='not data:view.isPage' name='postTimestamp'/>
-              <b:case value='author'/>
-              <b:include name='postAuthor'/>
-              <b:case value='labels'/>
-              <b:include cond='data:post.labels' name='postLabels'/>
-              <b:case value='icons'/>
-              <b:include cond='data:post.emailPostUrl' name='emailPostIcon'/>
-            </b:switch>
-          </b:includable>
-          <b:includable id='bylineRegion' var='regionItems'>
-            <b:loop values='data:regionItems' var='byline'>
-              <b:include data='byline' name='bylineByName'/>
-            </b:loop>
-          </b:includable>
-          <b:includable id='commentAuthorAvatar'>
-            <div class='avatar-image-container'>
-              <img alt='Foto profil pengomentar' class='author-avatar' decoding='async' expr:src='data:comment.authorAvatarSrc' height='35' loading='lazy' title='Foto profil pengomentar' width='35'/>
-            </div>
-          </b:includable>
-          <b:includable id='commentDeleteIcon' var='comment'>
-            <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
-              <b:if cond='data:showCmtPopup'>
-                <div class='goog-toggle-button'>
-                  <div class='goog-inline-block comment-action-icon'/>
-                </div>
-                <b:else/>
-                <a class='comment-delete' expr:href='data:comment.deleteUrl' expr:title='data:messages.deleteComment'>
-                  <img alt='' decoding='async' loading='lazy' src='https://resources.blogblog.com/img/icon_delete13.gif'/>
-                </a>
-              </b:if>
-            </span>
-          </b:includable>
-          <b:includable id='commentForm' var='post'>
-            <div class='comment-form'>
-              <a name='comment-form'/>
-              <h4 id='comment-post-message'>
-                <data:messages.postAComment/>
-              </h4>
-              <b:if cond='data:this.messages.blogComment != &quot;&quot;'>
-                <p>
-                  <data:this.messages.blogComment/>
-                </p>
-              </b:if>
-              <b:include data='post' name='commentFormIframeSrc'/>
-              <iframe allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight ?: &quot;90px&quot;' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
-              <data:post.cmtfpIframe/>
-            </div>
-          </b:includable>
-          <b:includable id='commentFormIframeSrc' var='post'>
-            <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-          </b:includable>
-          <b:includable id='commentItem' var='comment'>
-            <div class='comment' expr:id='&quot;c&quot; + data:comment.id'>
-              <b:include cond='data:blog.enabledCommentProfileImages' name='commentAuthorAvatar'/>
+                    </b:includable>
+                    <b:includable id='comments' var='post'>
+                        <section
+                            expr:class='&quot;comments&quot; + (data:post.embedCommentForm ? &quot; embed&quot; : &quot;&quot;)'
+                            expr:data-num-comments='data:post.numberOfComments' id='comments'>
+                            <a name='comments' />
+                            <b:if cond='data:post.allowComments'>
 
-              <div class='comment-block'>
-                <div class='comment-author'>
-                  <b:if cond='data:comment.authorUrl'>
-                    <b:message name='messages.authorSaidWithLink'>
-                      <b:param expr:value='data:comment.author' name='authorName'/>
-                      <b:param expr:value='data:comment.authorUrl' name='authorUrl'/>
-                    </b:message>
-                    <b:else/>
-                    <b:message name='messages.authorSaid'>
-                      <b:param expr:value='data:comment.author' name='authorName'/>
-                    </b:message>
-                  </b:if>
-                </div>
-                <div expr:class='&quot;comment-body&quot; + (data:comment.isDeleted ? &quot; deleted&quot; : &quot;&quot;)'>
-                  <data:comment.body/>
-                </div>
-                <div class='comment-footer'>
-                  <span class='comment-timestamp'>
-                    <a expr:href='data:comment.url' title='comment permalink'>
-                      <data:comment.timestamp/>
-                    </a>
-                    <b:include data='comment' name='commentDeleteIcon'/>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </b:includable>
-          <b:includable id='commentList' var='comments'>
-            <div id='comments-block'>
-              <b:loop values='data:comments' var='comment'>
-                <b:include data='comment' name='commentItem'/>
-              </b:loop>
-            </div>
-          </b:includable>
-          <b:includable id='commentPicker' var='post'>
-            <b:if cond='data:post.showThreadedComments'>
-              <b:include data='post' name='threadedComments'/>
-              <b:else/>
-              <b:include data='post' name='comments'/>
-            </b:if>
-          </b:includable>
-          <b:includable id='comments' var='post'>
-            <section expr:class='&quot;comments&quot; + (data:post.embedCommentForm ? &quot; embed&quot; : &quot;&quot;)' expr:data-num-comments='data:post.numberOfComments' id='comments'>
-              <a name='comments'/>
-              <b:if cond='data:post.allowComments'>
+                                <b:include name='commentsTitle' />
 
-                <b:include name='commentsTitle'/>
+                                <div
+                                    expr:id='data:widget.instanceId + &quot;_comments-block-wrapper&quot;'>
+                                    <b:include cond='data:post.comments' data='post.comments'
+                                        name='commentList' />
+                                </div>
 
-                <div expr:id='data:widget.instanceId + &quot;_comments-block-wrapper&quot;'>
-                  <b:include cond='data:post.comments' data='post.comments' name='commentList'/>
-                </div>
+                                <b:if cond='data:post.commentPagingRequired'>
+                                    <div class='paging-control-container'>
+                                        <b:if cond='data:post.hasOlderLinks'>
+                                            <a expr:class='data:post.oldLinkClass'
+                                                expr:href='data:post.oldestLinkUrl'>
+                                                <data:messages.oldest />
+                                            </a>
+                                            <a expr:class='data:post.oldLinkClass'
+                                                expr:href='data:post.olderLinkUrl'>
+                                                <data:messages.older />
+                                            </a>
+                                        </b:if>
 
-                <b:if cond='data:post.commentPagingRequired'>
-                  <div class='paging-control-container'>
-                    <b:if cond='data:post.hasOlderLinks'>
-                      <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'>
-                        <data:messages.oldest/>
-                      </a>
-                      <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
-                        <data:messages.older/>
-                      </a>
-                    </b:if>
+                                        <span class='comment-range-text'>
+                                            <data:post.commentRangeText />
+                                        </span>
 
-                    <span class='comment-range-text'>
-                      <data:post.commentRangeText/>
-                    </span>
+                                        <b:if cond='data:post.hasNewerLinks'>
+                                            <a expr:class='data:post.newLinkClass'
+                                                expr:href='data:post.newerLinkUrl'>
+                                                <data:messages.newer />
+                                            </a>
+                                            <a expr:class='data:post.newLinkClass'
+                                                expr:href='data:post.newestLinkUrl'>
+                                                <data:messages.newest />
+                                            </a>
+                                        </b:if>
+                                    </div>
+                                </b:if>
 
-                    <b:if cond='data:post.hasNewerLinks'>
-                      <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
-                        <data:messages.newer/>
-                      </a>
-                      <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
-                        <data:messages.newest/>
-                      </a>
-                    </b:if>
-                  </div>
-                </b:if>
-
-                <div class='footer'>
-                  <b:if cond='data:post.embedCommentForm'>
-                    <b:if cond='data:post.allowNewComments'>
-                      <b:include data='post' name='commentForm'/>
-                      <b:else/>
-                      <data:post.noNewCommentsText/>
-                    </b:if>
-                    <b:else/>
-                    <b:if cond='data:post.allowComments'>
-                      <b:include data='post' name='addComments'/>
-                    </b:if>
-                  </b:if>
-                </div>
-              </b:if>
-              <b:if cond='data:showCmtPopup'>
-                <div id='comment-popup'>
-                  <iframe allowtransparency='allowtransparency' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
-                  </iframe>
-                </div>
-              </b:if>
-            </section>
-          </b:includable>
-          <b:includable id='commentsLink'>
-            <a class='comment-link' expr:href='data:post.commentsUrl'>
-              <b:if cond='data:post.numberOfComments &gt; 0'>
-                <b:message name='messages.numberOfComments'>
-                  <b:param expr:value='data:post.numberOfComments' name='numComments'/>
-                </b:message>
-                <b:else/>
-                <data:messages.postAComment/>
-              </b:if>
-            </a>
-          </b:includable>
-          <b:includable id='commentsLinkIframe'>
-            <!-- G+ comments, no longer available. The includable is retained for
+                                <div class='footer'>
+                                    <b:if cond='data:post.embedCommentForm'>
+                                        <b:if cond='data:post.allowNewComments'>
+                                            <b:include data='post' name='commentForm' />
+                                            <b:else />
+                                            <data:post.noNewCommentsText />
+                                        </b:if>
+                                        <b:else />
+                                        <b:if cond='data:post.allowComments'>
+                                            <b:include data='post' name='addComments' />
+                                        </b:if>
+                                    </b:if>
+                                </div>
+                            </b:if>
+                            <b:if cond='data:showCmtPopup'>
+                                <div id='comment-popup'>
+                                    <iframe allowtransparency='allowtransparency' frameborder='0'
+                                        id='comment-actions' name='comment-actions' scrolling='no'>
+                                    </iframe>
+                                </div>
+                            </b:if>
+                        </section>
+                    </b:includable>
+                    <b:includable id='commentsLink'>
+                        <a class='comment-link' expr:href='data:post.commentsUrl'>
+                            <b:if cond='data:post.numberOfComments &gt; 0'>
+                                <b:message name='messages.numberOfComments'>
+                                    <b:param expr:value='data:post.numberOfComments'
+                                        name='numComments' />
+                                </b:message>
+                                <b:else />
+                                <data:messages.postAComment />
+                            </b:if>
+                        </a>
+                    </b:includable>
+                    <b:includable id='commentsLinkIframe'>
+                        <!-- G+ comments, no longer available. The includable is retained for
                         backwards-compatibility. -->
-          </b:includable>
-          <b:includable id='emailPostIcon'>
-            <span class='byline post-icons'>
-              <!-- email post links -->
-              <span class='item-action'>
-                <a expr:href='data:post.emailPostUrl' expr:title='data:messages.emailPost'>
-                  <b:include data='{ iconClass: &quot;touch-icon sharing-icon&quot; }' name='emailIcon'/>
-                </a>
-              </span>
-            </span>
-          </b:includable>
-          <b:includable id='facebookShare'>
-            <b:include name='platformShare'/>
-          </b:includable>
-          <b:includable id='feedLinks'>
-            <b:if cond='!data:view.isPost'> <!-- Blog feed links -->
-              <b:if cond='data:feedLinks'>
-                <div class='blog-feeds'>
-                  <b:include data='feedLinks' name='feedLinksBody'/>
-                </div>
-              </b:if>
-              <b:else/> <!--Post
+                    </b:includable>
+                    <b:includable id='emailPostIcon'>
+                        <span class='byline post-icons'>
+                            <!-- email post links -->
+                            <span class='item-action'>
+                                <a expr:href='data:post.emailPostUrl'
+                                    expr:title='data:messages.emailPost'>
+                                    <b:include
+                                        data='{ iconClass: &quot;touch-icon sharing-icon&quot; }'
+                                        name='emailIcon' />
+                                </a>
+                            </span>
+                        </span>
+                    </b:includable>
+                    <b:includable id='facebookShare'>
+                        <b:include name='platformShare' />
+                    </b:includable>
+                    <b:includable id='feedLinks'>
+                        <b:if cond='!data:view.isPost'> <!-- Blog feed links -->
+                            <b:if cond='data:feedLinks'>
+                                <div class='blog-feeds'>
+                                    <b:include data='feedLinks' name='feedLinksBody' />
+                                </div>
+                            </b:if>
+                            <b:else /> <!--Post
                             feed links -->
-              <div class='post-feeds'>
-                <b:loop values='data:posts' var='post'>
-                  <b:if cond='data:post.allowComments and data:post.feedLinks'>
-                    <b:include data='post.feedLinks' name='feedLinksBody'/>
-                  </b:if>
-                </b:loop>
-              </div>
-            </b:if>
-          </b:includable>
-          <b:includable id='feedLinksBody' var='links'>
-            <div class='feed-links'>
-              <data:messages.subscribeTo/>
-              <b:loop values='data:links' var='f'>
-                <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'><data:f.name/> (<data:f.feedType/> )</a>
-              </b:loop>
-            </div>
-          </b:includable>
-          <b:includable id='footerBylines'>
-            <b:if cond='data:widgets.Blog.first.footerBylines'>
-              <b:loop index='i' values='data:widgets.Blog.first.footerBylines' var='region'>
-                <b:if cond='not data:region.items.empty'>
-                  <div expr:class='&quot;post-footer-line post-footer-line-&quot; + (data:i + 1)'>
-                    <b:with value='&quot;footer-&quot; + (data:i + 1)' var='regionName'>
-                      <b:include data='region.items' name='bylineRegion'/>
-                    </b:with>
-                  </div>
-                </b:if>
-              </b:loop>
-            </b:if>
-          </b:includable>
-          <b:includable id='googlePlusShare'>
-          </b:includable>
-          <b:includable id='headerByline'>
-            <b:if cond='data:widgets.Blog.first.headerByline'>
-              <div class='post-header'>
-                <div class='post-header-line-1'>
-                  <b:with value='&quot;header-1&quot;' var='regionName'>
-                    <b:include data='data:widgets.Blog.first.headerByline.items' name='bylineRegion'/>
-                  </b:with>
-                </div>
-              </div>
-            </b:if>
-          </b:includable>
-          <b:includable id='homeLead' var='post'>
-            <article class='lkk-home-lead lkk-home-feature'>
+                            <div class='post-feeds'>
+                                <b:loop values='data:posts' var='post'>
+                                    <b:if cond='data:post.allowComments and data:post.feedLinks'>
+                                        <b:include data='post.feedLinks' name='feedLinksBody' />
+                                    </b:if>
+                                </b:loop>
+                            </div>
+                        </b:if>
+                    </b:includable>
+                    <b:includable id='feedLinksBody' var='links'>
+                        <div class='feed-links'>
+                            <data:messages.subscribeTo />
+                            <b:loop values='data:links' var='f'>
+                                <a class='feed-link' expr:href='data:f.url'
+                                    expr:type='data:f.mimeType' target='_blank'><data:f.name /> (<data:f.feedType />
+                                    )</a>
+                            </b:loop>
+                        </div>
+                    </b:includable>
+                    <b:includable id='footerBylines'>
+                        <b:if cond='data:widgets.Blog.first.footerBylines'>
+                            <b:loop index='i' values='data:widgets.Blog.first.footerBylines'
+                                var='region'>
+                                <b:if cond='not data:region.items.empty'>
+                                    <div
+                                        expr:class='&quot;post-footer-line post-footer-line-&quot; + (data:i + 1)'>
+                                        <b:with value='&quot;footer-&quot; + (data:i + 1)'
+                                            var='regionName'>
+                                            <b:include data='region.items' name='bylineRegion' />
+                                        </b:with>
+                                    </div>
+                                </b:if>
+                            </b:loop>
+                        </b:if>
+                    </b:includable>
+                    <b:includable id='googlePlusShare'>
+                    </b:includable>
+                    <b:includable id='headerByline'>
+                        <b:if cond='data:widgets.Blog.first.headerByline'>
+                            <div class='post-header'>
+                                <div class='post-header-line-1'>
+                                    <b:with value='&quot;header-1&quot;' var='regionName'>
+                                        <b:include data='data:widgets.Blog.first.headerByline.items'
+                                            name='bylineRegion' />
+                                    </b:with>
+                                </div>
+                            </div>
+                        </b:if>
+                    </b:includable>
+                    <b:includable id='homeLead' var='post'>
+                        <article class='lkk-home-lead lkk-home-feature'>
 
-              <div class='lkk-home-lead-media'>
-                <img alt='Liputan Kabar Kota - Media Informasi Indonesia' class='lkk-home-lead-image' decoding='async' fetchpriority='high' height='450' loading='eager' sizes='(max-width: 700px) 100vw, (max-width: 1200px) 58vw, 700px' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHDfm5N68Q63_zjKBTYI6GprMuCZp8LaHAfl2u4ji5bxsowmg3lWpjHdUELhVzIIKWW4slwweFmnaRo-YNUmMFjNBMZxKwujmgMuuDG5NhW6szwj7l-Vq5sqiJX4LW75wekdtoOXImbBinZYHxkSdYP77O8juERdiS2oJQIQFWKT9o81mtzUzL5fNBYZU/w800-h450-p-k-no-nu/Liputan%20KabarKota_%20Indonesia%20Connected%20(1).png' srcset='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHDfm5N68Q63_zjKBTYI6GprMuCZp8LaHAfl2u4ji5bxsowmg3lWpjHdUELhVzIIKWW4slwweFmnaRo-YNUmMFjNBMZxKwujmgMuuDG5NhW6szwj7l-Vq5sqiJX4LW75wekdtoOXImbBinZYHxkSdYP77O8juERdiS2oJQIQFWKT9o81mtzUzL5fNBYZU/w480-h270-p-k-no-nu/Liputan%20KabarKota_%20Indonesia%20Connected%20(1).png 480w, https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHDfm5N68Q63_zjKBTYI6GprMuCZp8LaHAfl2u4ji5bxsowmg3lWpjHdUELhVzIIKWW4slwweFmnaRo-YNUmMFjNBMZxKwujmgMuuDG5NhW6szwj7l-Vq5sqiJX4LW75wekdtoOXImbBinZYHxkSdYP77O8juERdiS2oJQIQFWKT9o81mtzUzL5fNBYZU/w800-h450-p-k-no-nu/Liputan%20KabarKota_%20Indonesia%20Connected%20(1).png 800w, https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHDfm5N68Q63_zjKBTYI6GprMuCZp8LaHAfl2u4ji5bxsowmg3lWpjHdUELhVzIIKWW4slwweFmnaRo-YNUmMFjNBMZxKwujmgMuuDG5NhW6szwj7l-Vq5sqiJX4LW75wekdtoOXImbBinZYHxkSdYP77O8juERdiS2oJQIQFWKT9o81mtzUzL5fNBYZU/w1200-h675-p-k-no-nu/Liputan%20KabarKota_%20Indonesia%20Connected%20(1).png 1200w' title='Liputan Kabar Kota - Media Informasi Indonesia' width='800'/>
-              </div>
+                            <div class='lkk-home-lead-media'>
+                                <img alt='Liputan Kabar Kota - Media Informasi Indonesia'
+                                    class='lkk-home-lead-image' decoding='async'
+                                    fetchpriority='high' height='450' loading='eager'
+                                    sizes='(max-width: 700px) 100vw, (max-width: 1200px) 58vw, 700px'
+                                    src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHDfm5N68Q63_zjKBTYI6GprMuCZp8LaHAfl2u4ji5bxsowmg3lWpjHdUELhVzIIKWW4slwweFmnaRo-YNUmMFjNBMZxKwujmgMuuDG5NhW6szwj7l-Vq5sqiJX4LW75wekdtoOXImbBinZYHxkSdYP77O8juERdiS2oJQIQFWKT9o81mtzUzL5fNBYZU/w800-h450-p-k-no-nu/Liputan%20KabarKota_%20Indonesia%20Connected%20(1).png'
+                                    srcset='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHDfm5N68Q63_zjKBTYI6GprMuCZp8LaHAfl2u4ji5bxsowmg3lWpjHdUELhVzIIKWW4slwweFmnaRo-YNUmMFjNBMZxKwujmgMuuDG5NhW6szwj7l-Vq5sqiJX4LW75wekdtoOXImbBinZYHxkSdYP77O8juERdiS2oJQIQFWKT9o81mtzUzL5fNBYZU/w480-h270-p-k-no-nu/Liputan%20KabarKota_%20Indonesia%20Connected%20(1).png 480w, https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHDfm5N68Q63_zjKBTYI6GprMuCZp8LaHAfl2u4ji5bxsowmg3lWpjHdUELhVzIIKWW4slwweFmnaRo-YNUmMFjNBMZxKwujmgMuuDG5NhW6szwj7l-Vq5sqiJX4LW75wekdtoOXImbBinZYHxkSdYP77O8juERdiS2oJQIQFWKT9o81mtzUzL5fNBYZU/w800-h450-p-k-no-nu/Liputan%20KabarKota_%20Indonesia%20Connected%20(1).png 800w, https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHDfm5N68Q63_zjKBTYI6GprMuCZp8LaHAfl2u4ji5bxsowmg3lWpjHdUELhVzIIKWW4slwweFmnaRo-YNUmMFjNBMZxKwujmgMuuDG5NhW6szwj7l-Vq5sqiJX4LW75wekdtoOXImbBinZYHxkSdYP77O8juERdiS2oJQIQFWKT9o81mtzUzL5fNBYZU/w1200-h675-p-k-no-nu/Liputan%20KabarKota_%20Indonesia%20Connected%20(1).png 1200w'
+                                    title='Liputan Kabar Kota - Media Informasi Indonesia'
+                                    width='800' />
+                            </div>
 
-              <div class='lkk-home-lead-copy'>
+                            <div class='lkk-home-lead-copy'>
 
-                <span class='lkk-home-lead-kicker'>
-                  Informasi aktual, akurat, dan berimbang
-                </span>
+                                <span class='lkk-home-lead-kicker'>
+                                    Informasi aktual, akurat, dan berimbang
+                                </span>
 
-                <h1 class='lkk-home-lead-title'>
-                  Liputan Kabar Kota
-                </h1>
+                                <h1 class='lkk-home-lead-title'>
+                                    Liputan Kabar Kota
+                                </h1>
 
-              </div>
+                            </div>
 
-            </article>
-          </b:includable>
-          <b:includable id='homeMiniCard' var='post'>
-            <article class='lkk-mini-card'>
-              <a class='lkk-mini-card-media' expr:href='data:post.url'>
-                <b:if cond='data:post.featuredImage'>
-                  <img
-                    decoding='async'
-                    expr:alt='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
-                    expr:src='resizeImage(data:post.featuredImage, 220, &quot;220:132&quot;)'
-                    expr:title='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
-                    height='132'
-                    loading='lazy'
-                    width='220'/>
-                  <b:else/>
-                  <span class='lkk-mini-card-placeholder'>LKK</span>
-                </b:if>
-              </a>
-              <div class='lkk-mini-card-copy'>
-                <b:if cond='data:post.labels'>
-                  <a class='lkk-news-label' expr:href='data:post.labels.first.url' expr:title='data:post.title'>
-                    <data:post.labels.first.name/>
-                  </a>
-                </b:if>
-                <h3>
-                  <a expr:href='data:post.url' expr:title='data:post.title'>
-                    <data:post.title/>
-                  </a>
-                </h3>
-                <time expr:datetime='data:post.date.iso8601'>
-                  <data:post.date/>
-                </time>
-              </div>
-            </article>
-          </b:includable>
-          <b:includable id='homePageLink'>
-            <a class='home-link' expr:href='data:blog.homepageUrl'>
-              <data:messages.home/>
-            </a>
-          </b:includable>
-          <b:includable id='iframeComments' var='post'>
-            <!-- G+ comments, no longer available. The includable is retained for
+                        </article>
+                    </b:includable>
+                    <b:includable id='homeMiniCard' var='post'>
+                        <article class='lkk-mini-card'>
+                            <a class='lkk-mini-card-media' expr:href='data:post.url'>
+                                <b:if cond='data:post.featuredImage'>
+                                    <img
+                                        decoding='async'
+                                        expr:alt='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
+                                        expr:src='resizeImage(data:post.featuredImage, 220, &quot;220:132&quot;)'
+                                        expr:title='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
+                                        height='132'
+                                        loading='lazy'
+                                        width='220' />
+                                    <b:else />
+                                    <span class='lkk-mini-card-placeholder'>LKK</span>
+                                </b:if>
+                            </a>
+                            <div class='lkk-mini-card-copy'>
+                                <b:if cond='data:post.labels'>
+                                    <a class='lkk-news-label' expr:href='data:post.labels.first.url'
+                                        expr:title='data:post.title'>
+                                        <data:post.labels.first.name />
+                                    </a>
+                                </b:if>
+                                <h3>
+                                    <a expr:href='data:post.url' expr:title='data:post.title'>
+                                        <data:post.title />
+                                    </a>
+                                </h3>
+                                <time expr:datetime='data:post.date.iso8601'>
+                                    <data:post.date />
+                                </time>
+                            </div>
+                        </article>
+                    </b:includable>
+                    <b:includable id='homePageLink'>
+                        <a class='home-link' expr:href='data:blog.homepageUrl'>
+                            <data:messages.home />
+                        </a>
+                    </b:includable>
+                    <b:includable id='iframeComments' var='post'>
+                        <!-- G+ comments, no longer available. The includable is retained for
                         backwards-compatibility. -->
-          </b:includable>
-          <b:includable id='inlineAd' var='post'>
-  <b:if cond='!data:view.isPreview'>
-    <b:if cond='data:this.adCode or data:this.adClientId or data:blog.adsenseClientId'>
-      <!-- Ad -->
-      <div class='inline-ad'>
-        <b:if cond='data:this.adCode != &quot;&quot;'>
-          <data:this.adCode/>
-        <b:else/>
-          <b:include cond='data:this.adClientId or data:blog.adsenseClientId' name='defaultAdUnit'/>
-        </b:if>
-      </div>
-    </b:if>
-  <b:else/>
-    <div class='inline-ad'>
-      <div class='inline-ad-placeholder'>
-        <span><b:message name='messages.adsGoHere'/></span>
-      </div>
-    </div>
-  </b:if>
-</b:includable>
-          <b:includable id='linkShare'>
-            <b:with value='&quot;window.prompt(\&quot;Copy to clipboard: Ctrl+C, Enter\&quot;, \&quot;&quot; + data:originalUrl + &quot;\&quot;); return false;&quot;' var='onclick'>
-              <b:include name='platformShare'/>
-            </b:with>
-          </b:includable>
-          <b:includable id='otherSharingButton'>
-  <span class='sharing-platform-button sharing-element-other' expr:aria-label='data:messages.shareToOtherApps.escaped' expr:data-url='data:originalUrl' expr:title='data:messages.shareToOtherApps.escaped' role='menuitem' tabindex='-1'>
-    <b:with value='{key: &quot;sharingOther&quot;}' var='platform'>
-      <b:include name='sharingPlatformIcon'/>
-    </b:with>
-    <span class='platform-sharing-text'><data:messages.shareOtherApps.escaped/></span>
-  </span>
-</b:includable>
-          <b:includable id='platformShare'>
-  <a expr:class='&quot;goog-inline-block sharing-&quot; + data:platform.key' expr:data-url='data:originalUrl' expr:href='data:shareUrl + &quot;&amp;target=&quot; + data:platform.target' expr:onclick='data:onclick ? data:onclick : &quot;&quot;' expr:title='data:platform.shareMessage' target='_blank'>
-    <span class='share-button-link-text'>
-      <data:platform.shareMessage/>
-    </span>
-  </a>
-</b:includable>
-          <b:includable id='postAuthor'>
-  <span class='byline post-author vcard'>
-    <span class='post-author-label'>
-      <data:byline.label/>
-    </span>
-    <span class='fn'>
-      <b:if cond='data:post.author.profileUrl'>
-        <meta expr:content='data:post.author.profileUrl'/>
-        <a class='g-profile' expr:href='data:post.author.profileUrl' rel='author' title='author profile'>
-          <span><data:post.author.name/></span>
-        </a>
-      <b:else/>
-        <span><data:post.author.name/></span>
-      </b:if>
-    </span>
-  </span>
-</b:includable>
-          <b:includable id='postCommentsLink'>
-  <span class='byline post-comment-link container'>
-    <b:include cond='data:post.commentSource != 1' name='commentsLink'/>
-  </span>
-</b:includable>
-          <b:includable id='postJumpLink' var='post'>
-  <div class='jump-link flat-button'>
-    <a expr:href='data:post.url fragment &quot;more&quot;' expr:title='data:post.title'>
-      <b:eval expr='data:blog.jumpLinkMessage'/>
-    </a>
-  </div>
-</b:includable>
-          <b:includable id='postLabels'>
-  <span class='byline post-labels'>
-    <span class='byline-label'><data:byline.label/></span>
-    <b:loop index='i' values='data:post.labels' var='label'>
-      <a expr:href='data:label.url' rel='tag'>
-        <data:label.name/>
-      </a>
-    </b:loop>
-  </span>
-</b:includable>
-          <b:includable id='postLocation'>
-  <span class='byline post-location'>
-    <data:byline.label/>
-    <a expr:href='data:post.location.mapsUrl' target='_blank'><data:post.location.name/></a>
-  </span>
-</b:includable>
-          <b:includable id='postReactions'>
-  <!-- Reaction feature no longer available. The includable is retained for backwards-compatibility. -->
-</b:includable>
-          <b:includable id='postShareButtons'>
-  <div class='byline post-share-buttons goog-inline-block'>
-    <b:with value='data:sharingId ?: ((data:widget.instanceId ?: &quot;sharing&quot;) + &quot;-&quot; + (data:regionName ?: &quot;byline&quot;) + &quot;-&quot; + data:post.id)' var='sharingId'>
-      <!-- Note: 'sharingButtons' includable is from the default Sharing widget markup. -->
-      <b:include data='{                                                sharingId: data:sharingId,                                                originalUrl: data:post.url,                                                platforms: data:this.sharing.platforms,                                                shareUrl: data:post.shareUrl,                                                shareTitle: data:post.title,                                              }' name='sharingButtons'/>
-    </b:with>
-  </div>
-</b:includable>
-          <b:includable id='postTimestamp'>
-  <span class='byline post-timestamp'>
-    <data:byline.label/>
-    <b:if cond='data:post.url'>
-      <meta expr:content='data:post.url.canonical'/>
-      <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'>
-        <time class='published' expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'>
-          <data:post.date/>
-        </time>
-      </a>
-    </b:if>
-  </span>
-</b:includable>
-          <b:includable id='sharingButton'>
-  <span expr:aria-label='data:platform.shareMessage' expr:class='&quot;sharing-platform-button sharing-element-&quot; + data:platform.key' expr:data-href='data:shareUrl + &quot;&amp;target=&quot; + data:platform.target' expr:data-url='data:originalUrl' expr:title='data:platform.shareMessage' role='menuitem' tabindex='-1'>
-    <b:include name='sharingPlatformIcon'/>
-    <span class='platform-sharing-text'><data:platform.name/></span>
-  </span>
-</b:includable>
-          <b:includable id='sharingButtonContent'>
-  <div class='flat-icon-button ripple'>
-    <b:include name='shareIcon'/>
-  </div>
-</b:includable>
-          <b:includable id='sharingButtons'>
-  <div class='sharing' expr:aria-owns='&quot;sharing-popup-&quot; + data:sharingId' expr:data-title='data:shareTitle'>
-    <button class='sharing-button touch-icon-button' expr:aria-controls='&quot;sharing-popup-&quot; + data:sharingId' expr:aria-label='data:messages.share.escaped' expr:id='&quot;sharing-button-&quot; + data:sharingId' role='button'>
-      <b:include name='sharingButtonContent'/>
-    </button>
-    <b:include name='sharingButtonsMenu'/>
-  </div>
-</b:includable>
-          <b:includable id='sharingButtonsMenu'>
-  <div class='share-buttons-container'>
-    <ul aria-hidden='true' class='share-buttons hidden' expr:aria-label='data:messages.share.escaped' expr:id='&quot;sharing-popup-&quot; + data:sharingId' role='menu'>
-      <b:loop values='(data:platforms ?: data:blog.sharing.platforms) filter (p =&gt; p.key not in {&quot;blogThis&quot;})' var='platform'>
-        <li>
-          <b:include name='sharingButton'/>
-        </li>
-      </b:loop>
-      <li aria-hidden='true' class='hidden'>
-        <b:include name='otherSharingButton'/>
-      </li>
-    </ul>
-  </div>
-</b:includable>
-          <b:includable id='sharingPlatformIcon'>
-  <b:include data='{ iconClass: (&quot;touch-icon sharing-&quot; + data:platform.key) }' expr:name='data:platform.key + &quot;Icon&quot;'/>
-</b:includable>
-          <b:includable id='snippetedPostByline'>
-  <b:with value='(data:widgets first (w =&gt; w.type == &quot;Blog&quot;)).allBylineItems' var='blogBylines'>
-    <div class='item-byline'>
-      <b:with value='data:blogBylines first (i =&gt; i.name == &quot;author&quot;)' var='byline'>
-        <b:include cond='data:byline and data:this.postDisplay.showAuthor' data='post' name='postAuthor'/>
-      </b:with>
-      <b:with value='data:blogBylines first (i =&gt; i.name == &quot;timestamp&quot;)' var='byline'>
-        <b:include cond='data:byline and data:this.postDisplay.showDate' data='post' name='postTimestamp'/>
-      </b:with>
-    </div>
-  </b:with>
-</b:includable>
-          <b:includable id='snippetedPostContent'>
-  <div class='post-content'>
-    <b:include cond='data:this.postDisplay.showTitle' name='snippetedPostTitle'/>
-    <b:include cond='data:this.postDisplay.showDate or data:this.postDisplay.showAuthor' name='snippetedPostByline'/>
-    <b:include cond='data:this.postDisplay.showSnippet' data='post' name='postSnippet'/>
-    <b:include cond='data:this.postDisplay.showFeaturedImage and data:post.featuredImage' name='snippetedPostThumbnail'/>
-  </div>
-</b:includable>
-          <b:includable id='snippetedPostThumbnail'>
-  <div class='item-thumbnail'>
-    <a expr:href='data:post.url'>
-      <b:include data='{                         image: data:post.featuredImage,                         imageSizes: [72, 144],                         imageRatio: &quot;1:1&quot;,                         sourceSizes: &quot;72px&quot;                        }' name='responsiveImage'/>
-    </a>
-  </div>
-</b:includable>
-          <b:includable id='snippetedPostTitle'>
-  <b:if cond='data:post.title != &quot;&quot;'>
-    <h3 class='post-title'><a expr:href='data:post.url'><data:post.title/></a></h3>
-  </b:if>
-</b:includable>
-          <b:includable id='snippetedPosts'>
-  <div role='feed'>
-    <!-- Don't render the post that we're currently already looking at. -->
-    <b:loop values='data:posts filter (p =&gt; p.id != data:view.postId)' var='post'>
-      <article class='post' role='article'>
-        <b:include name='snippetedPostContent'/>
-      </article>
-    </b:loop>
-  </div>
-</b:includable>
-        </b:widget>
-      </b:section>
-    </div>
-    <footer class='lkk-site-footer lkk-print-site-footer'>
-      <div class='lkk-container lkk-footer-inner'>
-        <section class='lkk-footer-about'>
-          <h2>Tentang Kami</h2>
-          <p><a href='https://www.liputankabarkota.com'>Liputan Kabar Kota</a> merupakan media
-            informasi digital yang berawal dari Kabupaten Jepara, Jawa Tengah, dengan jangkauan
-            pemberitaan daerah hingga nasional. Kami menyajikan informasi seputar pemerintahan,
-            pembangunan, hukum, pendidikan, ekonomi, sosial budaya, dan berbagai peristiwa
-            masyarakat.</p>
-          <p>Liputan Kabar Kota terbuka terhadap kerja sama dan kemitraan dengan
-            pemerintah, lembaga, APH, dunia usaha, komunitas, serta masyarakat, dengan
-            tetap menjunjung tinggi independensi redaksi, profesionalisme, dan Kode Etik
-            Jurnalistik.</p>
-        </section>
-        <nav aria-label='Tentang' class='lkk-footer-column'>
-          <h2>Tentang</h2>
-          <ul class='lkk-footer-links'>
-            <li>
-              <a href='/p/tentang-kami.html'>Tentang Kami</a>
-            </li>
-            <li>
-              <a href='/p/redaksi.html'>Redaksi</a>
-            </li>
-            <li>
-              <a href='/p/kontak-kami.html'>Kontak Kami</a>
-            </li>
-          </ul>
-        </nav>
-        <nav aria-label='Pedoman' class='lkk-footer-column'>
-          <h2>Pedoman</h2>
-          <ul class='lkk-footer-links'>
-            <li>
-              <a href='/p/pedoman-media.html'>Pedoman Media Siber</a>
-            </li>
-            <li>
-              <a href='/p/kode-etik-jurnalistik.html'>Kode Etik Jurnalistik</a>
-            </li>
-            <li>
-              <a href='/p/pengaduan-redaksi.html'>Pengaduan Redaksi</a>
-            </li>
-            <li>
-              <a href='/p/hak-jawab-dan-koreksi.html'>Hak Jawab dan Hak Koreksi</a>
-            </li>
-            <li>
-              <a href='/p/batas-tanggung-jawab-redaksi.html'>Batas Tanggung Jawab
-                Redaksi</a>
-            </li>
-          </ul>
-        </nav>
-        <nav aria-label='Layanan' class='lkk-footer-column'>
-          <h2>Layanan</h2>
-          <ul class='lkk-footer-links'>
-            <li>
-              <a href='/p/jasa-press-release.html'>Jasa Press Release</a>
-            </li>
-            <li>
-              <a href='/p/advertorial.html'>Advertorial</a>
-            </li>
-          </ul>
-        </nav>
-        <nav aria-label='Legal' class='lkk-footer-column'>
-          <h2>Legal</h2>
-          <ul class='lkk-footer-links'>
-            <li>
-              <a href='/p/privacy-policy.html'>Kebijakan Privasi</a>
-            </li>
-            <li>
-              <a href='/p/disclaimer.html'>Disclaimer</a>
-            </li>
-            <li>
-              <a href='/p/syarat-ketentuan.html'>Syarat &amp; Ketentuan</a>
-            </li>
-          </ul>
-        </nav>
-        <section aria-label='Media sosial' class='lkk-footer-column'>
-          <h2>Follow Us</h2>
-          <div aria-label='Media sosial' class='lkk-footer-social'>
-            <a aria-label='Facebook Liputan Kabar Kota' class='lkk-social-facebook' href='https://www.facebook.com/profile.php?id=61595493804386' rel='noopener noreferrer' target='_blank'>
-              <svg aria-hidden='true' class='lkk-social-icon' focusable='false' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                <path d='M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.019 4.388 11.015 10.125 11.927v-8.437H7.078v-3.49h3.047V9.41c0-3.017 1.792-4.687 4.533-4.687 1.312 0 2.686.236 2.686.236v2.953h-1.513c-1.49 0-1.954.93-1.954 1.885v2.263h3.328l-.532 3.49h-2.796V24C19.612 23.088 24 18.092 24 12.073Z' fill='currentColor'/>
-              </svg>
-            </a>
-            <a aria-label='Instagram Liputan Kabar Kota' class='lkk-social-instagram' href='https://www.instagram.com/liputankabarkota/' rel='noopener noreferrer' target='_blank'>
-              <svg aria-hidden='true' class='lkk-social-icon' focusable='false' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                <rect fill='none' height='17' rx='5' stroke='currentColor' stroke-width='2' width='17' x='3.5' y='3.5'/>
-                <circle cx='12' cy='12' fill='none' r='4' stroke='currentColor' stroke-width='2'/>
-                <circle cx='17.7' cy='6.6' fill='currentColor' r='1.2'/>
-              </svg>
-            </a>
-            <a aria-label='YouTube Liputan Kabar Kota' class='lkk-social-youtube' href='https://www.youtube.com/channel/UCQqS32KdUP5TGtorAQvBjNw' rel='noopener noreferrer' target='_blank'>
-              <svg aria-hidden='true' class='lkk-social-icon' focusable='false' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                <path d='M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z' fill='currentColor'/>
-              </svg>
-            </a>
-            <a aria-label='TikTok Liputan Kabar Kota' class='lkk-social-tiktok' href='https://www.tiktok.com/@liputankabarkota' rel='noopener noreferrer' target='_blank'>
-              <svg aria-hidden='true' class='lkk-social-icon' focusable='false' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                <path d='M19.6 7.1a6.7 6.7 0 0 1-4.1-1.4v9.1a5.8 5.8 0 1 1-5-5.7v3a2.8 2.8 0 1 0 2 2.7V2.5h3a6.7 6.7 0 0 0 4.1 4.1v.5Z' fill='currentColor'/>
-              </svg>
-            </a>
-          </div>
-        </section>
-        <section class='lkk-footer-column'>
-          <h2>Newsletter</h2>
-          <p class='lkk-footer-newsletter-copy'>Berlangganan untuk menerima berita terbaru
-            dan informasi pilihan dari Liputan Kabar Kota.</p>
-          <form action='https://api.follow.it/subscribe?pub=CQoJCcEXztieMrPUAQYKlNRPCjlhk9FW' class='lkk-footer-newsletter-form' method='post' target='_blank'>
-            <input aria-label='Alamat email' name='email' placeholder='Alamat email' required='required' type='email'/>
-            <button aria-label='Berlangganan newsletter' type='submit'>
-              <svg aria-hidden='true' focusable='false' viewBox='0 0 24 24'>
-                <path d='M3 5h18v14H3z'/>
-                <path d='m3 6 9 7 9-7'/>
-              </svg>
-            </button>
-          </form>
-        </section>
-      </div>
-      <div class='lkk-container lkk-footer-bottom'>
-        <span>&#169; <data:blog.title/>. Hak cipta dilindungi.</span>
-        <span>Langganan: <a href='https://www.liputankabarkota.com/feeds/posts/default'>Postingan
-          (Atom)</a></span>
-      </div>
-    </footer>
-    <script type='text/javascript'>
+                    </b:includable>
+                    <b:includable id='inlineAd' var='post'>
+                        <b:if cond='!data:view.isPreview'>
+                            <b:if
+                                cond='data:this.adCode or data:this.adClientId or data:blog.adsenseClientId'>
+                                <!-- Ad -->
+                                <div class='inline-ad'>
+                                    <b:if cond='data:this.adCode != &quot;&quot;'>
+                                        <data:this.adCode />
+                                        <b:else />
+                                        <b:include
+                                            cond='data:this.adClientId or data:blog.adsenseClientId'
+                                            name='defaultAdUnit' />
+                                    </b:if>
+                                </div>
+                            </b:if>
+                            <b:else />
+                            <div class='inline-ad'>
+                                <div class='inline-ad-placeholder'>
+                                    <span>
+                                        <b:message name='messages.adsGoHere' />
+                                    </span>
+                                </div>
+                            </div>
+                        </b:if>
+                    </b:includable>
+                    <b:includable id='linkShare'>
+                        <b:with
+                            value='&quot;window.prompt(\&quot;Copy to clipboard: Ctrl+C, Enter\&quot;, \&quot;&quot; + data:originalUrl + &quot;\&quot;); return false;&quot;'
+                            var='onclick'>
+                            <b:include name='platformShare' />
+                        </b:with>
+                    </b:includable>
+                    <b:includable id='otherSharingButton'>
+                        <span class='sharing-platform-button sharing-element-other'
+                            expr:aria-label='data:messages.shareToOtherApps.escaped'
+                            expr:data-url='data:originalUrl'
+                            expr:title='data:messages.shareToOtherApps.escaped' role='menuitem'
+                            tabindex='-1'>
+                            <b:with value='{key: &quot;sharingOther&quot;}' var='platform'>
+                                <b:include name='sharingPlatformIcon' />
+                            </b:with>
+                            <span class='platform-sharing-text'>
+                                <data:messages.shareOtherApps.escaped />
+                            </span>
+                        </span>
+                    </b:includable>
+                    <b:includable id='platformShare'>
+                        <a expr:class='&quot;goog-inline-block sharing-&quot; + data:platform.key'
+                            expr:data-url='data:originalUrl'
+                            expr:href='data:shareUrl + &quot;&amp;target=&quot; + data:platform.target'
+                            expr:onclick='data:onclick ? data:onclick : &quot;&quot;'
+                            expr:title='data:platform.shareMessage' target='_blank'>
+                            <span class='share-button-link-text'>
+                                <data:platform.shareMessage />
+                            </span>
+                        </a>
+                    </b:includable>
+                    <b:includable id='postAuthor'>
+                        <span class='byline post-author vcard'>
+                            <span class='post-author-label'>
+                                <data:byline.label />
+                            </span>
+                            <span class='fn'>
+                                <b:if cond='data:post.author.profileUrl'>
+                                    <meta expr:content='data:post.author.profileUrl' />
+                                    <a class='g-profile' expr:href='data:post.author.profileUrl'
+                                        rel='author' title='author profile'>
+                                        <span>
+                                            <data:post.author.name />
+                                        </span>
+                                    </a>
+                                    <b:else />
+                                    <span>
+                                        <data:post.author.name />
+                                    </span>
+                                </b:if>
+                            </span>
+                        </span>
+                    </b:includable>
+                    <b:includable id='postCommentsLink'>
+                        <span class='byline post-comment-link container'>
+                            <b:include cond='data:post.commentSource != 1' name='commentsLink' />
+                        </span>
+                    </b:includable>
+                    <b:includable id='postJumpLink' var='post'>
+                        <div class='jump-link flat-button'>
+                            <a expr:href='data:post.url fragment &quot;more&quot;'
+                                expr:title='data:post.title'>
+                                <b:eval expr='data:blog.jumpLinkMessage' />
+                            </a>
+                        </div>
+                    </b:includable>
+                    <b:includable id='postLabels'>
+                        <span class='byline post-labels'>
+                            <span class='byline-label'>
+                                <data:byline.label />
+                            </span>
+                            <b:loop index='i' values='data:post.labels' var='label'>
+                                <a expr:href='data:label.url' rel='tag'>
+                                    <data:label.name />
+                                </a>
+                            </b:loop>
+                        </span>
+                    </b:includable>
+                    <b:includable id='postLocation'>
+                        <span class='byline post-location'>
+                            <data:byline.label />
+                            <a expr:href='data:post.location.mapsUrl' target='_blank'>
+                                <data:post.location.name />
+                            </a>
+                        </span>
+                    </b:includable>
+                    <b:includable id='postReactions'>
+                        <!-- Reaction feature no longer available. The includable is retained for
+                        backwards-compatibility. -->
+                    </b:includable>
+                    <b:includable id='postShareButtons'>
+                        <div class='byline post-share-buttons goog-inline-block'>
+                            <b:with
+                                value='data:sharingId ?: ((data:widget.instanceId ?: &quot;sharing&quot;) + &quot;-&quot; + (data:regionName ?: &quot;byline&quot;) + &quot;-&quot; + data:post.id)'
+                                var='sharingId'>
+                                <!-- Note: 'sharingButtons' includable is from the default Sharing
+                                widget markup. -->
+                                <b:include
+                                    data='{                                                sharingId: data:sharingId,                                                originalUrl: data:post.url,                                                platforms: data:this.sharing.platforms,                                                shareUrl: data:post.shareUrl,                                                shareTitle: data:post.title,                                              }'
+                                    name='sharingButtons' />
+                            </b:with>
+                        </div>
+                    </b:includable>
+                    <b:includable id='postTimestamp'>
+                        <span class='byline post-timestamp'>
+                            <data:byline.label />
+                            <b:if cond='data:post.url'>
+                                <meta expr:content='data:post.url.canonical' />
+                                <a class='timestamp-link' expr:href='data:post.url' rel='bookmark'
+                                    title='permanent link'>
+                                    <time class='published' expr:datetime='data:post.date.iso8601'
+                                        expr:title='data:post.date.iso8601'>
+                                        <data:post.date />
+                                    </time>
+                                </a>
+                            </b:if>
+                        </span>
+                    </b:includable>
+                    <b:includable id='sharingButton'>
+                        <span expr:aria-label='data:platform.shareMessage'
+                            expr:class='&quot;sharing-platform-button sharing-element-&quot; + data:platform.key'
+                            expr:data-href='data:shareUrl + &quot;&amp;target=&quot; + data:platform.target'
+                            expr:data-url='data:originalUrl' expr:title='data:platform.shareMessage'
+                            role='menuitem' tabindex='-1'>
+                            <b:include name='sharingPlatformIcon' />
+                            <span class='platform-sharing-text'>
+                                <data:platform.name />
+                            </span>
+                        </span>
+                    </b:includable>
+                    <b:includable id='sharingButtonContent'>
+                        <div class='flat-icon-button ripple'>
+                            <b:include name='shareIcon' />
+                        </div>
+                    </b:includable>
+                    <b:includable id='sharingButtons'>
+                        <div class='sharing'
+                            expr:aria-owns='&quot;sharing-popup-&quot; + data:sharingId'
+                            expr:data-title='data:shareTitle'>
+                            <button class='sharing-button touch-icon-button'
+                                expr:aria-controls='&quot;sharing-popup-&quot; + data:sharingId'
+                                expr:aria-label='data:messages.share.escaped'
+                                expr:id='&quot;sharing-button-&quot; + data:sharingId' role='button'>
+                                <b:include name='sharingButtonContent' />
+                            </button>
+                            <b:include name='sharingButtonsMenu' />
+                        </div>
+                    </b:includable>
+                    <b:includable id='sharingButtonsMenu'>
+                        <div class='share-buttons-container'>
+                            <ul aria-hidden='true' class='share-buttons hidden'
+                                expr:aria-label='data:messages.share.escaped'
+                                expr:id='&quot;sharing-popup-&quot; + data:sharingId' role='menu'>
+                                <b:loop
+                                    values='(data:platforms ?: data:blog.sharing.platforms) filter (p =&gt; p.key not in {&quot;blogThis&quot;})'
+                                    var='platform'>
+                                    <li>
+                                        <b:include name='sharingButton' />
+                                    </li>
+                                </b:loop>
+                                <li aria-hidden='true' class='hidden'>
+                                    <b:include name='otherSharingButton' />
+                                </li>
+                            </ul>
+                        </div>
+                    </b:includable>
+                    <b:includable id='sharingPlatformIcon'>
+                        <b:include
+                            data='{ iconClass: (&quot;touch-icon sharing-&quot; + data:platform.key) }'
+                            expr:name='data:platform.key + &quot;Icon&quot;' />
+                    </b:includable>
+                    <b:includable id='snippetedPostByline'>
+                        <b:with
+                            value='(data:widgets first (w =&gt; w.type == &quot;Blog&quot;)).allBylineItems'
+                            var='blogBylines'>
+                            <div class='item-byline'>
+                                <b:with
+                                    value='data:blogBylines first (i =&gt; i.name == &quot;author&quot;)'
+                                    var='byline'>
+                                    <b:include
+                                        cond='data:byline and data:this.postDisplay.showAuthor'
+                                        data='post' name='postAuthor' />
+                                </b:with>
+                                <b:with
+                                    value='data:blogBylines first (i =&gt; i.name == &quot;timestamp&quot;)'
+                                    var='byline'>
+                                    <b:include cond='data:byline and data:this.postDisplay.showDate'
+                                        data='post' name='postTimestamp' />
+                                </b:with>
+                            </div>
+                        </b:with>
+                    </b:includable>
+                    <b:includable id='snippetedPostContent'>
+                        <div class='post-content'>
+                            <b:include cond='data:this.postDisplay.showTitle'
+                                name='snippetedPostTitle' />
+                            <b:include
+                                cond='data:this.postDisplay.showDate or data:this.postDisplay.showAuthor'
+                                name='snippetedPostByline' />
+                            <b:include cond='data:this.postDisplay.showSnippet' data='post'
+                                name='postSnippet' />
+                            <b:include
+                                cond='data:this.postDisplay.showFeaturedImage and data:post.featuredImage'
+                                name='snippetedPostThumbnail' />
+                        </div>
+                    </b:includable>
+                    <b:includable id='snippetedPostThumbnail'>
+                        <div class='item-thumbnail'>
+                            <a expr:href='data:post.url'>
+                                <b:include
+                                    data='{                         image: data:post.featuredImage,                         imageSizes: [72, 144],                         imageRatio: &quot;1:1&quot;,                         sourceSizes: &quot;72px&quot;                        }'
+                                    name='responsiveImage' />
+                            </a>
+                        </div>
+                    </b:includable>
+                    <b:includable id='snippetedPostTitle'>
+                        <b:if cond='data:post.title != &quot;&quot;'>
+                            <h3 class='post-title'>
+                                <a expr:href='data:post.url'>
+                                    <data:post.title />
+                                </a>
+                            </h3>
+                        </b:if>
+                    </b:includable>
+                    <b:includable id='snippetedPosts'>
+                        <div role='feed'>
+                            <!-- Don't render the post that we're currently already looking at. -->
+                            <b:loop values='data:posts filter (p =&gt; p.id != data:view.postId)'
+                                var='post'>
+                                <article class='post' role='article'>
+                                    <b:include name='snippetedPostContent' />
+                                </article>
+                            </b:loop>
+                        </div>
+                    </b:includable>
+                </b:widget>
+            </b:section>
+        </div>
+        <footer class='lkk-site-footer lkk-print-site-footer'>
+            <div class='lkk-container lkk-footer-inner'>
+                <section class='lkk-footer-about'>
+                    <h2>Tentang Kami</h2>
+                    <p><a href='https://www.liputankabarkota.com'>Liputan Kabar Kota</a> merupakan
+                        media informasi digital yang berawal dari Kabupaten Jepara, Jawa Tengah,
+                        dengan jangkauan pemberitaan daerah hingga nasional. Kami menyajikan
+                        informasi seputar pemerintahan, pembangunan, hukum, pendidikan, ekonomi,
+                        sosial budaya, dan berbagai peristiwa masyarakat.</p>
+                    <p>Liputan Kabar Kota terbuka terhadap kerja sama dan kemitraan dengan
+                        pemerintah, lembaga, APH, dunia usaha, komunitas, serta masyarakat, dengan
+                        tetap menjunjung tinggi independensi redaksi, profesionalisme, dan Kode Etik
+                        Jurnalistik.</p>
+                </section>
+                <nav aria-label='Tentang' class='lkk-footer-column'>
+                    <h2>Tentang</h2>
+                    <ul class='lkk-footer-links'>
+                        <li>
+                            <a href='/p/tentang-kami.html'>Tentang Kami</a>
+                        </li>
+                        <li>
+                            <a href='/p/redaksi.html'>Redaksi</a>
+                        </li>
+                        <li>
+                            <a href='/p/kontak-kami.html'>Kontak Kami</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav aria-label='Pedoman' class='lkk-footer-column'>
+                    <h2>Pedoman</h2>
+                    <ul class='lkk-footer-links'>
+                        <li>
+                            <a href='/p/pedoman-media.html'>Pedoman Media Siber</a>
+                        </li>
+                        <li>
+                            <a href='/p/kode-etik-jurnalistik.html'>Kode Etik Jurnalistik</a>
+                        </li>
+                        <li>
+                            <a href='/p/pengaduan-redaksi.html'>Pengaduan Redaksi</a>
+                        </li>
+                        <li>
+                            <a href='/p/hak-jawab-dan-koreksi.html'>Hak Jawab dan Hak Koreksi</a>
+                        </li>
+                        <li>
+                            <a href='/p/batas-tanggung-jawab-redaksi.html'>Batas Tanggung Jawab
+                                Redaksi</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav aria-label='Layanan' class='lkk-footer-column'>
+                    <h2>Layanan</h2>
+                    <ul class='lkk-footer-links'>
+                        <li>
+                            <a href='/p/jasa-press-release.html'>Jasa Press Release</a>
+                        </li>
+                        <li>
+                            <a href='/p/advertorial.html'>Advertorial</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav aria-label='Legal' class='lkk-footer-column'>
+                    <h2>Legal</h2>
+                    <ul class='lkk-footer-links'>
+                        <li>
+                            <a href='/p/privacy-policy.html'>Kebijakan Privasi</a>
+                        </li>
+                        <li>
+                            <a href='/p/disclaimer.html'>Disclaimer</a>
+                        </li>
+                        <li>
+                            <a href='/p/syarat-ketentuan.html'>Syarat &amp; Ketentuan</a>
+                        </li>
+                    </ul>
+                </nav>
+                <section aria-label='Media sosial' class='lkk-footer-column'>
+                    <h2>Follow Us</h2>
+                    <div aria-label='Media sosial' class='lkk-footer-social'>
+                        <a aria-label='Facebook Liputan Kabar Kota' class='lkk-social-facebook'
+                            href='https://www.facebook.com/profile.php?id=61595493804386'
+                            rel='noopener noreferrer' target='_blank'>
+                            <svg aria-hidden='true' class='lkk-social-icon' focusable='false'
+                                viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                                <path
+                                    d='M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.019 4.388 11.015 10.125 11.927v-8.437H7.078v-3.49h3.047V9.41c0-3.017 1.792-4.687 4.533-4.687 1.312 0 2.686.236 2.686.236v2.953h-1.513c-1.49 0-1.954.93-1.954 1.885v2.263h3.328l-.532 3.49h-2.796V24C19.612 23.088 24 18.092 24 12.073Z'
+                                    fill='currentColor' />
+                            </svg>
+                        </a>
+                        <a aria-label='Instagram Liputan Kabar Kota' class='lkk-social-instagram'
+                            href='https://www.instagram.com/liputankabarkota/'
+                            rel='noopener noreferrer' target='_blank'>
+                            <svg aria-hidden='true' class='lkk-social-icon' focusable='false'
+                                viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                                <rect fill='none' height='17' rx='5' stroke='currentColor'
+                                    stroke-width='2' width='17' x='3.5' y='3.5' />
+                                <circle cx='12' cy='12' fill='none' r='4' stroke='currentColor'
+                                    stroke-width='2' />
+                                <circle cx='17.7' cy='6.6' fill='currentColor' r='1.2' />
+                            </svg>
+                        </a>
+                        <a aria-label='YouTube Liputan Kabar Kota' class='lkk-social-youtube'
+                            href='https://www.youtube.com/channel/UCQqS32KdUP5TGtorAQvBjNw'
+                            rel='noopener noreferrer' target='_blank'>
+                            <svg aria-hidden='true' class='lkk-social-icon' focusable='false'
+                                viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                                <path
+                                    d='M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z'
+                                    fill='currentColor' />
+                            </svg>
+                        </a>
+                        <a aria-label='TikTok Liputan Kabar Kota' class='lkk-social-tiktok'
+                            href='https://www.tiktok.com/@liputankabarkota'
+                            rel='noopener noreferrer' target='_blank'>
+                            <svg aria-hidden='true' class='lkk-social-icon' focusable='false'
+                                viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                                <path
+                                    d='M19.6 7.1a6.7 6.7 0 0 1-4.1-1.4v9.1a5.8 5.8 0 1 1-5-5.7v3a2.8 2.8 0 1 0 2 2.7V2.5h3a6.7 6.7 0 0 0 4.1 4.1v.5Z'
+                                    fill='currentColor' />
+                            </svg>
+                        </a>
+                    </div>
+                </section>
+                <section class='lkk-footer-column'>
+                    <h2>Newsletter</h2>
+                    <p class='lkk-footer-newsletter-copy'>Berlangganan untuk menerima berita terbaru
+                        dan informasi pilihan dari Liputan Kabar Kota.</p>
+                    <form
+                        action='https://api.follow.it/subscribe?pub=CQoJCcEXztieMrPUAQYKlNRPCjlhk9FW'
+                        class='lkk-footer-newsletter-form' method='post' target='_blank'>
+                        <input aria-label='Alamat email' name='email' placeholder='Alamat email'
+                            required='required' type='email' />
+                        <button aria-label='Berlangganan newsletter' type='submit'>
+                            <svg aria-hidden='true' focusable='false' viewBox='0 0 24 24'>
+                                <path d='M3 5h18v14H3z' />
+                                <path d='m3 6 9 7 9-7' />
+                            </svg>
+                        </button>
+                    </form>
+                </section>
+            </div>
+            <div class='lkk-container lkk-footer-bottom'>
+                <span>&#169; <data:blog.title />. Hak cipta dilindungi.</span>
+                <span>Langganan: <a href='https://www.liputankabarkota.com/feeds/posts/default'>Postingan
+                    (Atom)</a></span>
+            </div>
+        </footer>
+        <script type='text/javascript'>
       //<![CDATA[
       (function () {
         var stylesheet = document.getElementById('lkk-theme-css');
@@ -1409,5 +1632,5 @@
       }());
       //]]>
     </script>
-  </body>
+    </body>
 </html>
