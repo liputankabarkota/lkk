@@ -1952,32 +1952,17 @@
         var stylesheet = document.getElementById('lkk-theme-css');
 
         function loadScripts() {
-          var sources = [];
-          if (document.querySelector('.lkk-article-body')) {
-            sources.push('https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/body.js');
-          }
-          sources.push('https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/footer.js');
-          var index = 0;
-
-          function loadNextScript() {
-            if (index >= sources.length) return;
-            var source = sources[index];
-            var script = document.createElement('script');
-            script.src = source;
-            script.async = false;
-            script.onload = function () {
-              index += 1;
-              loadNextScript();
-            };
-            script.onerror = function () {
-              console.error('Gagal memuat skrip LKK: ' + source);
-              index += 1;
-              loadNextScript();
-            };
-            document.body.appendChild(script);
-          }
-
-          loadNextScript();
+          var source = 'https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/footer.js';
+          var script = document.createElement('script');
+          script.src = source;
+          script.async = false;
+          script.onload = function () {
+            window.dispatchEvent(new CustomEvent('lkk:loaded'));
+          };
+          script.onerror = function () {
+            console.error('Gagal memuat skrip LKK: ' + source);
+          };
+          document.body.appendChild(script);
         }
 
         function handleStylesheetError() {
