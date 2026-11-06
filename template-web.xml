@@ -1588,6 +1588,46 @@
                     (Atom)</a></span>
             </div>
         </footer>
-        <script defer='defer' src='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/footer.js' type='text/javascript'></script>
+        <script type='text/javascript'>
+      //<![CDATA[
+      (function () {
+        var stylesheet = document.getElementById('lkk-theme-css');
+
+        function loadScripts() {
+          var source = 'https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/footer.js';
+          var script = document.createElement('script');
+          script.src = source;
+          script.async = false;
+          script.onerror = function () {
+            console.error('Gagal memuat skrip LKK: ' + source);
+          };
+          document.body.appendChild(script);
+        }
+
+        function handleStylesheetError() {
+          console.error('Gagal memuat stylesheet LKK: ' + stylesheet.href);
+          loadScriptsAfterStylesheet();
+        }
+
+        function loadScriptsAfterStylesheet() {
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadScripts, { once: true });
+          } else {
+            loadScripts();
+          }
+        }
+
+        var stylesheetState = stylesheet.getAttribute('data-lkk-state');
+        if (stylesheetState === 'loaded') {
+          loadScriptsAfterStylesheet();
+        } else if (stylesheetState === 'error') {
+          handleStylesheetError();
+        } else {
+          stylesheet.addEventListener('load', loadScriptsAfterStylesheet, { once: true });
+          stylesheet.addEventListener('error', handleStylesheetError, { once: true });
+        }
+      }());
+      //]]>
+    </script>
     </body>
 </html>
