@@ -15,7 +15,9 @@
         <link crossorigin='anonymous' href='https://cdn.jsdelivr.net' rel='preconnect' />
         <b:if cond='data:view.isPost and data:blog.postImageUrl'>
             <link rel='preload' as='image' fetchpriority='high'
-                expr:href='data:blog.postImageUrl' />
+                expr:href='resizeImage(data:blog.postImageUrl, 800, &quot;800:420&quot;)'
+                expr:imagesrcset='resizeImage(data:blog.postImageUrl, 480, &quot;480:252&quot;) + &quot; 480w, &quot; + resizeImage(data:blog.postImageUrl, 640, &quot;640:336&quot;) + &quot; 640w, &quot; + resizeImage(data:blog.postImageUrl, 800, &quot;800:420&quot;) + &quot; 800w, &quot; + resizeImage(data:blog.postImageUrl, 1200, &quot;1200:630&quot;) + &quot; 1200w"'
+                imagesizes='(max-width: 699px) calc(100vw - 24px), (max-width: 799px) calc(100vw - 32px), (max-width: 1199px) calc(100vw - 330px), 760px' />
         </b:if>
         <meta content='id_ID' property='og:locale' />
         <meta content='Liputan Kabar Kota' property='og:site_name' />
@@ -935,7 +937,9 @@ img { display: block; max-width: 100%; height: auto; }
                                     <figure class='lkk-article-featured'>
                                         <img class='lkk-article-featured-image' decoding='async'
                                             expr:alt='data:post.title'
-                                            expr:src='data:post.featuredImage'
+                                            expr:src='resizeImage(data:post.featuredImage, 800, &quot;800:420&quot;)'
+                                            expr:srcset='resizeImage(data:post.featuredImage, 480, &quot;480:252&quot;) + &quot; 480w, &quot; + resizeImage(data:post.featuredImage, 640, &quot;640:336&quot;) + &quot; 640w, &quot; + resizeImage(data:post.featuredImage, 800, &quot;800:420&quot;) + &quot; 800w, &quot; + resizeImage(data:post.featuredImage, 1200, &quot;1200:630&quot;) + &quot; 1200w"'
+                                            sizes='(max-width: 699px) calc(100vw - 24px), (max-width: 799px) calc(100vw - 32px), (max-width: 1199px) calc(100vw - 330px), 760px'
                                             expr:title='data:post.title + &quot; | Liputan Kabar Kota&quot;'
                                             fetchpriority='high' height='630' loading='eager'
                                             width='1200' />
