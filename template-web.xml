@@ -136,7 +136,7 @@
                   &quot;logo&quot;: {
                     &quot;@type&quot;: &quot;ImageObject&quot;,
                     &quot;@id&quot;: &quot;https://www.liputankabarkota.com/#logo&quot;,
-                    &quot;url&quot;: &quot;https://blogger.googleusercontent.com/img/a/AVvXsEjgRVVM0QqVwPxzGs7TIhfD1zDB1vtKwhgoOE2eKKrkFY4dRB5yEGnkau8vl7KXmoWer3u7eBPafATg01FaFIY9ksfR6Rpr06usrk5mJ2FQ6-98c-mm_fvfjoiFHgpEyJQYSFLVstsEL8W1GRsaWVMu8mypCymwSe9yZjTJ7Q0Fyg2708VTDc_x-Qt2gAc=w175&quot;
+                    &quot;url&quot;: &quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNZNmziOfEx1A54hSoxNC9kjYuohNN19BaVHt6aiOkOlFHuaM_Lr_W_k4OtrsQItMvjN_ZB5oTLNz9liuHA2ruOy7jdPe2ZlsTLu8wQLaAChjpTJaEnSb7Azx1Y99LqIdWKuHD7CHFh0Q-iZzCXXAN7bb5zEML356qujV-FHRyqye3tIEFwywakZn25Dw/s1600/logo-liputan-kabar-kota-fav.png&quot;
                   },
                   &quot;sameAs&quot;: [
                     &quot;https://www.youtube.com/channel/UCQqS32KdUP5TGtorAQvBjNw&quot;,
@@ -254,7 +254,10 @@ img { display: block; max-width: 100%; height: auto; }
 .lkk-top .lkk-wrap { display: flex; gap: 16px; align-items: center; min-height: 32px; }
 .lkk-top a { color: #fff; }
 .lkk-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; }
-.lkk-logo img { width: 175px; height: auto; }
+.lkk-site-title { margin: 0; font-size: 28px; line-height: 1; font-weight: 800; letter-spacing: -.04em; }
+.lkk-logo { display: flex; flex: 0 0 auto; align-items: center; gap: 12px; }
+.lkk-logo img { width: 64px; height: 64px; object-fit: contain; }
+.lkk-brand-name { display: block; color: var(--c-primary); }
 .lkk-search { display: flex; gap: 6px; }
 .lkk-search input { width: min(230px, 42vw); min-height: 40px; padding: 8px; border: 1px solid var(--c-line); }
 .lkk-search button { min-height: 40px; padding: 8px 14px; border: 0; color: #fff; background: var(--c-primary); }
@@ -262,13 +265,15 @@ img { display: block; max-width: 100%; height: auto; }
 .lkk-nav .lkk-wrap { display: flex; gap: 16px; overflow-x: auto; white-space: nowrap; }
 .lkk-nav a { display: block; padding: 10px 0; font-size: 14px; font-weight: 700; }
 .lkk-main { width: calc(100% - 24px); max-width: 1100px; min-height: 40vh; margin: 0 auto; padding-block: 18px 32px; }
-.lkk-ticker { display: flex; align-items: center; gap: 10px; min-height: 40px; margin-bottom: 14px; }
-.lkk-ticker-label { flex: 0 0 auto; padding: 3px 7px; color: #fff; background: var(--c-accent); font-size: 12px; font-weight: 700; }
-.lkk-ticker a { overflow: hidden; color: var(--c-text); font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
-.lkk-headline { min-height: 160px; padding: 16px 0 20px; border-bottom: 1px solid var(--c-line); }
-.lkk-headline h1 { margin: 0; font-size: clamp(26px, 4vw, 40px); line-height: 1.18; letter-spacing: -.025em; }
+.lkk-headline { display: grid; grid-template-columns: minmax(0, 1fr) 320px; align-items: center; gap: 20px; min-height: 190px; padding: 16px 0 20px; border-bottom: 1px solid var(--c-line); }
+.lkk-headline-media { grid-column: 2; grid-row: 1; }
+.lkk-headline-image, .lkk-headline-image-empty { display: grid; width: 100%; aspect-ratio: 16 / 9; place-items: center; object-fit: cover; background: #f3f5f7; }
+.lkk-headline-image-empty { color: var(--c-muted); font-weight: 700; }
+.lkk-headline-copy { grid-column: 1; grid-row: 1; min-width: 0; }
+.lkk-headline h2 { margin: 0; font-size: clamp(24px, 3.5vw, 36px); line-height: 1.18; letter-spacing: -.025em; }
 .lkk-headline p { max-width: 760px; margin: 10px 0 0; color: var(--c-muted); }
 .lkk-list { display: grid; gap: 0; }
+.lkk-archive-grid { display: grid; gap: 0; }
 .lkk-item { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 12px; min-height: 88px; padding: 12px 0; border-bottom: 1px solid var(--c-line); }
 .lkk-thumb { width: 96px; height: 64px; object-fit: cover; background: #f3f5f7; }
 .lkk-label, .lkk-meta { color: var(--c-muted); font-size: 12px; }
@@ -276,8 +281,11 @@ img { display: block; max-width: 100%; height: auto; }
 .lkk-more { display: inline-block; margin-top: 16px; padding: 8px 12px; border: 1px solid var(--c-line); }
 .lkk-archive-head { margin: 0 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--c-line); }
 .lkk-archive-head h1 { margin: 0; font-size: 28px; line-height: 1.25; }
-.lkk-article-shell { min-width: 0; }
+.lkk-article-shell { min-width: 0; max-width: 760px; margin: 0 auto; }
+.lkk-article-header { margin-bottom: 14px; }
 .lkk-article-title { margin: 12px 0; font-size: clamp(28px, 5vw, 42px); line-height: 1.2; }
+.lkk-article-title { color: var(--c-text); }
+.lkk-breadcrumb { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; color: var(--c-muted); font-size: 13px; }
 .lkk-article-byline { display: flex; flex-wrap: wrap; gap: 6px 14px; color: var(--c-muted); font-size: 13px; }
 .lkk-article-featured { margin: 18px 0; }
 .lkk-article-featured-image { width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; }
@@ -285,12 +293,32 @@ img { display: block; max-width: 100%; height: auto; }
 @media (min-width: 700px) {
   .lkk-wrap, .lkk-main { width: calc(100% - 32px); }
   .lkk-head { min-height: 88px; }
+  .lkk-list, .lkk-archive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .berita-utama:has(#Blog1 .lkk-article) { display: grid; width: calc(100% - 20px); max-width: 1100px; margin-inline: auto; grid-template-columns: minmax(0, 1fr) 284px; align-items: start; column-gap: 26px; }
+  .berita-utama:has(#Blog1 .lkk-article) > #Blog1, .berita-utama:has(#Blog1 .lkk-article) > #PopularPosts1 { min-width: 0; }
+}
+@media (min-width: 1200px) {
+  .berita-utama:has(#Blog1 .lkk-article) { display: grid; width: calc(100% - 32px); max-width: 1100px; margin-inline: auto; grid-template-columns: minmax(0, 1fr) 320px; align-items: start; column-gap: 16px; }
+  .berita-utama:has(#Blog1 .lkk-article) > #Blog1, .berita-utama:has(#Blog1 .lkk-article) > #PopularPosts1 { min-width: 0; }
+}
+@media (max-width: 699px) {
+  .lkk-head { min-height: 0; flex-wrap: wrap; gap: 8px; padding-block: 8px; }
+  .lkk-site-title, .lkk-search { width: 100%; }
+  .lkk-site-title { font-size: 22px; }
+  .lkk-logo img { width: 52px; height: 52px; }
+  .lkk-search input { width: auto; flex: 1; }
+  .lkk-headline { grid-template-columns: 112px minmax(0, 1fr); gap: 12px; min-height: 0; padding: 12px 0; }
+  .lkk-headline-media { grid-column: 1; }
+  .lkk-headline-copy { grid-column: 2; }
+  .lkk-headline h2 { font-size: 21px; }
 }
 ]]></b:skin>
             <link rel='preload' as='style' href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/dist/lkk.min.css' onload='this.onload=null;this.rel=&quot;stylesheet&quot;' />
         <noscript><link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/dist/lkk.min.css' /></noscript>
         <b:if cond='data:view.isPost and data:blog.postImageUrl'>
-            <link rel='preload' as='image' fetchpriority='high' expr:href='resizeImage(data:blog.postImageUrl, 1200, &quot;1200:630&quot;)' />
+            <link rel='preload' as='image' fetchpriority='high' expr:href='resizeImage(data:blog.postImageUrl, 1200, &quot;1200:630&quot;)' expr:imagesrcset='resizeImage(data:blog.postImageUrl, 480, &quot;480:252&quot;) + &quot; 480w, &quot; + resizeImage(data:blog.postImageUrl, 640, &quot;640:336&quot;) + &quot; 640w, &quot; + resizeImage(data:blog.postImageUrl, 1200, &quot;1200:630&quot;) + &quot; 1200w&quot;' imagesizes='(max-width: 784px) calc(100vw - 24px), 760px' />
         </b:if>
         <script defer='defer' src='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/dist/lkk.min.js'></script>
     </head>
@@ -301,9 +329,21 @@ img { display: block; max-width: 100%; height: auto; }
             <a href='https://www.liputankabarkota.com/p/contact.html'>Kontak</a>
         </div></div>
         <header class='lkk-head lkk-wrap'>
-            <a class='lkk-logo' expr:href='data:blog.homepageUrl' expr:title='data:blog.title'>
-                <img alt='Liputan Kabar Kota - Berita Lokal, Untuk Kita Semua' decoding='async' height='51' loading='eager' src='https://blogger.googleusercontent.com/img/a/AVvXsEjgRVVM0QqVwPxzGs7TIhfD1zDB1vtKwhgoOE2eKKrkFY4dRB5yEGnkau8vl7KXmoWer3u7eBPafATg01FaFIY9ksfR6Rpr06usrk5mJ2FQ6-98c-mm_fvfjoiFHgpEyJQYSFLVstsEL8W1GRsaWVMu8mypCymwSe9yZjTJ7Q0Fyg2708VTDc_x-Qt2gAc=w175' title='Liputan Kabar Kota - Berita Lokal, Untuk Kita Semua' width='175' />
-            </a>
+            <b:if cond='data:view.isHomepage'>
+                <h1 class='lkk-site-title'>
+                    <a class='lkk-logo' expr:href='data:blog.homepageUrl' expr:title='data:blog.title'>
+                        <img alt='' decoding='async' height='200' loading='eager' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNZNmziOfEx1A54hSoxNC9kjYuohNN19BaVHt6aiOkOlFHuaM_Lr_W_k4OtrsQItMvjN_ZB5oTLNz9liuHA2ruOy7jdPe2ZlsTLu8wQLaAChjpTJaEnSb7Azx1Y99LqIdWKuHD7CHFh0Q-iZzCXXAN7bb5zEML356qujV-FHRyqye3tIEFwywakZn25Dw/s1600/logo-liputan-kabar-kota-fav.png' title='Liputan Kabar Kota' width='200' />
+                        <span class='lkk-brand-name'>Liputan<br />Kabar Kota</span>
+                    </a>
+                </h1>
+                <b:else />
+                <div class='lkk-site-title'>
+                    <a class='lkk-logo' expr:href='data:blog.homepageUrl' expr:title='data:blog.title'>
+                        <img alt='' decoding='async' height='200' loading='eager' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNZNmziOfEx1A54hSoxNC9kjYuohNN19BaVHt6aiOkOlFHuaM_Lr_W_k4OtrsQItMvjN_ZB5oTLNz9liuHA2ruOy7jdPe2ZlsTLu8wQLaAChjpTJaEnSb7Azx1Y99LqIdWKuHD7CHFh0Q-iZzCXXAN7bb5zEML356qujV-FHRyqye3tIEFwywakZn25Dw/s1600/logo-liputan-kabar-kota-fav.png' title='Liputan Kabar Kota' width='200' />
+                        <span class='lkk-brand-name'>Liputan<br />Kabar Kota</span>
+                    </a>
+                </div>
+            </b:if>
             <form action='https://www.liputankabarkota.com/search' aria-label='Cari berita Liputan Kabar Kota' class='lkk-search' method='get' role='search'>
                 <label class='lkk-visually-hidden' for='lkk-query'>Kata kunci berita</label>
                 <input id='lkk-query' name='q' placeholder='Cari berita' type='search' />
@@ -312,7 +352,7 @@ img { display: block; max-width: 100%; height: auto; }
         </header>
         <nav aria-label='Main navigation' class='lkk-nav'><div class='lkk-wrap'>
             <a aria-label='Beranda' href='https://www.liputankabarkota.com/'>Beranda</a>
-            <a href='https://www.liputankabarkota.com/#lkk-breaking'>Terkini</a>
+            <a href='https://www.liputankabarkota.com/search'>Terkini</a>
             <a href='https://www.liputankabarkota.com/#lkk-home-latest-heading'>Berita Terbaru</a>
             <a href='https://www.liputankabarkota.com/search/label/Nasional'>Nasional</a>
             <a href='https://www.liputankabarkota.com/search/label/Politik'>Politik</a>
@@ -352,16 +392,21 @@ img { display: block; max-width: 100%; height: auto; }
                     <b:includable id='main' var='this'>
                         <main class='lkk-main'>
                             <b:if cond='data:view.isHomepage'>
-                                <section aria-label='Kabar terkini' class='lkk-ticker' id='lkk-breaking'>
-                                    <span class='lkk-ticker-label'>Kabar Terkini</span>
-                                    <b:loop index='i' values='data:posts' var='post'><b:if cond='data:i == 0'><a expr:href='data:post.url'><data:post.title /></a></b:if></b:loop>
-                                </section>
                                 <section aria-label='Berita utama' class='lkk-headline'>
                                     <b:loop index='i' values='data:posts' var='post'><b:if cond='data:i == 0'>
-                                        <b:if cond='data:post.labels'><span class='lkk-label'><data:post.labels.first.name /></span></b:if>
-                                        <h1><a expr:href='data:post.url'><data:post.title /></a></h1>
-                                        <time class='lkk-meta' expr:datetime='data:post.date.iso8601'><data:post.date /></time>
-                                        <p><data:post.snippet /></p>
+                                        <a aria-hidden='true' class='lkk-headline-media' expr:href='data:post.url' tabindex='-1'>
+                                            <b:if cond='data:post.featuredImage'>
+                                                <img alt='' class='lkk-headline-image' decoding='async' expr:src='resizeImage(data:post.featuredImage, 480, &quot;480:270&quot;)' expr:srcset='resizeImage(data:post.featuredImage, 320, &quot;320:180&quot;) + &quot; 320w, &quot; + resizeImage(data:post.featuredImage, 480, &quot;480:270&quot;) + &quot; 480w, &quot; + resizeImage(data:post.featuredImage, 640, &quot;640:360&quot;) + &quot; 640w&quot;' fetchpriority='high' height='180' loading='eager' sizes='(max-width: 699px) 112px, 320px' width='320' />
+                                                <b:else />
+                                                <span class='lkk-headline-image-empty'>LKK</span>
+                                            </b:if>
+                                        </a>
+                                        <div class='lkk-headline-copy'>
+                                            <b:if cond='data:post.labels'><span class='lkk-label'><data:post.labels.first.name /></span></b:if>
+                                            <h2><a expr:href='data:post.url'><data:post.title /></a></h2>
+                                            <time class='lkk-meta' expr:datetime='data:post.date.iso8601'><data:post.date /></time>
+                                            <b:if cond='data:post.snippet'><p><data:post.snippet /></p></b:if>
+                                        </div>
                                     </b:if></b:loop>
                                 </section>
                                 <section aria-labelledby='lkk-home-latest-heading'>
@@ -390,8 +435,8 @@ img { display: block; max-width: 100%; height: auto; }
                                             <div class='lkk-archive-grid'><b:loop values='data:posts' var='post'><b:include data='post' name='postCommentsAndAd' /></b:loop></div>
                                         </div>
                                         <aside aria-label='Informasi Liputan Kabar Kota' class='lkk-side lkk-archive-sidebar lkk-hidden-sm'>
-                                            <div class='lkk-sidebar-panel'><img alt='Legal Advisor Liputan Kabar Kota' class='lkk-sidebar-banner' decoding='async' height='360' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB9o_kAvat40yaG7z7nuLoLFI-uT5md7FNC10oq2ZonsH2MyTK6m1bly8qj6k9kscYv906sgm6QkvMPLDk4YU5M0xGX8xPCOYamjLIjrEXesTu-_7ZUtB-IKmKCx2WYQvgVDotkxuxAQ6L6HYHrX76Uy-DGHXN2LTTfHg_9v7SsBDrcmtF37ekwO_v2Os/s400/legal-danes.jpg' title='Legal Advisor Liputan Kabar Kota' width='640' /></div>
-                                            <div class='lkk-sidebar-panel'><img alt='Informasi Liputan Kabar Kota' class='lkk-sidebar-banner' decoding='async' height='360' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxRSauF_0RxmPaK-_7bBT8uxAkm2dDODP_Wwh7eA2_zCUNPa9TNmIOjvP11HBimYUynKZ_HYhYzL5LwPQZPA_2ZIwVe4FAI06GlZwQ5wjrHjLIz06BAbI-XXzUna61Teftl8PyLt9Q8qY6t0SH2ofpEvtdNmIEQxQ3WcTfTLkUHNJAYr0mgoej4FHUmBE/s400/WhatsApp%20Image%202026-11-02%20at%2018.55.07.jpeg' title='Informasi Liputan Kabar Kota' width='640' /></div>
+                                            <div class='lkk-sidebar-panel'><img alt='Legal Advisor Liputan Kabar Kota' class='lkk-sidebar-banner' decoding='async' height='960' loading='lazy' sizes='260px' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB9o_kAvat40yaG7z7nuLoLFI-uT5md7FNC10oq2ZonsH2MyTK6m1bly8qj6k9kscYv906sgm6QkvMPLDk4YU5M0xGX8xPCOYamjLIjrEXesTu-_7ZUtB-IKmKCx2WYQvgVDotkxuxAQ6L6HYHrX76Uy-DGHXN2LTTfHg_9v7SsBDrcmtF37ekwO_v2Os/w320-rw/legal-danes.jpg' srcset='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB9o_kAvat40yaG7z7nuLoLFI-uT5md7FNC10oq2ZonsH2MyTK6m1bly8qj6k9kscYv906sgm6QkvMPLDk4YU5M0xGX8xPCOYamjLIjrEXesTu-_7ZUtB-IKmKCx2WYQvgVDotkxuxAQ6L6HYHrX76Uy-DGHXN2LTTfHg_9v7SsBDrcmtF37ekwO_v2Os/w320-rw/legal-danes.jpg 320w, https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB9o_kAvat40yaG7z7nuLoLFI-uT5md7FNC10oq2ZonsH2MyTK6m1bly8qj6k9kscYv906sgm6QkvMPLDk4YU5M0xGX8xPCOYamjLIjrEXesTu-_7ZUtB-IKmKCx2WYQvgVDotkxuxAQ6L6HYHrX76Uy-DGHXN2LTTfHg_9v7SsBDrcmtF37ekwO_v2Os/w640-rw/legal-danes.jpg 640w' title='Legal Advisor Liputan Kabar Kota' width='640' /></div>
+                                            <div class='lkk-sidebar-panel'><img alt='Informasi Liputan Kabar Kota' class='lkk-sidebar-banner' decoding='async' height='512' loading='lazy' sizes='260px' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxRSauF_0RxmPaK-_7bBT8uxAkm2dDODP_Wwh7eA2_zCUNPa9TNmIOjvP11HBimYUynKZ_HYhYzL5LwPQZPA_2ZIwVe4FAI06GlZwQ5wjrHjLIz06BAbI-XXzUna61Teftl8PyLt9Q8qY6t0SH2ofpEvtdNmIEQxQ3WcTfTLkUHNJAYr0mgoej4FHUmBE/w320-rw/WhatsApp%20Image%202026-11-02%20at%2018.55.07.jpeg' srcset='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxRSauF_0RxmPaK-_7bBT8uxAkm2dDODP_Wwh7eA2_zCUNPa9TNmIOjvP11HBimYUynKZ_HYhYzL5LwPQZPA_2ZIwVe4FAI06GlZwQ5wjrHjLIz06BAbI-XXzUna61Teftl8PyLt9Q8qY6t0SH2ofpEvtdNmIEQxQ3WcTfTLkUHNJAYr0mgoej4FHUmBE/w320-rw/WhatsApp%20Image%202026-11-02%20at%2018.55.07.jpeg 320w, https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxRSauF_0RxmPaK-_7bBT8uxAkm2dDODP_Wwh7eA2_zCUNPa9TNmIOjvP11HBimYUynKZ_HYhYzL5LwPQZPA_2ZIwVe4FAI06GlZwQ5wjrHjLIz06BAbI-XXzUna61Teftl8PyLt9Q8qY6t0SH2ofpEvtdNmIEQxQ3WcTfTLkUHNJAYr0mgoej4FHUmBE/w640-rw/WhatsApp%20Image%202026-11-02%20at%2018.55.07.jpeg 640w' title='Informasi Liputan Kabar Kota' width='640' /></div>
                                         </aside>
                                     </div>
                                 </b:if>
@@ -707,7 +752,6 @@ img { display: block; max-width: 100%; height: auto; }
                             </div>
                         </b:if>
                     </b:includable>
-                    <b:includable id='homeLead' var='post'><section class='lkk-headline'><b:if cond='data:post.labels'><span class='lkk-label'><data:post.labels.first.name /></span></b:if><h1><a expr:href='data:post.url'><data:post.title /></a></h1><time class='lkk-meta' expr:datetime='data:post.date.iso8601'><data:post.date /></time><p><data:post.snippet /></p></section></b:includable>
                     <b:includable id='homeMiniCard' var='post'>
                         <article class='lkk-item'>
                             <a expr:aria-label='&quot;Berita: &quot; + data:post.title' expr:href='data:post.url'><b:if cond='data:post.featuredImage'><img class='lkk-thumb' decoding='async' expr:alt='&quot;Foto: &quot; + data:post.title' expr:src='resizeImage(data:post.featuredImage, 96, &quot;96:64&quot;)' expr:srcset='resizeImage(data:post.featuredImage, 96, &quot;96:64&quot;) + &quot; 96w, &quot; + resizeImage(data:post.featuredImage, 192, &quot;192:128&quot;) + &quot; 192w&quot;' height='64' loading='lazy' sizes='96px' width='96' /><b:else /><span aria-hidden='true' class='lkk-thumb lkk-thumb-empty'>LKK</span></b:if></a>
@@ -792,10 +836,10 @@ img { display: block; max-width: 100%; height: auto; }
                                     <span itemprop='logo' itemscope='itemscope'
                                         itemtype='https://schema.org/ImageObject'>
                                         <meta
-                                            content='https://blogger.googleusercontent.com/img/a/AVvXsEjgRVVM0QqVwPxzGs7TIhfD1zDB1vtKwhgoOE2eKKrkFY4dRB5yEGnkau8vl7KXmoWer3u7eBPafATg01FaFIY9ksfR6Rpr06usrk5mJ2FQ6-98c-mm_fvfjoiFHgpEyJQYSFLVstsEL8W1GRsaWVMu8mypCymwSe9yZjTJ7Q0Fyg2708VTDc_x-Qt2gAc=w175'
+                                            content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNZNmziOfEx1A54hSoxNC9kjYuohNN19BaVHt6aiOkOlFHuaM_Lr_W_k4OtrsQItMvjN_ZB5oTLNz9liuHA2ruOy7jdPe2ZlsTLu8wQLaAChjpTJaEnSb7Azx1Y99LqIdWKuHD7CHFh0Q-iZzCXXAN7bb5zEML356qujV-FHRyqye3tIEFwywakZn25Dw/s1600/logo-liputan-kabar-kota-fav.png'
                                             itemprop='url' />
-                                        <meta content='175' itemprop='width' />
-                                        <meta content='51' itemprop='height' />
+                                        <meta content='200' itemprop='width' />
+                                        <meta content='200' itemprop='height' />
                                     </span>
                                 </span>
                                 <header class='lkk-article-header'>
@@ -892,8 +936,10 @@ img { display: block; max-width: 100%; height: auto; }
                                         <img class='lkk-article-featured-image' decoding='async'
                                             expr:alt='data:post.title'
                                             expr:src='resizeImage(data:post.featuredImage, 1200, &quot;1200:630&quot;)'
+                                            expr:srcset='resizeImage(data:post.featuredImage, 480, &quot;480:252&quot;) + &quot; 480w, &quot; + resizeImage(data:post.featuredImage, 640, &quot;640:336&quot;) + &quot; 640w, &quot; + resizeImage(data:post.featuredImage, 1200, &quot;1200:630&quot;) + &quot; 1200w&quot;'
                                             expr:title='data:post.title + &quot; | Liputan Kabar Kota&quot;'
                                             fetchpriority='high' height='630' loading='eager'
+                                            sizes='(max-width: 784px) calc(100vw - 24px), 760px'
                                             width='1200' />
                                     </figure>
                                 </b:if>
@@ -1246,16 +1292,16 @@ img { display: block; max-width: 100%; height: auto; }
                     </b:includable>
                     
                 </b:widget>
-                <b:widget id='PopularPosts1' locked='true' title='Berita Lainnya'
+                <b:widget id='PopularPosts1' locked='true' title='Liputan Kabar Berita'
                     type='PopularPosts' version='2' visible='true'>
                     <b:widget-settings>
-                        <b:widget-setting name='numItemsToShow'>6</b:widget-setting>
+                        <b:widget-setting name='numItemsToShow'>9</b:widget-setting>
                         <b:widget-setting name='showThumbnails'>false</b:widget-setting>
                         <b:widget-setting name='showSnippets'>false</b:widget-setting>
                         <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
                     </b:widget-settings>
                     <b:includable id='main'>
-                        <b:if cond='data:view.isPost'><section aria-label='Berita Lainnya' class='lkk-popular-list'><h2>Berita Lainnya</h2><ul><b:loop values='data:posts' var='post'><b:if cond='data:post.href != data:view.url'><li><a expr:href='data:post.href ? data:post.href : data:post.url'><data:post.title /></a></li></b:if></b:loop></ul></section></b:if>
+                        <b:if cond='data:view.isPost'><aside aria-label='Liputan Kabar Berita dan informasi' class='lkk-related-sidebar'><div class='lkk-related-banner'><img alt='Legal Advisor Liputan Kabar Kota' decoding='async' height='960' loading='lazy' sizes='(min-width: 1000px) 360px, calc(100vw - 24px)' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB9o_kAvat40yaG7z7nuLoLFI-uT5md7FNC10oq2ZonsH2MyTK6m1bly8qj6k9kscYv906sgm6QkvMPLDk4YU5M0xGX8xPCOYamjLIjrEXesTu-_7ZUtB-IKmKCx2WYQvgVDotkxuxAQ6L6HYHrX76Uy-DGHXN2LTTfHg_9v7SsBDrcmtF37ekwO_v2Os/w640-h960-p-k-no-nu-rw/legal-danes.jpg' srcset='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB9o_kAvat40yaG7z7nuLoLFI-uT5md7FNC10oq2ZonsH2MyTK6m1bly8qj6k9kscYv906sgm6QkvMPLDk4YU5M0xGX8xPCOYamjLIjrEXesTu-_7ZUtB-IKmKCx2WYQvgVDotkxuxAQ6L6HYHrX76Uy-DGHXN2LTTfHg_9v7SsBDrcmtF37ekwO_v2Os/w320-h480-p-k-no-nu-rw/legal-danes.jpg 320w, https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB9o_kAvat40yaG7z7nuLoLFI-uT5md7FNC10oq2ZonsH2MyTK6m1bly8qj6k9kscYv906sgm6QkvMPLDk4YU5M0xGX8xPCOYamjLIjrEXesTu-_7ZUtB-IKmKCx2WYQvgVDotkxuxAQ6L6HYHrX76Uy-DGHXN2LTTfHg_9v7SsBDrcmtF37ekwO_v2Os/w640-h960-p-k-no-nu-rw/legal-danes.jpg 640w' title='Legal Advisor Liputan Kabar Kota' width='640' /></div><section aria-label='Liputan Kabar Berita' class='lkk-popular-list'><h2>Liputan Kabar Berita</h2><ul><b:loop values='data:posts' var='post'><b:if cond='data:post.href != data:blog.canonicalUrl'><li><a expr:href='data:post.href ? data:post.href : data:post.url'><data:post.title /></a></li></b:if></b:loop></ul></section></aside></b:if>
                     </b:includable>
                     <b:includable id='blogThisShare'>
                         <b:with

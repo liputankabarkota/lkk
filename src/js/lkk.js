@@ -30,9 +30,15 @@
     article.querySelectorAll('img').forEach(function (image) {
       if (imageKey(image.currentSrc || image.src) !== featuredKey) return;
 
+<<<<<<< HEAD
       var figure = image.closest('figure');
       var link = image.closest('a');
       var caption = figure && figure.querySelector('figcaption');
+=======
+      var wrapper = image.closest('figure, table.tr-caption-container');
+      var link = image.closest('a');
+      var caption = wrapper && wrapper.querySelector('figcaption, .tr-caption');
+>>>>>>> 5974a75 (Auto sync LKK - 2026-11-07 00:00:24)
 
       if (!featured.getAttribute('alt') && image.getAttribute('alt')) {
         featured.alt = image.getAttribute('alt');
@@ -40,9 +46,24 @@
       if (!featured.getAttribute('title') && image.getAttribute('title')) {
         featured.title = image.getAttribute('title');
       }
+<<<<<<< HEAD
       if (caption && featuredFigure && !featuredFigure.querySelector('figcaption')) {
         featuredFigure.appendChild(caption.cloneNode(true));
         caption.remove();
+=======
+      if (caption && caption.textContent.trim() && featuredFigure &&
+          !featuredFigure.querySelector('figcaption')) {
+        var featuredCaption = document.createElement('figcaption');
+        Array.prototype.forEach.call(caption.childNodes, function (node) {
+          featuredCaption.appendChild(node.cloneNode(true));
+        });
+        while (featuredCaption.lastChild &&
+            (featuredCaption.lastChild.nodeName === 'BR' ||
+             (featuredCaption.lastChild.nodeType === 3 && !featuredCaption.lastChild.nodeValue.trim()))) {
+          featuredCaption.removeChild(featuredCaption.lastChild);
+        }
+        featuredFigure.appendChild(featuredCaption);
+>>>>>>> 5974a75 (Auto sync LKK - 2026-11-07 00:00:24)
       }
 
       if (link && link.querySelectorAll('img').length === 1 && !link.textContent.trim()) {
@@ -51,8 +72,13 @@
         image.remove();
       }
 
+<<<<<<< HEAD
       if (figure && !figure.querySelector('img, figcaption') && !figure.textContent.trim()) {
         figure.remove();
+=======
+      if (wrapper && !wrapper.querySelector('img')) {
+        wrapper.remove();
+>>>>>>> 5974a75 (Auto sync LKK - 2026-11-07 00:00:24)
       }
     });
 
