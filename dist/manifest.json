@@ -1,0 +1,47 @@
+{
+  "name": "lkk-cdn-parts",
+  "version": "1.0.0",
+  "description": "Modular CDN split for Liputan Kabar Kota template",
+  "parts": [
+    {
+      "name": "base",
+      "file": "00-base.css",
+      "purpose": "CSS reset, root tokens, common layout"
+    },
+    {
+      "name": "header",
+      "file": "01-header.css",
+      "purpose": "Header, nav, breaking ticker"
+    },
+    {
+      "name": "home",
+      "file": "02-home.css",
+      "purpose": "Homepage hero, cards, category tiles"
+    },
+    {
+      "name": "article",
+      "file": "03-article.css",
+      "purpose": "Article content styles and footer"
+    },
+    {
+      "name": "responsive",
+      "file": "04-responsive.css",
+      "purpose": "Desktop/mobile layout rules"
+    },
+    {
+      "name": "shared",
+      "file": "10-shared.js",
+      "purpose": "Header + bootstrapping logic"
+    },
+    {
+      "name": "images",
+      "file": "11-images.js",
+      "purpose": "Responsive image and lazy loading helpers"
+    },
+    {
+      "name": "article-js",
+      "file": "12-article.js",
+      "purpose": "TOC and article enhancement logic"
+    }
+  ]
+}
