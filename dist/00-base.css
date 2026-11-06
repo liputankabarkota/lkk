@@ -1,0 +1,52 @@
+:root {
+  --lkk-bg: #edf2f7;
+  --lkk-surface: #ffffff;
+  --lkk-surface-soft: #f7f9fb;
+  --lkk-line: #e5e9ef;
+  --lkk-text: #1f2328;
+  --lkk-text-soft: #586171;
+  --lkk-primary: #103a7a;
+  --lkk-primary-deep: #0b2d5e;
+  --lkk-accent: #d22232;
+  --lkk-shadow: 0 12px 24px rgba(12, 20, 37, 0.06);
+  --lkk-radius: 14px;
+  --lkk-container: 1280px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: auto; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background: var(--lkk-bg);
+  color: var(--lkk-text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+a { color: var(--lkk-primary); text-decoration: none; overflow-wrap: anywhere; }
+img { max-width: 100%; display: block; height: auto; }
+.lkk-container {
+  width: min(var(--lkk-container), calc(100% - 32px));
+  max-width: var(--lkk-container);
+  margin: 0 auto;
+}
+.lkk-page { padding: 22px 0 36px; }
+
+.lkk-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 16px;
+}
+.lkk-section-head h1,
+.lkk-section-head h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  letter-spacing: -0.04em;
+}
+.lkk-more-link {
+  font-size: 12px;
+  font-weight: 700;
+}
