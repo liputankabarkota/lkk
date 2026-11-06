@@ -68,7 +68,7 @@
             .lkk-news-body h3 { margin-bottom: 6px; font-size: 14px; line-height: 1.35; }
             .lkk-news-body p { margin: 0; color: var(--lkk-text-soft); font-size: 12px; line-height: 1.55; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
             .lkk-card-meta { margin-top: 8px; font-size: 10px; }
-            @media (max-width: 680px) { .lkk-container { width: calc(100% - 24px); } .lkk-header-inner { gap: 8px 12px; padding: 10px 0; } .lkk-brand-logo { width: min(175px, 48vw); max-height: 48px; } .lkk-search-form { min-width: 0; width: auto; max-width: 45%; } .lkk-search-input { width: 100%; min-width: 0; } .lkk-main-nav { width: calc(100% - 24px); min-height: 42px; } .lkk-break-ing a { font-size: 11px; } .lkk-home-top { grid-template-columns: 1fr; gap: 10px; } .lkk-home-feature { min-height: clamp(260px, 58vw, 390px); } .lkk-mini-card { grid-template-columns: 82px minmax(0, 1fr); } .lkk-news-grid { grid-template-columns: 1fr; } }
+            @media (max-width: 680px) { .lkk-container { width: calc(100% - 24px); } .lkk-header-inner { gap: 8px 12px; padding: 10px 0; } .lkk-brand-logo { width: min(175px, 48vw); max-height: 48px; } .lkk-search-form { min-width: 0; width: auto; max-width: 45%; } .lkk-search-input { width: 100%; min-width: 0; } .lkk-main-nav { width: calc(100% - 24px); min-height: 42px; } .lkk-breaking a { font-size: 11px; } .lkk-home-top { grid-template-columns: 1fr; gap: 10px; } .lkk-home-feature { min-height: clamp(260px, 58vw, 390px); } .lkk-mini-card { grid-template-columns: 82px minmax(0, 1fr); } .lkk-news-grid { grid-template-columns: 1fr; } }
         </style>
         <link rel='preload' as='style' href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/head.min.css' />
         <link href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/head.min.css'
@@ -2389,12 +2389,27 @@
       //<![CDATA[
       (function () {
         var stylesheet = document.getElementById('lkk-theme-css');
+        var stylesheetSource = 'https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/head.min.css';
+
+        function scheduleScript(fn) {
+          if (window.requestIdleCallback) {
+            requestIdleCallback(function () {
+              fn();
+            }, { timeout: 1500 });
+          } else {
+            setTimeout(fn, 250);
+          }
+        }
 
         function loadScripts() {
           var source = 'https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/footer.js';
+          var existing = document.querySelector('script[data-lkk-footer-script]');
+          if (existing) return;
+
           var script = document.createElement('script');
           script.src = source;
-          script.async = false;
+          script.async = true;
+          script.setAttribute('data-lkk-footer-script', 'true');
           script.onerror = function () {
             console.error('Gagal memuat skrip LKK: ' + source);
           };
@@ -2402,26 +2417,26 @@
         }
 
         function handleStylesheetError() {
-          console.error('Gagal memuat stylesheet LKK: ' + stylesheet.href);
-          loadScriptsAfterStylesheet();
+          console.error('Gagal memuat stylesheet LKK: ' + stylesheetSource);
+          scheduleScript(loadScripts);
         }
 
         function loadScriptsAfterStylesheet() {
-          if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', loadScripts, { once: true });
-          } else {
-            loadScripts();
-          }
+          scheduleScript(loadScripts);
         }
 
-        var stylesheetState = stylesheet.getAttribute('data-lkk-state');
+        var stylesheetState = stylesheet && stylesheet.getAttribute('data-lkk-state');
         if (stylesheetState === 'loaded') {
           loadScriptsAfterStylesheet();
         } else if (stylesheetState === 'error') {
           handleStylesheetError();
         } else {
-          stylesheet.addEventListener('load', loadScriptsAfterStylesheet, { once: true });
-          stylesheet.addEventListener('error', handleStylesheetError, { once: true });
+          if (stylesheet) {
+            stylesheet.addEventListener('load', loadScriptsAfterStylesheet, { once: true });
+            stylesheet.addEventListener('error', handleStylesheetError, { once: true });
+          } else {
+            scheduleScript(loadScripts);
+          }
         }
       }());
       //]]>
