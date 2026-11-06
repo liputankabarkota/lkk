@@ -61,6 +61,12 @@
         gap: 20px;
         align-items: stretch;
       }
+      @media (min-width: 1200px) {
+        .lkk-container { width: min(100%, 1360px); }
+        .lkk-home-top { grid-template-columns: minmax(0, 1.8fr) minmax(290px, .92fr); }
+        .lkk-home-feature { min-height: 470px; }
+        .lkk-category-tiles { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+      }
 /* Css Responsive */
            @media (max-width: 980px) {
         .lkk-hero,
