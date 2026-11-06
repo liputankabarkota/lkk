@@ -174,15 +174,20 @@
       }
       .lkk-topbar a { color: #fff; }
       .lkk-site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
         background: rgba(255,255,255,0.96);
         border-bottom: 1px solid var(--lkk-line);
+        box-shadow: 0 8px 22px rgba(16, 58, 122, 0.06);
+        backdrop-filter: blur(6px);
       }
       .lkk-header-inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 18px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         min-height: 82px;
         padding: 12px 0;
       }
