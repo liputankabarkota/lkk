@@ -112,22 +112,6 @@
                 </b:if>
             </b:if>
         </b:if>
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
-
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/dist/00-critical.css" />
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/dist/01-noncritical.css"
-            media="print" onload="this.media='all'" />
-        <noscript>
-            <link rel="stylesheet"
-                href="https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/dist/01-noncritical.css" />
-        </noscript>
-
-        <script defer src="https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/dist/10-shared.js"></script>
-        <script defer src="https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/dist/11-images.js"></script>
-        <script defer src="https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/dist/12-article.js"></script>
         <script type='application/ld+json'>
             {
               &quot;@context&quot;: &quot;https://schema.org&quot;,
@@ -1008,6 +992,14 @@
                         <!-- G+ comments, no longer available. The includable is retained for
                         backwards-compatibility. -->
                     </b:includable>
+                    <b:includable id='commentsTitle'>
+                        <h3 class='title'>
+                            <data:messages.comments />
+                        </h3>
+                    </b:includable>
+                    <b:includable id='defaultAdUnit'>
+                        <!-- Kode iklan telah dihapus -->
+                    </b:includable>
                     <b:includable id='emailPostIcon'>
                         <span class='byline post-icons'>
                             <!-- email post links -->
@@ -1023,6 +1015,34 @@
                     </b:includable>
                     <b:includable id='facebookShare'>
                         <b:include name='platformShare' />
+                    </b:includable>
+                    <b:includable id='feedLinks'>
+                        <b:if cond='!data:view.isPost'> <!-- Blog feed links -->
+                            <b:if cond='data:feedLinks'>
+                                <div class='blog-feeds'>
+                                    <b:include data='feedLinks' name='feedLinksBody' />
+                                </div>
+                            </b:if>
+                            <b:else /> <!--Post
+                            feed links -->
+                            <div class='post-feeds'>
+                                <b:loop values='data:posts' var='post'>
+                                    <b:if cond='data:post.allowComments and data:post.feedLinks'>
+                                        <b:include data='post.feedLinks' name='feedLinksBody' />
+                                    </b:if>
+                                </b:loop>
+                            </div>
+                        </b:if>
+                    </b:includable>
+                    <b:includable id='feedLinksBody' var='links'>
+                        <div class='feed-links'>
+                            <data:messages.subscribeTo />
+                            <b:loop values='data:links' var='f'>
+                                <a class='feed-link' expr:href='data:f.url'
+                                    expr:type='data:f.mimeType' target='_blank'><data:f.name /> (<data:f.feedType />
+                                    )</a>
+                            </b:loop>
+                        </div>
                     </b:includable>
                     <b:includable id='footerBylines'>
                         <b:if cond='data:widgets.Blog.first.footerBylines'>
@@ -1054,12 +1074,86 @@
                             </div>
                         </b:if>
                     </b:includable>
+                    <b:includable id='homeLead' var='post'>
+                        <article class='lkk-home-lead lkk-home-feature'>
+
+                            <div class='lkk-home-lead-media'>
+                                <img alt='Liputan Kabar Kota - Media Informasi Indonesia'
+                                    class='lkk-home-lead-image' decoding='async'
+                                    fetchpriority='high' height='450' loading='eager'
+                                    sizes='(max-width: 700px) 100vw, (max-width: 1200px) 58vw, 700px'
+                                    src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHDfm5N68Q63_zjKBTYI6GprMuCZp8LaHAfl2u4ji5bxsowmg3lWpjHdUELhVzIIKWW4slwweFmnaRo-YNUmMFjNBMZxKwujmgMuuDG5NhW6szwj7l-Vq5sqiJX4LW75wekdtoOXImbBinZYHxkSdYP77O8juERdiS2oJQIQFWKT9o81mtzUzL5fNBYZU/w800-h450-p-k-no-nu/Liputan%20KabarKota_%20Indonesia%20Connected%20(1).png'
+                                    srcset='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHDfm5N68Q63_zjKBTYI6GprMuCZp8LaHAfl2u4ji5bxsowmg3lWpjHdUELhVzIIKWW4slwweFmnaRo-YNUmMFjNBMZxKwujmgMuuDG5NhW6szwj7l-Vq5sqiJX4LW75wekdtoOXImbBinZYHxkSdYP77O8juERdiS2oJQIQFWKT9o81mtzUzL5fNBYZU/w480-h270-p-k-no-nu/Liputan%20KabarKota_%20Indonesia%20Connected%20(1).png 480w, https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHDfm5N68Q63_zjKBTYI6GprMuCZp8LaHAfl2u4ji5bxsowmg3lWpjHdUELhVzIIKWW4slwweFmnaRo-YNUmMFjNBMZxKwujmgMuuDG5NhW6szwj7l-Vq5sqiJX4LW75wekdtoOXImbBinZYHxkSdYP77O8juERdiS2oJQIQFWKT9o81mtzUzL5fNBYZU/w800-h450-p-k-no-nu/Liputan%20KabarKota_%20Indonesia%20Connected%20(1).png 800w, https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHDfm5N68Q63_zjKBTYI6GprMuCZp8LaHAfl2u4ji5bxsowmg3lWpjHdUELhVzIIKWW4slwweFmnaRo-YNUmMFjNBMZxKwujmgMuuDG5NhW6szwj7l-Vq5sqiJX4LW75wekdtoOXImbBinZYHxkSdYP77O8juERdiS2oJQIQFWKT9o81mtzUzL5fNBYZU/w1200-h675-p-k-no-nu/Liputan%20KabarKota_%20Indonesia%20Connected%20(1).png 1200w'
+                                    title='Liputan Kabar Kota - Media Informasi Indonesia'
+                                    width='800' />
+                            </div>
+
+                            <div class='lkk-home-lead-copy'>
+
+                                <span class='lkk-home-lead-kicker'>
+                                    Informasi aktual, akurat, dan berimbang
+                                </span>
+
+                                <h1 class='lkk-home-lead-title'>
+                                    Liputan Kabar Kota
+                                </h1>
+
+                            </div>
+
+                        </article>
+                    </b:includable>
+                    <b:includable id='homeMiniCard' var='post'>
+                        <article class='lkk-mini-card'>
+                            <a class='lkk-mini-card-media' expr:href='data:post.url'>
+                                <b:if cond='data:post.featuredImage'>
+                                    <img decoding='async'
+                                        expr:alt='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
+                                        expr:src='resizeImage(data:post.featuredImage, 220, &quot;220:132&quot;)'
+                                        expr:title='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
+                                        height='132' loading='lazy' width='220' />
+                                    <b:else />
+                                    <span class='lkk-mini-card-placeholder'>LKK</span>
+                                </b:if>
+                            </a>
+                            <div class='lkk-mini-card-copy'>
+                                <b:if cond='data:post.labels'>
+                                    <a class='lkk-news-label' expr:href='data:post.labels.first.url'
+                                        expr:title='data:post.title'>
+                                        <data:post.labels.first.name />
+                                    </a>
+                                </b:if>
+                                <h3>
+                                    <a expr:href='data:post.url' expr:title='data:post.title'>
+                                        <data:post.title />
+                                    </a>
+                                </h3>
+                                <time expr:datetime='data:post.date.iso8601'>
+                                    <data:post.date />
+                                </time>
+                            </div>
+                        </article>
+                    </b:includable>
+                    <b:includable id='homePageLink'>
+                        <a class='home-link' expr:href='data:blog.homepageUrl'>
+                            <data:messages.home />
+                        </a>
+                    </b:includable>
+                    <b:includable id='iframeComments' var='post'>
+                        <!-- G+ comments, no longer available. The includable is retained for
+                        backwards-compatibility. -->
+                    </b:includable>
+                    <b:includable id='inlineAd' var='post'>
+                        <!-- Fungsi iklan di sela postingan dinonaktifkan -->
+                    </b:includable>
                     <b:includable id='linkShare'>
-                        <b:with
-                            value='&quot;window.prompt(\&quot;Copy to clipboard: Ctrl+C, Enter\&quot;, \&quot;&quot; + data:originalUrl + &quot;\&quot;); return false;&quot;'
-                            var='onclick'>
-                            <b:include name='platformShare' />
-                        </b:with>
+                        <b:include name='platformShare' />
+                    </b:includable>
+                    <b:includable id='nextPageLink'>
+                        <a class='blog-pager-older-link' expr:href='data:olderPageUrl'
+                            expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;'
+                            title='Liputan lama'>
+                            Liputan Lama
+                        </a>
                     </b:includable>
                     <b:includable id='otherSharingButton'>
                         <span class='sharing-platform-button sharing-element-other'
@@ -1079,12 +1173,188 @@
                         <a expr:class='&quot;goog-inline-block sharing-&quot; + data:platform.key'
                             expr:data-url='data:originalUrl'
                             expr:href='data:shareUrl + &quot;&amp;target=&quot; + data:platform.target'
-                            expr:onclick='data:onclick ? data:onclick : &quot;&quot;'
                             expr:title='data:platform.shareMessage' target='_blank'>
                             <span class='share-button-link-text'>
                                 <data:platform.shareMessage />
                             </span>
                         </a>
+                    </b:includable>
+                    <b:includable id='post' var='post'>
+                        <b:if cond='data:view.isSingleItem'>
+                            <article class='lkk-article-shell' itemscope='itemscope'
+                                itemtype='https://schema.org/NewsArticle'>
+                                <meta expr:content='data:blog.canonicalUrl' itemprop='url' />
+                                <meta expr:content='data:blog.canonicalUrl'
+                                    itemprop='mainEntityOfPage' />
+                                <meta expr:content='data:post.snippet' itemprop='description' />
+                                <meta expr:content='data:post.lastUpdated.iso8601'
+                                    itemprop='dateModified' />
+                                <meta content='true' itemprop='isAccessibleForFree' />
+                                <span itemprop='isPartOf' itemscope='itemscope'
+                                    itemtype='https://schema.org/Product'>
+                                    <meta content='CAowx4XIDA:openaccess' itemprop='productID' />
+                                </span>
+                                <b:if cond='data:post.labels'>
+                                    <meta expr:content='data:post.labels.first.name'
+                                        itemprop='articleSection' />
+                                </b:if>
+                                <b:if cond='data:post.featuredImage'>
+                                    <meta
+                                        expr:content='resizeImage(data:post.featuredImage, 1200, &quot;1200:630&quot;)'
+                                        itemprop='image' />
+                                </b:if>
+                                <span itemprop='publisher' itemscope='itemscope'
+                                    itemtype='https://schema.org/Organization'>
+                                    <meta content='Liputan Kabar Kota' itemprop='name' />
+                                    <meta content='https://www.liputankabarkota.com/p/redaksi.html'
+                                        itemprop='url' />
+                                    <span itemprop='logo' itemscope='itemscope'
+                                        itemtype='https://schema.org/ImageObject'>
+                                        <meta
+                                            content='https://blogger.googleusercontent.com/img/a/AVvXsEjgRVVM0QqVwPxzGs7TIhfD1zDB1vtKwhgoOE2eKKrkFY4dRB5yEGnkau8vl7KXmoWer3u7eBPafATg01FaFIY9ksfR6Rpr06usrk5mJ2FQ6-98c-mm_fvfjoiFHgpEyJQYSFLVstsEL8W1GRsaWVMu8mypCymwSe9yZjTJ7Q0Fyg2708VTDc_x-Qt2gAc=w175'
+                                            itemprop='url' />
+                                        <meta content='175' itemprop='width' />
+                                        <meta content='51' itemprop='height' />
+                                    </span>
+                                </span>
+                                <header class='lkk-article-header'>
+                                    <h1 class='lkk-article-title' itemprop='headline'>
+                                        <data:post.title />
+                                    </h1>
+                                    <nav aria-label='Breadcrumb' class='lkk-breadcrumb'
+                                        itemscope='itemscope'
+                                        itemtype='https://schema.org/BreadcrumbList'>
+                                        <span itemprop='itemListElement' itemscope='itemscope'
+                                            itemtype='https://schema.org/ListItem'>
+                                            <a expr:href='data:blog.homepageUrl' itemprop='item'>
+                                                <span itemprop='name'>Beranda</span>
+                                            </a>
+                                            <meta content='1' itemprop='position' />
+                                        </span>
+                                        <b:if cond='data:post.labels'>
+                                            <span aria-hidden='true'>/</span>
+                                            <span itemprop='itemListElement' itemscope='itemscope'
+                                                itemtype='https://schema.org/ListItem'>
+                                                <a expr:href='data:post.labels.first.url'
+                                                    itemprop='item'>
+                                                    <span itemprop='name'>
+                                                        <data:post.labels.first.name />
+                                                    </span>
+                                                </a>
+                                                <meta content='2' itemprop='position' />
+                                            </span>
+                                        </b:if>
+                                        <span aria-hidden='true'>/</span>
+                                        <span itemprop='itemListElement' itemscope='itemscope'
+                                            itemtype='https://schema.org/ListItem'>
+                                            <meta expr:content='data:blog.canonicalUrl'
+                                                itemprop='item' />
+                                            <span aria-current='page' itemprop='name'>
+                                                <data:post.title />
+                                            </span>
+                                            <b:if cond='data:post.labels'>
+                                                <meta content='3' itemprop='position' />
+                                                <b:else />
+                                                <meta content='2' itemprop='position' />
+                                            </b:if>
+                                        </span>
+                                    </nav>
+                                    <div class='lkk-article-byline'>
+                                        <span class='lkk-article-author' itemprop='author'
+                                            itemscope='itemscope'
+                                            itemtype='https://schema.org/Person'>
+                                            <span>Oleh </span>
+                                            <b:if cond='data:post.author.profileUrl'>
+                                                <a expr:href='data:post.author.profileUrl'
+                                                    itemprop='url' rel='author'>
+                                                    <span itemprop='name'>
+                                                        <data:post.author.name />
+                                                    </span>
+                                                </a>
+                                                <b:else />
+                                                <span itemprop='name'>
+                                                    <data:post.author.name />
+                                                </span>
+                                            </b:if>
+                                        </span>
+                                        <span class='lkk-article-editor' itemprop='editor'
+                                            itemscope='itemscope'
+                                            itemtype='https://schema.org/Organization'>
+                                            <span>Editor </span>
+                                            <a
+                                                href='https://www.liputankabarkota.com/p/redaksi.html#editor'
+                                                itemprop='url'>
+                                                <span itemprop='name'>Tim Editor Liputan Kabar Kota</span>
+                                            </a>
+                                        </span>
+                                        <span class='lkk-article-date'>
+                                            <span>Dipublikasikan:</span>
+                                            <time class='lkk-post-published'
+                                                expr:datetime='data:post.date.iso8601'
+                                                itemprop='datePublished'>
+                                                <data:post.date />
+                                            </time>
+                                        </span>
+                                        <b:if cond='data:post.lastUpdated != data:post.date'>
+                                            <span class='lkk-article-date'>
+                                                <span>Diperbarui:</span>
+                                                <time class='lkk-post-modified'
+                                                    expr:datetime='data:post.lastUpdated.iso8601'>
+                                                    <data:post.lastUpdated />
+                                                </time>
+                                            </span>
+                                        </b:if>
+                                    </div>
+                                </header>
+                                <b:if cond='data:post.featuredImage'>
+                                    <figure class='lkk-article-featured'>
+                                        <img class='lkk-article-featured-image' decoding='async'
+                                            expr:alt='data:post.title'
+                                            expr:src='resizeImage(data:post.featuredImage, 1200, &quot;1200:630&quot;)'
+                                            expr:title='data:post.title + &quot; | Liputan Kabar Kota&quot;'
+                                            fetchpriority='high' height='630' loading='eager'
+                                            width='1200' />
+                                    </figure>
+                                </b:if>
+                                <nav aria-label='Poin penting isi berita' class='lkk-article-toc'
+                                    hidden='hidden'>
+                                    <h2>Poin Penting</h2>
+                                    <ol />
+                                </nav>
+                                <div class='lkk-article-body post-body entry-content'
+                                    expr:id='&quot;post-body-&quot; + data:post.id'
+                                    itemprop='articleBody'>
+                                    <data:post.body />
+                                </div>
+                                <div class='lkk-article-categories'>
+                                    <p class='lkk-article-kicker'>Liputan Kabar Kota</p>
+                                    <b:if cond='data:post.labels'>
+                                        <div class='lkk-article-labels'>
+                                            <span class='lkk-article-category-label'>Kategori:</span>
+                                            <b:loop values='data:post.labels' var='label'>
+                                                <a expr:href='data:label.url'>
+                                                    <data:label.name />
+                                                </a>
+                                            </b:loop>
+                                        </div>
+                                    </b:if>
+                                </div>
+
+                                <div class='lkk-article-actions'>
+                                    <button class='lkk-print-button' onclick='window.print();'
+                                        type='button'>Cetak
+                                        artikel A4</button>
+                                </div>
+                                <div rrm-inline-cta='415cb5e0-9f51-4adb-803b-fd3190b73f88' />
+                                <p class='lkk-print-source'> Sumber: <a
+                                        expr:href='data:blog.canonicalUrl'>
+                                        <data:blog.canonicalUrl />
+                                    </a>
+                                </p>
+                            </article>
+                            <b:else />
+                            <b:include data='post' name='postCard' />
+                        </b:if>
                     </b:includable>
                     <b:includable id='postAuthor'>
                         <span class='byline post-author vcard'>
@@ -1108,10 +1378,100 @@
                             </span>
                         </span>
                     </b:includable>
+                    <b:includable id='postBody' var='post'>
+                        <!-- If metaDescription is empty, use the post body as the schema.org
+                        description too, for G+/FB snippeting. -->
+                        <div class='post-body entry-content float-container'
+                            expr:id='&quot;post-body-&quot; + data:post.id'>
+                            <data:post.body />
+                        </div>
+                    </b:includable>
+                    <b:includable id='postBodySnippet' var='post'>
+                        <b:include data='post' name='postBody' />
+                    </b:includable>
+                    <b:includable id='postCard' var='post'>
+                        <article class='lkk-news-card'>
+                            <a class='lkk-news-card-media'
+                                expr:aria-label='&quot;Berita: &quot; + data:post.title'
+                                expr:href='data:post.url'>
+                                <b:if cond='data:post.featuredImage'>
+                                    <img class='lkk-news-thumb' decoding='async'
+                                        expr:alt='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
+                                        expr:src='resizeImage(data:post.featuredImage, 320, &quot;320:180&quot;)'
+                                        expr:title='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
+                                        height='180' loading='lazy' width='320' />
+                                    <b:else />
+                                    <span class='lkk-news-thumb lkk-news-thumb-placeholder'>LKK</span>
+                                </b:if>
+                            </a>
+                            <div class='lkk-news-body'>
+                                <b:if cond='data:post.labels'>
+                                    <a class='lkk-news-label' expr:href='data:post.labels.first.url'
+                                        expr:title='data:post.title'>
+                                        <data:post.labels.first.name />
+                                    </a>
+                                </b:if>
+                                <h3>
+                                    <a expr:href='data:post.url' expr:title='data:post.title'>
+                                        <data:post.title />
+                                    </a>
+                                </h3>
+                                <p>
+                                    <data:post.snippet />
+                                </p>
+                                <div class='lkk-card-meta'>
+                                    <span>
+                                        <data:post.author.name />
+                                    </span>
+                                    <time expr:datetime='data:post.date.iso8601'>
+                                        <data:post.date />
+                                    </time>
+                                </div>
+                            </div>
+                        </article>
+                    </b:includable>
+                    <b:includable id='postCommentsAndAd' var='post'>
+                        <div class='post-outer-container'>
+                            <!-- Post title and body -->
+                            <div class='post-outer'>
+                                <b:include data='post' name='post' />
+                            </div>
+
+                        </div>
+                    </b:includable>
                     <b:includable id='postCommentsLink'>
-                        <span class='byline post-comment-link container'>
-                            <b:include cond='data:post.commentSource != 1' name='commentsLink' />
-                        </span>
+                        <b:if cond='data:view.isMultipleItems'>
+                            <span class='byline post-comment-link container'>
+                                <b:include cond='data:post.commentSource != 1' name='commentsLink' />
+                            </span>
+                        </b:if>
+                    </b:includable>
+                    <b:includable id='postFooter' var='post'>
+                        <div class='post-footer'>
+                            <b:include name='footerBylines' />
+                            <b:include data='post' name='postFooterAuthorProfile' />
+                        </div>
+                    </b:includable>
+                    <b:includable id='postFooterAuthorProfile' var='post'>
+                        <b:if cond='data:post.author.aboutMe and data:view.isPost'>
+                            <div class='author-profile'>
+                                <b:if cond='data:post.author.authorPhoto.url'>
+                                    <img class='author-image' decoding='async'
+                                        expr:alt='data:post.author.name'
+                                        expr:src='data:post.author.authorPhoto.url'
+                                        expr:title='data:post.author.name' height='50'
+                                        loading='lazy' width='50' />
+                                    <div class='author-about'>
+                                        <b:include data='post' name='aboutPostAuthor' />
+                                    </div>
+                                    <b:else />
+                                    <b:include data='post' name='aboutPostAuthor' />
+                                </b:if>
+                            </div>
+                        </b:if>
+                    </b:includable>
+                    <b:includable id='postHeader' var='post'>
+                        <b:include name='headerByline' />
                     </b:includable>
                     <b:includable id='postJumpLink' var='post'>
                         <div class='jump-link flat-button'>
@@ -1140,6 +1500,35 @@
                                 <data:post.location.name />
                             </a>
                         </span>
+                    </b:includable>
+                    <b:includable id='postMeta' var='post'>
+                        <b:include data='post' name='postMetadataJSON' />
+                    </b:includable>
+                    <b:includable id='postMetadataJSONImage'> &quot;image&quot;: {
+                        &quot;@type&quot;: &quot;ImageObject&quot;, <b:if
+                            cond='data:post.featuredImage.isResizable'> &quot;url&quot;: &quot;<b:eval
+                                expr='resizeImage(data:post.featuredImage, 1200, &quot;1200:630&quot;)' />&quot;,
+                        &quot;height&quot;: 630, &quot;width&quot;: 1200 <b:else /> &quot;url&quot;:
+                        &quot;https://blogger.googleusercontent.com/img/b/U2hvZWJveA/AVvXsEgfMvYAhAbdHksiBA24JKmb2Tav6K0GviwztID3Cq4VpV96HaJfy0viIu8z1SSw_G9n5FQHZWSRao61M3e58ImahqBtr7LiOUS6m_w59IvDYwjmMcbq3fKW4JSbacqkbxTo8B90dWp0Cese92xfLMPe_tg11g/w1200/&quot;,
+                        &quot;height&quot;: 348, &quot;width&quot;: 1200 </b:if> }, </b:includable>
+                    <b:includable id='postMetadataJSONPublisher'>
+                        &quot;publisher&quot;: {
+                        &quot;@type&quot;: &quot;Organization&quot;,
+                        &quot;name&quot;: &quot;Blogger&quot;,
+                        &quot;logo&quot;: {
+                        &quot;@type&quot;: &quot;ImageObject&quot;,
+                        &quot;url&quot;:
+                        &quot;https://blogger.googleusercontent.com/img/b/U2hvZWJveA/AVvXsEgfMvYAhAbdHksiBA24JKmb2Tav6K0GviwztID3Cq4VpV96HaJfy0viIu8z1SSw_G9n5FQHZWSRao61M3e58ImahqBtr7LiOUS6m_w59IvDYwjmMcbq3fKW4JSbacqkbxTo8B90dWp0Cese92xfLMPe_tg11g/h60/&quot;,
+                        &quot;width&quot;: 206,
+                        &quot;height&quot;: 60
+                        }
+                        },
+                    </b:includable>
+                    <b:includable id='postPagination'>
+                        <div class='blog-pager container' id='blog-pager'>
+                            <b:include cond='data:newerPageUrl' name='previousPageLink' />
+                            <b:include cond='data:olderPageUrl' name='nextPageLink' />
+                        </div>
                     </b:includable>
                     <b:includable id='postReactions'>
                         <!-- Reaction feature no longer available. The includable is retained for
@@ -1172,6 +1561,28 @@
                                 </a>
                             </b:if>
                         </span>
+                    </b:includable>
+                    <b:includable id='postTitle' var='post'>
+                        <a expr:name='data:post.id' />
+                        <b:if cond='data:post.title != &quot;&quot;'>
+                            <h3 class='post-title entry-title'>
+                                <b:if
+                                    cond='data:post.link or (data:post.url and data:view.url != data:post.url)'>
+                                    <a expr:href='data:post.link ?: data:post.url'>
+                                        <data:post.title />
+                                    </a>
+                                    <b:else />
+                                    <data:post.title />
+                                </b:if>
+                            </h3>
+                        </b:if>
+                    </b:includable>
+                    <b:includable id='previousPageLink'>
+                        <a class='blog-pager-newer-link' expr:href='data:newerPageUrl'
+                            expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;'
+                            title='Liputan terbaru'>
+                            Liputan Terbaru
+                        </a>
                     </b:includable>
                     <b:includable id='sharingButton'>
                         <span expr:aria-label='data:platform.shareMessage'
@@ -1839,12 +2250,12 @@
       (function () {
         var stylesheet = document.createElement('link');
         stylesheet.rel = 'stylesheet';
-        stylesheet.href = 'https://cdn.jsdelivr.net/gh/yonleon/lkk@main/head.css';
+        stylesheet.href = 'https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main//head.css';
 
         function loadScripts() {
           var sources = [
-            'https://cdn.jsdelivr.net/gh/yonleon/lkk@main/body.js',
-            'https://cdn.jsdelivr.net/gh/yonleon/lkk@main/footer.js'
+            'https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main//body.js',
+            'https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main//footer.js'
           ];
           var index = 0;
 
