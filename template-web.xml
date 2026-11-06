@@ -55,6 +55,8 @@
             .lkk-category-tiles .lkk-category-icon { width: 22px; height: 22px; stroke: currentColor; stroke-width: 1.8; fill: none; }
             .lkk-page { padding: 22px 0 36px; }
             .lkk-home-top { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(300px, .92fr); gap: 20px; align-items: stretch; }
+            .lkk-page { padding: 22px 0 36px; }
+            .lkk-home-top { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(300px, .92fr); gap: 20px; align-items: stretch; }
             .lkk-home-feature { position: relative; display: block; min-height: 390px; overflow: hidden; border-radius: 8px; background: #172a3a; box-shadow: 0 18px 38px rgba(12,27,45,.08); }
             .lkk-home-feature .lkk-home-lead-media { position: absolute; inset: 0; display: block; min-height: 0; background: #172a3a; }
             .lkk-home-feature .lkk-home-lead-media::after { position: absolute; inset: 35% 0 0; background: linear-gradient(180deg, transparent, rgba(7,18,29,.9)); content: ''; }
