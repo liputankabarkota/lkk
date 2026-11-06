@@ -450,6 +450,17 @@
         text-overflow: ellipsis;
         white-space: nowrap;
       }
+      .lkk-news-body p {
+        margin: 0;
+        color: var(--lkk-text-soft);
+        font-size: 12px;
+        line-height: 1.55;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+      }
       .lkk-home-top {
         display: grid;
         grid-template-columns: minmax(0, 1.8fr) minmax(270px, .9fr);
