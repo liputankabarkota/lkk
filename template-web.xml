@@ -1164,8 +1164,9 @@
                                     <img decoding='async'
                                         expr:alt='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
                                         expr:src='resizeImage(data:post.featuredImage, 220, &quot;220:132&quot;)'
+                                        expr:srcset='resizeImage(data:post.featuredImage, 220, &quot;220:132&quot;) + &quot; 220w, &quot; + resizeImage(data:post.featuredImage, 440, &quot;220:132&quot;) + &quot; 440w, &quot; + resizeImage(data:post.featuredImage, 660, &quot;220:132&quot;) + &quot; 660w&quot;'
                                         expr:title='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
-                                        height='132' loading='lazy' width='220' />
+                                        height='132' loading='lazy' sizes='(max-width: 480px) 110px, 220px' width='220' />
                                     <b:else />
                                     <span class='lkk-mini-card-placeholder'>LKK</span>
                                 </b:if>
@@ -1477,8 +1478,9 @@
                                     <img class='lkk-news-thumb' decoding='async'
                                         expr:alt='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
                                         expr:src='resizeImage(data:post.featuredImage, 320, &quot;320:180&quot;)'
+                                        expr:srcset='resizeImage(data:post.featuredImage, 320, &quot;320:180&quot;) + &quot; 320w, &quot; + resizeImage(data:post.featuredImage, 480, &quot;320:180&quot;) + &quot; 480w, &quot; + resizeImage(data:post.featuredImage, 640, &quot;320:180&quot;) + &quot; 640w&quot;'
                                         expr:title='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
-                                        height='180' loading='lazy' width='320' />
+                                        height='180' loading='lazy' sizes='(max-width: 480px) 100vw, (max-width: 900px) 50vw, 320px' width='320' />
                                     <b:else />
                                     <span class='lkk-news-thumb lkk-news-thumb-placeholder'>LKK</span>
                                 </b:if>
