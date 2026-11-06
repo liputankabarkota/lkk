@@ -1146,6 +1146,8 @@
                                     <img decoding='async'
                                         expr:alt='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
                                         expr:src='resizeImage(data:post.featuredImage, 220, &quot;220:132&quot;)'
+                                        expr:srcset='resizeImage(data:post.featuredImage, 220, &quot;220:132&quot;) + &quot; 220w, &quot; + resizeImage(data:post.featuredImage, 440, &quot;440:264&quot;) + &quot; 440w, &quot; + resizeImage(data:post.featuredImage, 660, &quot;660:396&quot;) + &quot; 660w&quot;'
+                                        expr:sizes='&quot;(max-width: 480px) 110px, 220px&quot;'
                                         expr:title='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
                                         height='132' loading='lazy' width='220' />
                                     <b:else />
