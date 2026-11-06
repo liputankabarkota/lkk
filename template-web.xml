@@ -24,8 +24,16 @@
             .lkk-topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 34px; }
             .lkk-topbar-links { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
             .lkk-topbar a { color: #fff; }
-            .lkk-site-header { background: rgba(255,255,255,0.96); border-bottom: 1px solid var(--lkk-line); }
-            .lkk-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; min-height: 82px; padding: 12px 0; }
+            .lkk-site-header {
+              position: sticky;
+              top: 0;
+              z-index: 20;
+              background: rgba(255,255,255,0.96);
+              border-bottom: 1px solid var(--lkk-line);
+              box-shadow: 0 8px 22px rgba(16, 58, 122, 0.06);
+              backdrop-filter: blur(6px);
+            }
+            .lkk-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: nowrap; min-height: 82px; padding: 12px 0; }
             .lkk-brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
             .lkk-brand-logo { display: block; width: clamp(175px, 22vw, 220px); height: auto; max-height: 56px; object-fit: contain; }
             .lkk-header-search { display: flex; align-items: center; gap: 8px; min-width: 0; }
@@ -36,9 +44,15 @@
             .lkk-main-nav { width: min(100%, var(--lkk-container)); max-width: var(--lkk-container); min-height: 44px; display: flex; align-items: center; justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: thin; gap: 2px; }
             .lkk-main-nav a { flex: 0 0 auto; min-height: 44px; padding: 8px 12px; color: #fff; font-size: 12px; font-weight: 700; white-space: nowrap; }
             .lkk-main-nav a + a { border-left: 1px solid rgba(255,255,255,.22); }
-            .lkk-breaking { display: flex; align-items: center; gap: 12px; min-height: 44px; margin-bottom: 16px; padding: 8px 12px; border: 1px solid #e5e9ed; background: #fff; border-radius: var(--lkk-radius); overflow: hidden; }
+            .lkk-breaking { display: flex; align-items: center; gap: 12px; width: min(100%, var(--lkk-container)); min-height: 44px; margin: 0 auto 16px; padding: 8px 12px; border: 1px solid #e5e9ed; background: #fff; border-radius: var(--lkk-radius); overflow: hidden; box-shadow: 0 12px 26px rgba(12, 20, 37, 0.03); }
             .lkk-breaking-label { flex: 0 0 auto; padding: 5px 9px; background: var(--lkk-accent); color: #fff; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
             .lkk-breaking a { display: block; flex: 1 1 auto; min-width: 0; color: #273846; font-size: 13px; font-weight: 700; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+            .lkk-category-section { margin-top: 30px; }
+            .lkk-category-tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+            .lkk-category-tiles a { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 74px; padding: 12px 14px; border: 1px solid var(--lkk-line); border-radius: 12px; background: #fff; color: var(--lkk-text); box-shadow: 0 6px 18px rgba(16, 58, 122, 0.04); }
+            .lkk-category-tiles a:hover, .lkk-category-tiles a:focus-visible { border-color: rgba(16, 58, 122, 0.25); transform: translateY(-1px); }
+            .lkk-category-tiles span { font-size: 13px; font-weight: 700; }
+            .lkk-category-tiles .lkk-category-icon { width: 22px; height: 22px; stroke: currentColor; stroke-width: 1.8; fill: none; }
             .lkk-page { padding: 22px 0 36px; }
             .lkk-home-top { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(300px, .92fr); gap: 20px; align-items: stretch; }
             .lkk-home-feature { position: relative; display: block; min-height: 390px; overflow: hidden; border-radius: 8px; background: #172a3a; box-shadow: 0 18px 38px rgba(12,27,45,.08); }
