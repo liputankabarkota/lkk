@@ -1374,7 +1374,8 @@
         border-top: 1px solid rgba(255,255,255,.13);
       }
       .lkk-main-nav {
-        width: calc(100% - 32px);
+        width: min(100%, var(--lkk-container));
+        max-width: var(--lkk-container);
         min-height: 44px;
         justify-content: flex-start;
         flex-wrap: nowrap;
@@ -1430,7 +1431,7 @@
       }
       .lkk-home-top {
         display: grid;
-        grid-template-columns: minmax(0, 1.8fr) minmax(270px, .9fr);
+        grid-template-columns: minmax(0, 1.8fr) minmax(300px, .92fr);
         gap: 20px;
         align-items: stretch;
       }
@@ -1676,8 +1677,8 @@
         .lkk-home-latest-cards .lkk-news-grid { grid-template-columns: 1fr; }
       }
       .lkk-post-page .lkk-page {
-        width: min(1120px, calc(100% - 32px));
-        max-width: 1120px;
+        width: min(1220px, calc(100% - 32px));
+        max-width: 1220px;
         padding-top: 16px;
         padding-bottom: 28px;
       }
