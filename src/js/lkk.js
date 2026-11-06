@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var article = document.querySelector('.lkk-article-body');
+  var article = document.querySelector('.lkk-article .lkk-article-body');
   var featured = document.querySelector('.lkk-article-featured-image');
   var articleHeading = document.querySelector('.lkk-article-title');
   var toc = document.querySelector('.lkk-article-toc');
@@ -28,30 +28,31 @@
     var featuredKey = imageKey(featured.currentSrc || featured.src);
 
     article.querySelectorAll('img').forEach(function (image) {
-      if (imageKey(image.currentSrc || image.src) !== featuredKey) return;
-
+      var isFeaturedDuplicate = imageKey(image.currentSrc || image.src) === featuredKey;
       var wrapper = image.closest('figure, table.tr-caption-container');
       var link = image.closest('a');
       var caption = wrapper && wrapper.querySelector('figcaption, .tr-caption');
 
-      if (!featured.getAttribute('alt') && image.getAttribute('alt')) {
-        featured.alt = image.getAttribute('alt');
-      }
-      if (!featured.getAttribute('title') && image.getAttribute('title')) {
-        featured.title = image.getAttribute('title');
-      }
-      if (caption && caption.textContent.trim() && featuredFigure &&
-          !featuredFigure.querySelector('figcaption')) {
-        var featuredCaption = document.createElement('figcaption');
-        Array.prototype.forEach.call(caption.childNodes, function (node) {
-          featuredCaption.appendChild(node.cloneNode(true));
-        });
-        while (featuredCaption.lastChild &&
-            (featuredCaption.lastChild.nodeName === 'BR' ||
-             (featuredCaption.lastChild.nodeType === 3 && !featuredCaption.lastChild.nodeValue.trim()))) {
-          featuredCaption.removeChild(featuredCaption.lastChild);
+      if (isFeaturedDuplicate) {
+        if (!featured.getAttribute('alt') && image.getAttribute('alt')) {
+          featured.alt = image.getAttribute('alt');
         }
-        featuredFigure.appendChild(featuredCaption);
+        if (!featured.getAttribute('title') && image.getAttribute('title')) {
+          featured.title = image.getAttribute('title');
+        }
+        if (caption && caption.textContent.trim() && featuredFigure &&
+            !featuredFigure.querySelector('figcaption')) {
+          var featuredCaption = document.createElement('figcaption');
+          Array.prototype.forEach.call(caption.childNodes, function (node) {
+            featuredCaption.appendChild(node.cloneNode(true));
+          });
+          while (featuredCaption.lastChild &&
+              (featuredCaption.lastChild.nodeName === 'BR' ||
+               (featuredCaption.lastChild.nodeType === 3 && !featuredCaption.lastChild.nodeValue.trim()))) {
+            featuredCaption.removeChild(featuredCaption.lastChild);
+          }
+          featuredFigure.appendChild(featuredCaption);
+        }
       }
 
       if (link && link.querySelectorAll('img').length === 1 && !link.textContent.trim()) {
