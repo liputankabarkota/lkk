@@ -597,7 +597,7 @@
                     </header>
                     <div class='lkk-home-latest-list'>
                       <b:loop index='i' values='data:posts' var='post'>
-                        <b:if cond='data:i &gt; 0 and data:i &lt; 4'>
+                        <b:if cond='data:i &gt; 0 and data:i &lt; 6'>
                           <b:include data='post' name='homeMiniCard'/>
                         </b:if>
                       </b:loop>
