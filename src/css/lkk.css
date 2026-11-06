@@ -20,6 +20,7 @@
 .lkk-list-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 22px 0 0; }
 .lkk-list-heading h2 { margin: 0; font-size: 22px; }
 .lkk-item-copy { min-width: 0; align-self: center; }
+.lkk-thumb-empty { display: grid; place-items: center; color: var(--c-muted); background: #f3f5f7; font-size: 13px; font-weight: 700; }
 .lkk-item-copy h2 a, .lkk-item-copy h3 a { color: var(--c-text); }
 .lkk-item-copy .lkk-label { display: inline-block; }
 .lkk-item-copy .lkk-meta { display: block; margin-top: 4px; }
@@ -29,7 +30,7 @@
 .lkk-crumb, .lkk-breadcrumb { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; color: var(--c-muted); font-size: 13px; }
 .lkk-archive-description { margin: 8px 0 0; color: var(--c-muted); }
 .lkk-archive-layout { display: block; }
-.lkk-archive-main, .lkk-blog-root, .lkk-article { min-width: 0; }
+.lkk-archive-main, .lkk-blog-root, .lkk-article, .lkk-side { min-width: 0; }
 .lkk-archive-sidebar { display: none; }
 .lkk-sidebar-panel { margin: 0 0 14px; }
 .lkk-sidebar-banner { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
