@@ -27,7 +27,9 @@
 
     var featuredKey = imageKey(featured.currentSrc || featured.src);
 
-    article.querySelectorAll('img').forEach(function (image) {
+    var image = article.querySelector('img');
+
+    if (image) {
       var isFeaturedDuplicate = imageKey(image.currentSrc || image.src) === featuredKey;
       var wrapper = image.closest('figure, table.tr-caption-container');
       var link = image.closest('a');
@@ -64,7 +66,7 @@
       if (wrapper && !wrapper.querySelector('img')) {
         wrapper.remove();
       }
-    });
+    }
 
     if (!featured.getAttribute('alt')) {
       featured.alt = articleTitle || 'Foto artikel';
