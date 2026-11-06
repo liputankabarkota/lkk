@@ -1953,31 +1953,14 @@
         var stylesheet = document.getElementById('lkk-theme-css');
 
         function loadScripts() {
-          if (window.__lkkFooterLoaded) return;
-          window.__lkkFooterLoaded = true;
-
           var source = 'https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/footer.js';
           var script = document.createElement('script');
           script.src = source;
           script.async = false;
-          script.defer = true;
           script.onerror = function () {
             console.error('Gagal memuat skrip LKK: ' + source);
           };
-
-          function scheduleLoad() {
-            if (window.requestIdleCallback) {
-              window.requestIdleCallback(function () {
-                document.body.appendChild(script);
-              }, { timeout: 1500 });
-            } else {
-              window.setTimeout(function () {
-                document.body.appendChild(script);
-              }, 32);
-            }
-          }
-
-          scheduleLoad();
+          document.body.appendChild(script);
         }
 
         function handleStylesheetError() {
