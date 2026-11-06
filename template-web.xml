@@ -12,7 +12,8 @@
         <meta content='width=device-width, initial-scale=1' name='viewport' />
         <link crossorigin='anonymous' href='https://blogger.googleusercontent.com' rel='preconnect' />
         <link crossorigin='anonymous' href='https://cdn.jsdelivr.net' rel='preconnect' />
-        <link href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/head.css' rel='stylesheet' />
+        <link href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/head.min.css'
+            rel='stylesheet' />
         <meta content='id_ID' property='og:locale' />
         <meta content='Liputan Kabar Kota' property='og:site_name' />
         <meta content='summary_large_image' name='twitter:card' />
