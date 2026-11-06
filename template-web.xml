@@ -443,6 +443,7 @@
         line-height: 1.3;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
+        line-clamp: 2;
       }
       .lkk-archive-head { margin: 0 0 24px; padding: 8px 0 16px; border-bottom: 2px solid var(--lkk-accent); }
       .lkk-archive-head h1 {
