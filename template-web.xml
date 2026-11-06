@@ -230,60 +230,92 @@
         max-width: var(--lkk-container);
         margin: 0 auto;
       }
-      .lkk-topbar { background: #122638; color: #fff; font-size: 12px; }
+      .lkk-topbar {
+        background: #1e2d1d;
+        color: #fff;
+        font-size: 12px;
+      }
       .lkk-topbar-inner {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: flex-start;
         gap: 12px;
-        min-height: 32px;
+        min-height: 38px;
       }
-      .lkk-topbar-links { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
-      .lkk-topbar a { color: rgba(255,255,255,.86); }
-      .lkk-site-header { background: #fff; border-bottom: 1px solid #e6e8eb; }
+      .lkk-topbar-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .lkk-topbar a {
+        color: rgba(255,255,255,.92);
+        font-weight: 700;
+      }
+      .lkk-site-header {
+        background: #f1f1f1;
+        border-bottom: 1px solid #dfe3e7;
+      }
       .lkk-header-inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 22px;
-        min-height: 78px;
-        padding: 14px 0;
+        gap: 18px;
+        min-height: 92px;
+        padding: 10px 0 8px;
         flex-wrap: nowrap;
       }
       .lkk-brand { display: flex; align-items: center; gap: 13px; min-width: 0; }
       .lkk-brand-logo {
         display: block;
-        width: clamp(175px, 22vw, 220px);
+        width: clamp(170px, 20vw, 220px);
         height: auto;
         max-height: 56px;
         object-fit: contain;
       }
-      .lkk-header-search { display: flex; align-items: center; gap: 6px; }
+      .lkk-header-search {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-left: auto;
+        padding: 4px 4px 4px 12px;
+        background: rgba(255,255,255,.6);
+        border: 1px solid #d8dee5;
+        border-radius: 2px;
+      }
       .lkk-search-input {
         width: 145px;
         min-width: 0;
         padding: 9px 10px;
-        border: 1px solid #d8dee5;
-        border-radius: 2px;
+        border: 0;
+        background: transparent;
         font: inherit;
+        color: #1f2328;
+      }
+      .lkk-search-input:focus {
+        outline: none;
       }
       .lkk-search-form button {
-        padding: 9px 14px;
+        padding: 9px 16px;
         border: 0;
         border-radius: 2px;
         background: var(--lkk-accent);
         color: #fff;
         font-weight: 700;
+        cursor: pointer;
       }
-      .lkk-nav-bar { background: #063b78; border-top: 1px solid rgba(255,255,255,.13); }
+      .lkk-nav-bar {
+        background: #0f4f8d;
+        border-top: 1px solid rgba(255,255,255,.12);
+      }
       .lkk-main-nav {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         gap: 0;
-        width: calc(100% - 32px);
+        width: 100%;
         min-width: 0;
-        min-height: 44px;
+        min-height: 42px;
         flex-wrap: nowrap;
         overflow-x: auto;
         scrollbar-width: thin;
@@ -292,14 +324,14 @@
         display: inline-flex;
         flex: 0 0 auto;
         align-items: center;
-        min-height: 44px;
-        padding: 8px 11px;
+        min-height: 42px;
+        padding: 8px 12px;
         color: #fff;
         font-size: 13px;
         font-weight: 700;
         white-space: nowrap;
       }
-      .lkk-main-nav a + a { border-left: 1px solid rgba(255,255,255,.22); }
+      .lkk-main-nav a + a { border-left: 1px solid rgba(255,255,255,.2); }
       .lkk-page { padding: 24px 0 48px; }
       .lkk-breaking {
         display: flex;
