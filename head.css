@@ -1,6 +1,6 @@
 /* Css Dasar */
       :root {
-        --lkk-bg: #f3f5f7;
+        --lkk-bg: #edf2f7;
         --lkk-surface: #ffffff;
         --lkk-surface-soft: #f7f9fb;
         --lkk-line: #e5e9ef;
@@ -9,8 +9,8 @@
         --lkk-primary: #103a7a;
         --lkk-primary-deep: #0b2d5e;
         --lkk-accent: #d22232;
-        --lkk-shadow: 0 10px 24px rgba(12, 20, 37, 0.05);
-        --lkk-radius: 12px;
+        --lkk-shadow: 0 12px 24px rgba(12, 20, 37, 0.06);
+        --lkk-radius: 14px;
         --lkk-container: 1280px;
       }
 
@@ -44,13 +44,22 @@
         height: auto;
       }
       .lkk-container {
-        width: calc(100% - 32px);
+        width: min(var(--lkk-container), calc(100% - 32px));
         max-width: var(--lkk-container);
         margin: 0 auto;
       }
       .lkk-nav-bar .lkk-main-nav,
       .lkk-post-page .lkk-page {
         max-width: var(--lkk-container);
+      }
+      .lkk-page {
+        padding: 22px 0 36px;
+      }
+      .lkk-home-top {
+        display: grid;
+        grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
+        gap: 20px;
+        align-items: stretch;
       }
 /* Css Responsive */
            @media (max-width: 980px) {
