@@ -1018,7 +1018,14 @@
             <article class='lkk-mini-card'>
               <a class='lkk-mini-card-media' expr:href='data:post.url'>
                 <b:if cond='data:post.featuredImage'>
-                  <img decoding='async' expr:alt='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;' expr:src='resizeImage(data:post.featuredImage, 220, &quot;220:132&quot;)' expr:title='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;' height='132' loading='lazy' width='220'/>
+                  <img
+                    decoding='async'
+                    expr:alt='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
+                    expr:src='resizeImage(data:post.featuredImage, 220, &quot;220:132&quot;)'
+                    expr:title='&quot;Foto dokumentasi: &quot; + data:post.title + &quot; - Liputan Kabar Kota&quot;'
+                    height='132'
+                    loading='lazy'
+                    width='220'/>
                   <b:else/>
                   <span class='lkk-mini-card-placeholder'>LKK</span>
                 </b:if>
