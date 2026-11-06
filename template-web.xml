@@ -1956,9 +1956,6 @@
           var script = document.createElement('script');
           script.src = source;
           script.async = false;
-          script.onload = function () {
-            window.dispatchEvent(new CustomEvent('lkk:loaded'));
-          };
           script.onerror = function () {
             console.error('Gagal memuat skrip LKK: ' + source);
           };
