@@ -2251,12 +2251,12 @@
       (function () {
         var stylesheet = document.createElement('link');
         stylesheet.rel = 'stylesheet';
-        stylesheet.href = 'https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main//head.css';
+        stylesheet.href = 'https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/head.css';
 
         function loadScripts() {
           var sources = [
-            'https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main//body.js',
-            'https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main//footer.js'
+            'https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/body.js',
+            'https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/footer.js'
           ];
           var index = 0;
 
