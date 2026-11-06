@@ -13,6 +13,10 @@
         <meta content='width=device-width, initial-scale=1' name='viewport' />
         <link crossorigin='anonymous' href='https://blogger.googleusercontent.com' rel='preconnect' />
         <link crossorigin='anonymous' href='https://cdn.jsdelivr.net' rel='preconnect' />
+        <b:if cond='data:view.isPost and data:blog.postImageUrl'>
+            <link rel='preload' as='image' fetchpriority='high'
+                expr:href='data:blog.postImageUrl' />
+        </b:if>
         <meta content='id_ID' property='og:locale' />
         <meta content='Liputan Kabar Kota' property='og:site_name' />
         <meta content='summary_large_image' name='twitter:card' />
@@ -318,8 +322,6 @@ img { display: block; max-width: 100%; height: auto; }
             <link rel='preload' as='style' href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/dist/lkk.min.css' onload='this.onload=null;this.rel=&quot;stylesheet&quot;' />
         <noscript><link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/dist/lkk.min.css' /></noscript>
         <b:if cond='data:view.isPost and data:blog.postImageUrl'>
-            <link rel='preload' as='image' fetchpriority='high' expr:href='resizeImage(data:blog.postImageUrl, 1200, &quot;1200:630&quot;)' expr:imagesrcset='resizeImage(data:blog.postImageUrl, 480, &quot;480:252&quot;) + &quot; 480w, &quot; + resizeImage(data:blog.postImageUrl, 640, &quot;640:336&quot;) + &quot; 640w, &quot; + resizeImage(data:blog.postImageUrl, 1200, &quot;1200:630&quot;) + &quot; 1200w&quot;' imagesizes='(max-width: 784px) calc(100vw - 24px), 760px' />
-        </b:if>
     </head>
     <body>
         <div class='lkk-top'><div class='lkk-wrap'>
@@ -331,14 +333,14 @@ img { display: block; max-width: 100%; height: auto; }
             <b:if cond='data:view.isHomepage'>
                 <h1 class='lkk-site-title'>
                     <a class='lkk-logo' expr:href='data:blog.homepageUrl' expr:title='data:blog.title'>
-                        <img alt='' decoding='async' height='200' loading='eager' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNZNmziOfEx1A54hSoxNC9kjYuohNN19BaVHt6aiOkOlFHuaM_Lr_W_k4OtrsQItMvjN_ZB5oTLNz9liuHA2ruOy7jdPe2ZlsTLu8wQLaAChjpTJaEnSb7Azx1Y99LqIdWKuHD7CHFh0Q-iZzCXXAN7bb5zEML356qujV-FHRyqye3tIEFwywakZn25Dw/s1600/logo-liputan-kabar-kota-fav.png' title='Liputan Kabar Kota' width='200' />
+                        <img alt='' decoding='async' height='128' loading='eager' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNZNmziOfEx1A54hSoxNC9kjYuohNN19BaVHt6aiOkOlFHuaM_Lr_W_k4OtrsQItMvjN_ZB5oTLNz9liuHA2ruOy7jdPe2ZlsTLu8wQLaAChjpTJaEnSb7Azx1Y99LqIdWKuHD7CHFh0Q-iZzCXXAN7bb5zEML356qujV-FHRyqye3tIEFwywakZn25Dw/w128-rw/logo-liputan-kabar-kota-fav.png' title='Liputan Kabar Kota' width='128' />
                         <span class='lkk-brand-name'>Liputan<br />Kabar Kota</span>
                     </a>
                 </h1>
                 <b:else />
                 <div class='lkk-site-title'>
                     <a class='lkk-logo' expr:href='data:blog.homepageUrl' expr:title='data:blog.title'>
-                        <img alt='' decoding='async' height='200' loading='eager' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNZNmziOfEx1A54hSoxNC9kjYuohNN19BaVHt6aiOkOlFHuaM_Lr_W_k4OtrsQItMvjN_ZB5oTLNz9liuHA2ruOy7jdPe2ZlsTLu8wQLaAChjpTJaEnSb7Azx1Y99LqIdWKuHD7CHFh0Q-iZzCXXAN7bb5zEML356qujV-FHRyqye3tIEFwywakZn25Dw/s1600/logo-liputan-kabar-kota-fav.png' title='Liputan Kabar Kota' width='200' />
+                        <img alt='' decoding='async' height='128' loading='eager' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNZNmziOfEx1A54hSoxNC9kjYuohNN19BaVHt6aiOkOlFHuaM_Lr_W_k4OtrsQItMvjN_ZB5oTLNz9liuHA2ruOy7jdPe2ZlsTLu8wQLaAChjpTJaEnSb7Azx1Y99LqIdWKuHD7CHFh0Q-iZzCXXAN7bb5zEML356qujV-FHRyqye3tIEFwywakZn25Dw/w128-rw/logo-liputan-kabar-kota-fav.png' title='Liputan Kabar Kota' width='128' />
                         <span class='lkk-brand-name'>Liputan<br />Kabar Kota</span>
                     </a>
                 </div>
@@ -934,11 +936,9 @@ img { display: block; max-width: 100%; height: auto; }
                                     <figure class='lkk-article-featured'>
                                         <img class='lkk-article-featured-image' decoding='async'
                                             expr:alt='data:post.title'
-                                            expr:src='resizeImage(data:post.featuredImage, 1200, &quot;1200:630&quot;)'
-                                            expr:srcset='resizeImage(data:post.featuredImage, 480, &quot;480:252&quot;) + &quot; 480w, &quot; + resizeImage(data:post.featuredImage, 640, &quot;640:336&quot;) + &quot; 640w, &quot; + resizeImage(data:post.featuredImage, 1200, &quot;1200:630&quot;) + &quot; 1200w&quot;'
+                                            expr:src='data:post.featuredImage'
                                             expr:title='data:post.title + &quot; | Liputan Kabar Kota&quot;'
                                             fetchpriority='high' height='630' loading='eager'
-                                            sizes='(max-width: 784px) calc(100vw - 24px), 760px'
                                             width='1200' />
                                     </figure>
                                 </b:if>
