@@ -389,7 +389,7 @@ img { display: block; max-width: 100%; height: auto; }
                                             </header>
                                             <div class='lkk-archive-grid'><b:loop values='data:posts' var='post'><b:include data='post' name='postCommentsAndAd' /></b:loop></div>
                                         </div>
-                                        <aside aria-label='Informasi Liputan Kabar Kota' class='lkk-side lkk-archive-sidebar'>
+                                        <aside aria-label='Informasi Liputan Kabar Kota' class='lkk-side lkk-archive-sidebar lkk-hidden-sm'>
                                             <div class='lkk-sidebar-panel'><img alt='Legal Advisor Liputan Kabar Kota' class='lkk-sidebar-banner' decoding='async' height='360' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB9o_kAvat40yaG7z7nuLoLFI-uT5md7FNC10oq2ZonsH2MyTK6m1bly8qj6k9kscYv906sgm6QkvMPLDk4YU5M0xGX8xPCOYamjLIjrEXesTu-_7ZUtB-IKmKCx2WYQvgVDotkxuxAQ6L6HYHrX76Uy-DGHXN2LTTfHg_9v7SsBDrcmtF37ekwO_v2Os/s400/legal-danes.jpg' title='Legal Advisor Liputan Kabar Kota' width='640' /></div>
                                             <div class='lkk-sidebar-panel'><img alt='Informasi Liputan Kabar Kota' class='lkk-sidebar-banner' decoding='async' height='360' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxRSauF_0RxmPaK-_7bBT8uxAkm2dDODP_Wwh7eA2_zCUNPa9TNmIOjvP11HBimYUynKZ_HYhYzL5LwPQZPA_2ZIwVe4FAI06GlZwQ5wjrHjLIz06BAbI-XXzUna61Teftl8PyLt9Q8qY6t0SH2ofpEvtdNmIEQxQ3WcTfTLkUHNJAYr0mgoej4FHUmBE/s400/WhatsApp%20Image%202026-11-02%20at%2018.55.07.jpeg' title='Informasi Liputan Kabar Kota' width='640' /></div>
                                         </aside>
@@ -1244,45 +1244,7 @@ img { display: block; max-width: 100%; height: auto; }
                             </b:if>
                         </section>
                     </b:includable>
-                    <b:includable id='tooltipCss'>
-                        <!-- LINT.IfChange -->
-                        <style>
-    .post-body a.b-tooltip-container {
-      position: relative;
-      display: inline-block;
-    }
-
-    .post-body a.b-tooltip-container .b-tooltip {
-      display: block !important;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translate(-20%, 1px);
-      visibility: hidden;
-      opacity: 0;
-      z-index: 1;
-      transition: opacity 0.2s ease-in-out;
-    }
-
-    .post-body a.b-tooltip-container .b-tooltip iframe {
-      width: 200px;
-      height: 198px;
-      max-width: none;
-      border: none;
-      border-radius: 20px;
-      box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
-    }
-
-    @media (hover: hover) {
-      .post-body a.b-tooltip-container:hover .b-tooltip {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-  </style>
-                        <!--
-                        LINT.ThenChange(//depot/google3/java/com/google/blogger/b2/layouts/widgets/v2-style.css) -->
-                    </b:includable>
+                    
                 </b:widget>
                 <b:widget id='PopularPosts1' locked='true' title='Berita Lainnya'
                     type='PopularPosts' version='2' visible='true'>
@@ -1708,7 +1670,7 @@ img { display: block; max-width: 100%; height: auto; }
                 <section aria-label='Media sosial' class='lkk-foot-col'>
                     <h2>Follow Us</h2>
                     <div aria-label='Media sosial' class='lkk-social'>
-                        <a aria-label='Facebook Liputan Kabar Kota' class='lkk-social-facebook'
+                        <a aria-label='Facebook Liputan Kabar Kota'
                             href='https://www.facebook.com/profile.php?id=61595493804386'
                             rel='noopener noreferrer' target='_blank'>
                             <svg aria-hidden='true' class='lkk-social-icon' focusable='false'
@@ -1718,7 +1680,7 @@ img { display: block; max-width: 100%; height: auto; }
                                     fill='currentColor' />
                             </svg>
                         </a>
-                        <a aria-label='Instagram Liputan Kabar Kota' class='lkk-social-instagram'
+                        <a aria-label='Instagram Liputan Kabar Kota'
                             href='https://www.instagram.com/liputankabarkota/'
                             rel='noopener noreferrer' target='_blank'>
                             <svg aria-hidden='true' class='lkk-social-icon' focusable='false'
@@ -1730,7 +1692,7 @@ img { display: block; max-width: 100%; height: auto; }
                                 <circle cx='17.7' cy='6.6' fill='currentColor' r='1.2' />
                             </svg>
                         </a>
-                        <a aria-label='YouTube Liputan Kabar Kota' class='lkk-social-youtube'
+                        <a aria-label='YouTube Liputan Kabar Kota'
                             href='https://www.youtube.com/channel/UCQqS32KdUP5TGtorAQvBjNw'
                             rel='noopener noreferrer' target='_blank'>
                             <svg aria-hidden='true' class='lkk-social-icon' focusable='false'
@@ -1740,7 +1702,7 @@ img { display: block; max-width: 100%; height: auto; }
                                     fill='currentColor' />
                             </svg>
                         </a>
-                        <a aria-label='TikTok Liputan Kabar Kota' class='lkk-social-tiktok'
+                        <a aria-label='TikTok Liputan Kabar Kota'
                             href='https://www.tiktok.com/@liputankabarkota'
                             rel='noopener noreferrer' target='_blank'>
                             <svg aria-hidden='true' class='lkk-social-icon' focusable='false'
