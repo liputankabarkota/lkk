@@ -142,7 +142,7 @@
                     }
                 }
                 if (caption && captionText) {
-                    if (featuredImage && featuredImage.parentNode) {
+                    if (featuredImage && featuredImage.parentNode && !featuredImage.parentNode.querySelector('figcaption, .tr-caption, .caption')) {
                         featuredImage.parentNode.appendChild(caption);
                     }
                 }
