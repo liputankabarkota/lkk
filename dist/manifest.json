@@ -2,31 +2,57 @@
   "name": "lkk-cdn-parts",
   "version": "1.0.0",
   "description": "Modular CDN split for Liputan Kabar Kota template",
+  "repository": "liputankabarkota/lkk",
+  "default_branch": "main",
+  "cdn_base": "https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main",
   "parts": [
     {
       "name": "critical",
       "file": "00-critical.css",
-      "purpose": "Critical CSS for above-the-fold layout"
+      "purpose": "Critical CSS for above-the-fold layout",
+      "url": "https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/dist/00-critical.css"
     },
     {
       "name": "noncritical",
       "file": "01-noncritical.css",
-      "purpose": "Non-critical CSS for the rest of the template"
+      "purpose": "Non-critical CSS for the rest of the template",
+      "url": "https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/dist/01-noncritical.css"
+    },
+    {
+      "name": "home",
+      "file": "02-home.css",
+      "purpose": "Homepage layout and cards",
+      "url": "https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/dist/02-home.css"
+    },
+    {
+      "name": "article",
+      "file": "03-article.css",
+      "purpose": "Article page styling",
+      "url": "https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/dist/03-article.css"
+    },
+    {
+      "name": "responsive",
+      "file": "04-responsive.css",
+      "purpose": "Responsive breakpoints and mobile tuning",
+      "url": "https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/dist/04-responsive.css"
     },
     {
       "name": "shared",
       "file": "10-shared.js",
-      "purpose": "Header + bootstrapping logic"
+      "purpose": "Header + bootstrapping logic",
+      "url": "https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/dist/10-shared.js"
     },
     {
       "name": "images",
       "file": "11-images.js",
-      "purpose": "Responsive image and lazy loading helpers"
+      "purpose": "Responsive image and lazy loading helpers",
+      "url": "https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/dist/11-images.js"
     },
     {
       "name": "article-js",
       "file": "12-article.js",
-      "purpose": "TOC and article enhancement logic"
+      "purpose": "TOC and article enhancement logic",
+      "url": "https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@main/dist/12-article.js"
     }
   ]
 }
