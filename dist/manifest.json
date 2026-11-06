@@ -4,29 +4,14 @@
   "description": "Modular CDN split for Liputan Kabar Kota template",
   "parts": [
     {
-      "name": "base",
-      "file": "00-base.css",
-      "purpose": "CSS reset, root tokens, common layout"
+      "name": "critical",
+      "file": "00-critical.css",
+      "purpose": "Critical CSS for above-the-fold layout"
     },
     {
-      "name": "header",
-      "file": "01-header.css",
-      "purpose": "Header, nav, breaking ticker"
-    },
-    {
-      "name": "home",
-      "file": "02-home.css",
-      "purpose": "Homepage hero, cards, category tiles"
-    },
-    {
-      "name": "article",
-      "file": "03-article.css",
-      "purpose": "Article content styles and footer"
-    },
-    {
-      "name": "responsive",
-      "file": "04-responsive.css",
-      "purpose": "Desktop/mobile layout rules"
+      "name": "noncritical",
+      "file": "01-noncritical.css",
+      "purpose": "Non-critical CSS for the rest of the template"
     },
     {
       "name": "shared",
