@@ -225,6 +225,9 @@
         gap: 4px;
         flex-wrap: wrap;
         min-width: 0;
+        width: 100%;
+        max-width: var(--lkk-container);
+        margin: 0 auto;
       }
       .lkk-main-nav a {
         color: var(--lkk-text);
