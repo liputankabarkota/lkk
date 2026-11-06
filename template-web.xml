@@ -9,7 +9,7 @@
     <meta content='width=device-width, initial-scale=1' name='viewport'/>
     <link crossorigin='anonymous' href='https://blogger.googleusercontent.com' rel='preconnect'/>
     <link crossorigin='anonymous' href='https://cdn.jsdelivr.net' rel='preconnect'/>
-    <link as='style' href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/head.min.css' id='lkk-theme-css' onerror='this.setAttribute(&quot;data-lkk-state&quot;,&quot;error&quot;)' onload='this.onload=null;this.rel=&quot;stylesheet&quot;;this.setAttribute(&quot;data-lkk-state&quot;,&quot;loaded&quot;)' rel='preload'/>
+    <link href='https://cdn.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/head.min.css' id='lkk-theme-css' media='all' rel='stylesheet'/>
     <meta content='id_ID' property='og:locale'/>
     <meta content='Liputan Kabar Kota' property='og:site_name'/>
     <meta content='summary_large_image' name='twitter:card'/>
