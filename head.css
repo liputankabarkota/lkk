@@ -364,6 +364,13 @@
         min-height: 300px;
         object-fit: cover;
       }
+      .lkk-mini-card-media img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 220 / 132;
+      }
       .lkk-home-lead-no-image {
         padding: 24px;
         font-size: 1.2rem;
