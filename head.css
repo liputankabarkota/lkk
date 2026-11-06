@@ -1390,12 +1390,14 @@
       .lkk-breaking {
         display: flex;
         align-items: center;
-        gap: 14px;
+        gap: 12px;
         min-height: 44px;
         margin-bottom: 16px;
         padding: 8px 12px;
         border: 1px solid #e5e9ed;
         background: #fff;
+        border-radius: var(--lkk-radius);
+        overflow: hidden;
       }
       .lkk-breaking-label {
         flex: 0 0 auto;
@@ -1404,13 +1406,18 @@
         color: #fff;
         font-size: 11px;
         font-weight: 800;
+        letter-spacing: .08em;
         text-transform: uppercase;
       }
       .lkk-breaking a {
+        display: block;
+        flex: 1 1 auto;
+        min-width: 0;
         overflow: hidden;
         color: #273846;
         font-size: 13px;
         font-weight: 700;
+        line-height: 1.4;
         text-overflow: ellipsis;
         white-space: nowrap;
       }
