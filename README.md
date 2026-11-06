@@ -23,7 +23,6 @@ Run `sh build.sh` from the repository root. It minifies CSS and JavaScript into 
 4. Preview `template.xml` in Blogger before applying it. Validate the homepage, an article, a label, archive, search, static page, and 404 at mobile and desktop widths.
 5. After publishing assets, purge jsDelivr caches:
    - https://purge.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/dist/lkk.min.css
-   - https://purge.jsdelivr.net/gh/liputankabarkota/lkk@refs/heads/main/dist/lkk.min.js
 
 CDN URLs used by the template:
 
